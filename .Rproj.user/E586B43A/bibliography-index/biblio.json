@@ -936,11 +936,11 @@
                     "given": "Andrew F."
                 }
             ],
-            "id": "hayes_introduction_2017",
+            "id": "hayes_introduction_2018",
             "issued": {
                 "date-parts": [
                     [
-                        2017
+                        2018
                     ]
                 ]
             },
@@ -1320,6 +1320,57 @@
             "title-short": "Radical hope in revolting times",
             "type": "article-journal",
             "volume": "14"
+        },
+        {
+            "DOI": "10.1037/cou0000231",
+            "ISSN": "0022-0167",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2017-46640-003&site=ehost-live",
+            "abstract": "The purpose of this study was to apply an intersectionality framework to explore the influence of gendered racism (i.e., intersection of racism and sexism) on health outcomes. Specifically, we applied intersectionality to extend a biopsychosocial model of racism to highlight the psychosocial variables that mediate and moderate the influence of gendered racial microaggressions (i.e., subtle gendered racism) on health outcomes. In addition, we tested aspects of this conceptual model by exploring the influence of gendered racial microaggressions on the mental and physical health of Black women. In addition, we explored the mediating role of coping strategies and the moderating role of gendered racial identity centrality. Participants were 231 Black women who completed an online survey. Results from regression analyses indicated that gendered racial microaggressions significantly predicted both self-reported mental and physical health outcomes. In addition, results from mediation analyses indicated that disengagement coping significantly mediated the link between gendered racial microaggressions and negative mental and physical health. In addition, a moderated mediation effect was found, such that individuals who reported a greater frequency of gendered racial microaggressions and reported lower levels of gendered racial identity centrality tended to use greater disengagement coping, which in turn, was negatively associated with mental and physical health outcomes. Findings of this study suggest that gendered racial identity centrality can serve a buffering role against the negative mental and physical health effects of gendered racism for Black women. (PsycINFO Database Record (c) 2017 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2020,
+                        8,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Lewis",
+                    "given": "Jioni A."
+                },
+                {
+                    "family": "Williams",
+                    "given": "Marlene G."
+                },
+                {
+                    "family": "Peppers",
+                    "given": "Erica J."
+                },
+                {
+                    "family": "Gadson",
+                    "given": "Cecile A."
+                }
+            ],
+            "collection-title": "Intersectionality",
+            "container-title": "Journal of Counseling Psychology",
+            "id": "lewis_applying_2017",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        10
+                    ]
+                ]
+            },
+            "keyword": "Stress, Coping Behavior, Sex Role Attitudes, Sexism, Health, Blacks, Racism, coping, gendered racism, Microaggression, microaggressions, sexism, stress",
+            "note": "Publisher: American Psychological Association",
+            "page": "475-486",
+            "title": "Applying intersectionality to explore the relations between gendered racism and health among Black women",
+            "type": "article-journal",
+            "volume": "64"
         },
         {
             "ISBN": "978-1-4338-3233-8",
@@ -5432,6 +5483,491 @@
             "title": "Outliers: The story of success",
             "title-short": "Outliers",
             "type": "book"
+        },
+        {
+            "DOI": "10.1037/men0000159",
+            "ISSN": "1524-9220",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2018-17971-001&site=ehost-live",
+            "abstract": "Nationally, 1 in 6 men report some form of sexual victimization in his lifetime, and rates differ across racial and ethnic groups. Although research has explored the relations between sexual victimization, sexual risk behavior, and sexual attitudes among women, a dearth of literature investigates these relationships among men. Using structural equation modeling among 284 racially diverse young men, this cross-sectional study tested the mediating role of sexual risk-taking behavior on sexual victimization and attitudes about sex. Two models were tested, one to explore general attitudes toward women and the other to explore racially stereotyped attitudes toward women. The general model was a good fit of the data and showed full mediation for White men and Men of Color. The racially stereotyped mediation model fit the data for Men of Color but not White men. Implications for counseling and future research are discussed. (PsycINFO Database Record (c) 2019 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "French",
+                    "given": "Bryana H."
+                },
+                {
+                    "family": "Teti",
+                    "given": "Michelle"
+                },
+                {
+                    "family": "Suh",
+                    "given": "Han Na"
+                },
+                {
+                    "family": "Serafin",
+                    "given": "Melissa R."
+                }
+            ],
+            "container-title": "Psychology of Men & Masculinities",
+            "id": "french_path_2019",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        1
+                    ]
+                ]
+            },
+            "keyword": "structural equation modeling, sexual assault, Stereotyped Attitudes, Sexual Risk Taking, Sex Offenses, Human Males, Sexual Attitudes, Victimization, men’s victimization, sexual risk-taking",
+            "note": "Publisher: Educational Publishing Foundation",
+            "page": "1-11",
+            "title": "A path analysis of racially diverse men’s sexual victimization, risk-taking, and attitudes",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "DOI": "10.1037/ort0000203",
+            "ISSN": "0002-9432",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2016-39469-001&site=ehost-live",
+            "abstract": "The present study is an empirical investigation of cultural mistrust as a mediator in the association between racial microaggressions and mental health (anxiety, depression, and well-being) in a sample of Asian American college students. In addition, we explored the role of cultural mistrust as a mediator in the association between racial microaggressions and attitudes toward seeking professional help. Asian American participants (N = 156) were recruited from 2 institutions located in the Pacific Northwest region of the United States. Participants filled out an online survey consisting of measures assessing the study variables. Bootstrapped results indicated that cultural mistrust was a significant mediator in the relation between microaggressions and well-being, such that racial microaggressions was significantly and positively associated with cultural mistrust, which, in turn, was significantly and inversely related to well-being. Mediation models involving anxiety, depression, and help-seeking attitudes as outcome variables were nonsignificant. The significant mediation finding (microaggressions → mistrust → well-being) has implications for improved understanding of Asian American students’ reactions to modern day racism and how it relates to their sense of well-being. (PsycINFO Database Record (c) 2019 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        8
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kim",
+                    "given": "Paul Youngbin"
+                },
+                {
+                    "family": "Kendall",
+                    "given": "Dana L."
+                },
+                {
+                    "family": "Cheon",
+                    "given": "Hee-Sun"
+                }
+            ],
+            "container-title": "American Journal of Orthopsychiatry",
+            "id": "kim_racial_2017",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "keyword": "Humans, United States, Female, Male, Surveys and Questionnaires, Sociocultural Factors, Asians, Well Being, College Students, Students, Health Outcomes, Mental Health, Culture, Young Adult, Racial and Ethnic Attitudes, Racism, Microaggression, Aggression, Asian Americans, racial microaggressions, cultural mistrust, Help Seeking Behavior, Trust (Social Behavior)",
+            "note": "Publisher: Educational Publishing Foundation",
+            "page": "663-670",
+            "title": "Racial microaggressions, cultural mistrust, and mental health outcomes among asian american college students",
+            "type": "article-journal",
+            "volume": "87"
+        },
+        {
+            "ISSN": "0197-4327",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1982-29464-001&site=ehost-live",
+            "abstract": "Developed an inventory designed to measure cultural mistrust among Blacks in the domains of Education and Training, Interpersonal Relations, Business and Work, and Politics and Law. The initial 72-item Cultural Mistrust Inventory (CMI) was administered to 172 Black male undergraduates by a Black male examiner. Psychometric strategies were used to examine the internal construction of the CMI and to eliminate items of low discriminatory value or those that significantly correlated with the Social Desirability Scale. In an examination of external validity, it was found that Ss with a high exposure to racial discrimination had higher mistrust scores than those with lower exposure to racial discrimination. A 2-wk test–retest revealed adequate temporal stability. A copy of the final 48-item CMI is appended. (21 ref) (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Terrell",
+                    "given": "Francis"
+                },
+                {
+                    "family": "Terrell",
+                    "given": "Sandra L."
+                }
+            ],
+            "container-title": "The Western Journal of Black Studies",
+            "id": "terrell_inventory_1981",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1981
+                    ]
+                ]
+            },
+            "keyword": "Attitude Measures, Test Construction, Blacks, Racial and Ethnic Attitudes, Trust (Social Behavior), Black male college students, construction of measure of cultural mistrust",
+            "note": "Publisher: Washington State University Press",
+            "page": "180-184",
+            "title": "An inventory to measure cultural mistrust among Blacks",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "DOI": "10.1037/0022-006X.51.5.730",
+            "ISSN": "0022-006X",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1984-02935-001&site=ehost-live",
+            "abstract": "Describes the development of the Mental Health Inventory (MHI), a 38-item measure of psychological distress and well-being, developed for use in general populations. The MHI was fielded in 4 large samples (N = 5089) of Ss aged 13–69 yrs. One data set was used to explore the MHI’s factor structure, and confirmatory factor analyses were used for cross validation. Results support a hierarchical factor model composed of a general underlying psychological distress vs well-being factor; a higher order structure defined by 2 correlated factors—Psychological Distress and Well-Being; and 5 correlated lower order factors—Anxiety, Depression, Emotional Ties, General Positive Affect, and Loss of Behavioral Emotional Control. Summated rating scales produced high internal consistency estimates and substantial stability over a 1-yr interval. Results provide strong psychometric support for a hierarchical model and scoring options ranging from 5 distinct constructs to reliance on 1 summary index. (36 ref) (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Veit",
+                    "given": "Clairice T."
+                },
+                {
+                    "family": "Ware",
+                    "given": "John E."
+                }
+            ],
+            "container-title": "Journal of Consulting and Clinical Psychology",
+            "id": "veit_structure_1983",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983,
+                        10
+                    ]
+                ]
+            },
+            "keyword": "Humans, Test Construction, Test Reliability, Adult, Female, Male, Test Validity, Factor Analysis, Distress, Mental Health, Adolescent, Adaptation, Psychological, Psychological Tests, Middle Aged, Aged, Inventories, Stress, Psychological, 13–69 yr olds, development & factor structure & validity & reliability of Mental Health Inventory, measurement of psychological distress & well-being",
+            "note": "Publisher: American Psychological Association",
+            "page": "730-742",
+            "title": "The structure of psychological distress and well-being in general populations",
+            "type": "article-journal",
+            "volume": "51"
+        },
+        {
+            "ISSN": "0897-5264",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1996-10056-001&site=ehost-live",
+            "abstract": "Presents the development of a 10-item unidimensional version of Fischer and Turner’s 29-item scale for measuring attitudes toward seeking professional psychological help. Two studies were carried out. The first study involved the development of the scale. The second study determined the stability over time, of scores derived from the new abbreviated scale. Some of the items were slightly modified. The psychometric features of the new scale appeared to match those of the original version. Scores from the new scale correlated .87 with full scale scores derived from the original form. The present scale should be easier and less obtrusive for use in research on attitudes toward help-seeking due to its brevity. The need for studies that go beyond the examination of simple correlates of the attitude with other measures of demographic variables was emphasized. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Fischer",
+                    "given": "Edward H."
+                },
+                {
+                    "family": "Farina",
+                    "given": "Amerigo"
+                }
+            ],
+            "container-title": "Journal of College Student Development",
+            "id": "fischer_attitudes_1995",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995,
+                        7
+                    ]
+                ]
+            },
+            "keyword": "Attitude Measures, Test Construction, Test Reliability, college students, Test Forms, Help Seeking Behavior, assessment of attitudes towards seeking professional psychological help, development & psychometric stability of shortened form of E. Fischer & J. Turner’s scale",
+            "note": "Publisher: ACPA Executive Office",
+            "page": "368-373",
+            "title": "Attitudes toward seeking professional psychologial help: A shortened form and considerations for research",
+            "title-short": "Attitudes toward seeking professional psychologial help",
+            "type": "article-journal",
+            "volume": "36"
+        },
+        {
+            "DOI": "10.1016/j.jesp.2015.09.012",
+            "ISSN": "0022-1031",
+            "PMCID": "PMC4999253",
+            "PMID": "27570259",
+            "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4999253/",
+            "abstract": "Identifying causal mechanisms has become a cornerstone of experimental social psychology, and editors in top social psychology journals champion the use of mediation methods, particularly innovative ones when possible (e.g. , ). Commonly, studies in experimental social psychology randomly assign participants to levels of the independent variable and measure the mediating and dependent variables, and the mediator is assumed to causally affect the dependent variable. However, participants are not randomly assigned to levels of the mediating variable(s), i.e., the relationship between the mediating and dependent variables is correlational. Although researchers likely know that correlational studies pose a risk of confounding, this problem seems forgotten when thinking about experimental designs randomly assigning participants to levels of the independent variable and measuring the mediator (i.e., “measurement-of-mediation” designs). Experimentally manipulating the mediator provides an approach to solving these problems, yet these methods contain their own set of challenges (e.g., ). We describe types of experimental manipulations targeting the mediator (manipulations demonstrating a causal effect of the mediator on the dependent variable and manipulations targeting the strength of the causal effect of the mediator) and types of experimental designs (double randomization, concurrent double randomization, and parallel), provide published examples of the designs, and discuss the strengths and challenges of each design. Therefore, the goals of this paper include providing a practical guide to manipulation-of-mediator designs in light of their challenges and encouraging researchers to use more rigorous approaches to mediation because manipulation-of-mediator designs strengthen the ability to infer causality of the mediating variable on the dependent variable.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Pirlott",
+                    "given": "Angela G."
+                },
+                {
+                    "family": "MacKinnon",
+                    "given": "David P."
+                }
+            ],
+            "container-title": "Journal of experimental social psychology",
+            "id": "pirlott_design_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        9
+                    ]
+                ]
+            },
+            "page": "29-38",
+            "title": "Design approaches to experimental mediation",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "DOI": "10.1108/02683941011075256",
+            "abstract": "Purpose – Tests of assumed mediation models are common in research in many disciplines, including managerial psychology, industrial and organizational psychology, organizational behavior, and organizational theory. Thus, the purpose of this paper is to detail experimental design options for conducting such tests in a manner that has the potential to yield results that have high levels of internal and construct validity. Design/methodology/approach – The paper presents a logical analysis of strategies for testing mediation models so as to insure valid inferences about causal relations between variables. Findings – The most appropriate strategy for testing assumed mediation models is research that uses randomized experimental designs. Practical implications – Managers should base their actions on valid evidence about phenomena. More specifically, managerial actions should be predicated on research results that have high levels of internal, construct, and statistical conclusion validity. Thus, this paper encourages managers to base decisions about organizational policies and practices on well-designed experimental research. Originality/value – This paper addresses a number of points about issues involving internal and construct validity in tests of assumed causal models that have not been covered in previous work.",
+            "author": [
+                {
+                    "family": "Stone-Romero",
+                    "given": "EF"
+                },
+                {
+                    "family": "Rosopa",
+                    "given": "Patrick"
+                }
+            ],
+            "container-title": "Journal of Managerial Psychology",
+            "id": "stone-romero_research_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010,
+                        9
+                    ]
+                ]
+            },
+            "page": "697-712",
+            "title": "Research design options for testing mediation models and their implications for facets of validity",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
+            "DOI": "10.1080/01973533.2015.1049349",
+            "ISSN": "0197-3533",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2015-36735-002&site=ehost-live",
+            "abstract": "The mediation myth is the false belief that mediation is actually estimated in the typical mediation analysis. This myth is based on a trifecta of shortcomings: (1) the typical mediation study relies on an inadequate design; (2) the researcher uses a flawed analysis strategy; and (3) there is scant attention to assumptions that are required when estimating mediation. These problems stem from overgeneralizing the classical product method for estimating mediation and overreliance on statistical significance testing as a decision criterion in mediation analysis. The goals of this article are to (1) raise awareness of these difficulties among researchers and (2) provide a roadmap about design and analysis options for a more rigorous and scientifically valid approach to mediation analysis. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kline",
+                    "given": "Rex B."
+                }
+            ],
+            "container-title": "Basic and Applied Social Psychology",
+            "id": "kline_mediation_2015",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        7
+                    ]
+                ]
+            },
+            "keyword": "Mediation, Awareness, social psychology, Social Psychology, analysis strategy, decision criterion, mediation analysis, myth, Myths",
+            "note": "Publisher: Taylor & Francis",
+            "page": "202-213",
+            "title": "The mediation myth",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "DOI": "10.1037/cou0000062",
+            "ISSN": "0022-0167",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2015-15500-004&site=ehost-live",
+            "abstract": "The purpose of this study was to develop a measure of gendered racial microaggressions (i.e., subtle and everyday verbal, behavioral, and environmental expressions of oppression based on the intersection of one’s race and gender) experienced by Black women by applying an intersectionality framework to Essed’s (1991) theory of gendered racism and Sue, Capodilupo, et al.’s (2007) model of racial microaggressions. The Gendered Racial Microaggressions Scale (GRMS), was developed to assess both frequency and stress appraisal of microaggressions, in 2 separate studies. After the initial pool of GRMS items was developed, we received input from a community-based focus group of Black women and an expert panel. In Study 1, an exploratory factor analysis using a sample of 259 Black women resulted in a multidimensional scale with 4 factors as follows: (a) Assumptions of Beauty and Sexual Objectification, (b) Silenced and Marginalized, (c) Strong Black Woman Stereotype, and (d) Angry Black Woman Stereotype. In Study 2, results of confirmatory factor analyses using an independent sample of 210 Black women suggested that the 4-factor model was a good fit of the data for both the frequency and stress appraisal scales. Supporting construct validity, the GRMS was positively related to the Racial and Ethnic Microaggressions Scale (Nadal, 2011) and the Schedule of Sexist Events (Klonoff & Landrine, 1995). In addition, the GRMS was significantly related to psychological distress, such that greater perceived gendered racial microaggressions were related to greater levels of reported psychological distress. Implications for future research and practice are discussed. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Lewis",
+                    "given": "Jioni A."
+                },
+                {
+                    "family": "Neville",
+                    "given": "Helen A."
+                }
+            ],
+            "container-title": "Journal of Counseling Psychology",
+            "id": "lewis_construction_2015",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        4
+                    ]
+                ]
+            },
+            "keyword": "Aggressiveness, Blacks, Distress, gendered racial microaggressions, gendered racism, Human Females, Human Sex Differences, Oppression, racism, Racism, Rating Scales, sexism, Sexism, stress, Stress, Test Construction, Test Validity",
+            "note": "Publisher: American Psychological Association",
+            "page": "289-302",
+            "title": "Construction and initial validation of the Gendered Racial Microaggressions Scale for Black women",
+            "type": "article-journal",
+            "volume": "62"
+        },
+        {
+            "ISSN": "0025-7079",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1995-35535-001&site=ehost-live",
+            "abstract": "Tested the usefulness of physical component summary and mental component summary (MCS) measures relative to a profile of 8 scales from the Medical Outcomes Study 36-ltem Short-Form Health Survey (SF-36) by comparing results across 16 tests involving 1,440 patients. Comparisons were made between groups known to differ at a point in time or to change over time in terms of age, diagnosis, severity of disease, comorbid conditions, acute symptoms, self-reported changes in health, and recovery from clinical depression. The relative validity (RV) of each measure was estimated by a comparison of statistical results with those for the best scales in the same tests. Differences in RV among scales from the SF-36 were consistent with those in previous studies. The MCS was superior to the best SF-36 scale in mental health tests. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ware",
+                    "given": "John E."
+                },
+                {
+                    "family": "Kosinski",
+                    "given": "Mark"
+                },
+                {
+                    "family": "Bayliss",
+                    "given": "Martha S."
+                },
+                {
+                    "family": "McHorney",
+                    "given": "Colleen A."
+                }
+            ],
+            "container-title": "Medical Care",
+            "id": "ware_comparison_1995",
+            "issue": "4, Suppl",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995,
+                        4
+                    ]
+                ]
+            },
+            "keyword": "assessment of medical treatment outcomes, conference presentation, Measurement, Medical Treatment (General), patients, Treatment Effectiveness Evaluation, usefulness of physical vs mental component summary measures",
+            "note": "Publisher: Lippincott Williams & Wilkins",
+            "page": "264-279",
+            "title": "Comparison of methods for the scoring and statistical analysis of SF-36 health profile and summary measures: Summary of results from the medical outcomes study",
+            "title-short": "Comparison of methods for the scoring and statistical analysis of SF-36 health profile and summary measures",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "DOI": "10.1207/s15327558ijbm0401_6",
+            "ISSN": "1070-5503",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=1999-13167-006&site=ehost-live",
+            "abstract": "Studies of coping in applied settings often confront the need to minimize time demands on participants. The problem of participant response burden is exacerbated further by the fact that these studies typically are designed to test multiple hypotheses with the same sample, a strategy that entails the use of many time-consuming measures. Such research would benefit from a brief measure of coping assessing several responses known to be relevant to effective and ineffective coping. This article presents such a brief form of a previously published measure called the COPE inventory, which has proven to be useful in health-related research. The Brief COPE omits two scales of the full COPE, reduces others to two items per scale, and adds one scale. Psychometric properties of the Brief COPE are reported, derived from a sample of 168 adults participating in a study of the process of recovery after Hurricane Andrew. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        12
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Carver",
+                    "given": "Charles S."
+                }
+            ],
+            "container-title": "International Journal of Behavioral Medicine",
+            "id": "carver_you_1997",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "keyword": "assessment of effective & ineffective coping, Coping Behavior, Natural Disasters, Personality Measures, psychometric properties & construction of Brief COPE, Psychometrics, survivors of Hurricane Andrew, Test Construction",
+            "note": "Publisher: Lawrence Erlbaum",
+            "page": "92-100",
+            "title": "You want to measure coping but your protocol’s too long: Consider the Brief COPE",
+            "title-short": "You want to measure coping but your protocol’s too long",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sellers",
+                    "given": "Robert M"
+                },
+                {
+                    "family": "Rowley",
+                    "given": "Stephanie A J"
+                },
+                {
+                    "family": "Chavous",
+                    "given": "Tabbye M"
+                },
+                {
+                    "family": "Shelton",
+                    "given": "J Nicole"
+                },
+                {
+                    "family": "Smith",
+                    "given": "Mia A"
+                }
+            ],
+            "id": "sellers_multidimensional_nodate",
+            "page": "11",
+            "title": "Multidimensional Inventory of Black Identity: A Preliminary Investigation of Reliability and Construct Validity",
+            "title-short": "Multidimensional Inventory of Black Identity",
+            "type": "article-journal"
         }
     ],
     "project_biblios": [

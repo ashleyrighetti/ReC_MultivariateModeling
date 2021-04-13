@@ -1,0 +1,2 @@
+"0","#renaming the variables"
+"0","as.data.frame(Kim_df, row.names = NULL, optional = FALSE, make.names = TRUE)"

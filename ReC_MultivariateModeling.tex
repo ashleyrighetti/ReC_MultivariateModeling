@@ -152,7 +152,7 @@
 \chapter*{PREFACE}\label{preface}}
 \addcontentsline{toc}{chapter}{PREFACE}
 
-\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 04 Apr 2021}
+\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 12 Apr 2021}
 
 \href{https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c932455e-ef06-444a-bdca-acf7012d759a}{Screencasted Lecture Link}
 
@@ -236,7 +236,7 @@ There are a number of ways you can access this resource. You may wish to try sev
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Simply follow along in the .html formatted document that is available on via GitHug Pages, and then
+  Simply follow along in the .html formatted document that is available on via GitHub Pages, and then
 
   \begin{itemize}
   \tightlist
@@ -897,10 +897,10 @@ APA Style, and in particular the Journal Article Reporting Standards (JARS) for 
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 34
+## [1] 43
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 43 individuals opened the survey link.
 
 Next let's filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.
 
@@ -914,10 +914,10 @@ Next let's filter in only those who consented to take the survey. Because Qualtr
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 32
+## [1] 38
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link. Of those, 32, granted consent and proceeded into the survey items.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 43 individuals opened the survey link. Of those, 38, granted consent and proceeded into the survey items.
 
 In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.
 
@@ -930,10 +930,10 @@ In this particular study, the categories used to collect race were U.S.-centric.
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 32
+## [1] 35
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 34 individuals opened the survey link. Of those, 32, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 43 individuals opened the survey link. Of those, 38, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 35 met this criteria.
 
 \hypertarget{renaming-variables}{%
 \subsection{Renaming Variables}\label{renaming-variables}}
@@ -1002,7 +1002,7 @@ It can be helpful to save outfile of progress as we go along. Here I save this r
 \hypertarget{methodprocedure}{%
 \subsection{Method/Procedure}\label{methodprocedure}}
 
-Data screening suggested that 34 individuals opened the survey link. Of those, 32 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria.
+Data screening suggested that 43 individuals opened the survey link. Of those, 38 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 35 met this criteria.
 
 \hypertarget{practice-problems}{%
 \section{Practice Problems}\label{practice-problems}}
@@ -1513,7 +1513,7 @@ I use \emph{different} names for the object/df in my R environment than I use fo
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    32 obs. of  25 variables:
+## 'data.frame':    35 obs. of  25 variables:
 ##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iRace1   : int  3 3 3 3 1 3 3 3 1 0 ...
 ##  $ iRace2   : int  1 NA 1 1 NA NA 3 NA NA 0 ...
@@ -1594,7 +1594,7 @@ Our next step is to conduct a preliminary missing data analysis at the item leve
 \end{Shaded}
 
 \begin{verbatim}
-##  int [1:32] 3 3 3 3 1 3 3 3 1 0 ...
+##  int [1:35] 3 3 3 3 1 3 3 3 1 0 ...
 \end{verbatim}
 
 Looking at the structure of our data, the iRace(1 thru 10) variables are in ``int'' or integer format. This means that they are represented as whole numbers. We need them to be represented as factors. R handles factors represented as words well. Therefore, let's use our codebook to reformat this variable as a an ordered factor, with words instead of numbers.
@@ -1648,7 +1648,7 @@ Let's check the structure to see if they are factors.
 \end{Shaded}
 
 \begin{verbatim}
-## Rows: 32
+## Rows: 35
 ## Columns: 35
 ## $ ID        <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17...
 ## $ iRace1    <int> 3, 3, 3, 3, 1, 3, 3, 3, 1, 0, 2, 1, 1, 1, 3, 3, 3, 1, 3, ...
@@ -1772,8 +1772,8 @@ We can grab the descriptives for the \emph{prop\_miss} variable to begin to unde
 \end{Shaded}
 
 \begin{verbatim}
-##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 32 3.98 10.05      0    1.05   0   0 36.36 36.36 2.44     4.67 1.78
+##    vars  n mean   sd median trimmed mad min   max range skew kurtosis   se
+## X1    1 35 3.64 9.66      0    0.94   0   0 36.36 36.36 2.61     5.57 1.63
 \end{verbatim}
 
 \begin{Shaded}
@@ -1824,7 +1824,7 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3.98%
+## [1] 3.64%
 \end{verbatim}
 
 \begin{Shaded}
@@ -1834,10 +1834,10 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 81.25%
+## [1] 82.86%
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.98\% of cells had missing data and 81.25\% of cases had nonmissing data.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.64\% of cells had missing data and 82.86\% of cases had nonmissing data.
 
 \hypertarget{analyzing-missing-data-patterns}{%
 \subsection{Analyzing Missing Data Patterns}\label{analyzing-missing-data-patterns}}
@@ -2025,8 +2025,8 @@ Using the \emph{describe()} function from the \emph{psych} package, we can inves
 \end{Shaded}
 
 \begin{verbatim}
-##    vars  n mean    sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 32 4.17 10.37      0    1.28   0   0 33.33 33.33 2.14     3.02 1.83
+##    vars  n mean   sd median trimmed mad min   max range skew kurtosis   se
+## X1    1 35 3.81 9.97      0    1.15   0   0 33.33 33.33  2.3     3.76 1.69
 \end{verbatim}
 
 \begin{Shaded}
@@ -2051,7 +2051,7 @@ Using the \emph{describe()} function from the \emph{psych} package, we can inves
 ## [1] 33
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 35 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%.
 
 We need to decide what is our retention threshhold. Twenty percent seems to be a general rule of thumb. Let's delete all cases with missingness at 20\% or greater.
 
@@ -2067,10 +2067,10 @@ We need to decide what is our retention threshhold. Twenty percent seems to be a
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 29
+## [1] 32
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 29 cases.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 35 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 32 cases.
 
 With a decision about the number of cases we are going to include, we can continue to analyze missingness.
 
@@ -2098,7 +2098,7 @@ Again, we look at missingness as the proportion of
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 1.15%
+## [1] 1.04%
 \end{verbatim}
 
 \begin{Shaded}
@@ -2108,10 +2108,10 @@ Again, we look at missingness as the proportion of
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 93.10%
+## [1] 93.75%
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 29 cases. In this dataset we had 1.15\% missing across the df; 93.10\% of the rows had nonmissing data.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 35 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 32 cases. In this dataset we had 1.04\% missing across the df; 93.75\% of the rows had nonmissing data.
 
 Let's look again at missing patterns and mechanisms.
 
@@ -2222,9 +2222,9 @@ All analyses were completed in R Studio (v. 1.4.1106) with R (v. 4.0.4).
 
 Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
 
-Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.98\% of cells had missing data and 81.25\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.64\% of cells had missing data and 82.86\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
 
-Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 29 cases. In this dataset we had 1.15\% missing across the df; 93.10\% of the rows had nonmissing data.
+Across the 35 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 32 cases. In this dataset we had 1.04\% missing across the df; 93.75\% of the rows had nonmissing data.
 
 \hypertarget{practice-problems-1}{%
 \section{Practice Problems}\label{practice-problems-1}}
@@ -2551,28 +2551,28 @@ From this, we create tiny dfs, one for each of the alpha coefficients we need to
 ## Call: psych::alpha(x = item_scores_df[c("Belong_1", "Belong_2", "Belong_3")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
-##       0.95      0.95    0.94      0.87  21 0.015  4.2 1.5     0.88
+##       0.95      0.95    0.94      0.87  20 0.014  4.2 1.5     0.87
 ## 
 ##  lower alpha upper     95% confidence boundaries
 ## 0.92 0.95 0.98 
 ## 
 ##  Reliability if an item is dropped:
 ##          raw_alpha std.alpha G6(smc) average_r  S/N alpha se var.r med.r
-## Belong_1      0.93      0.93    0.88      0.88 14.2    0.023    NA  0.88
-## Belong_2      0.90      0.90    0.82      0.82  8.9    0.036    NA  0.82
-## Belong_3      0.96      0.96    0.93      0.93 24.8    0.014    NA  0.93
+## Belong_1      0.93      0.93    0.87      0.87 13.8    0.023    NA  0.87
+## Belong_2      0.90      0.90    0.82      0.82  8.9    0.034    NA  0.82
+## Belong_3      0.96      0.96    0.92      0.92 24.6    0.013    NA  0.92
 ## 
 ##  Item statistics 
 ##           n raw.r std.r r.cor r.drop mean  sd
-## Belong_1 31  0.95  0.96  0.93   0.90  4.3 1.6
-## Belong_2 32  0.97  0.98  0.97   0.94  4.4 1.6
-## Belong_3 31  0.94  0.94  0.88   0.86  4.0 1.6
+## Belong_1 34  0.95  0.96  0.93   0.90  4.3 1.5
+## Belong_2 35  0.97  0.98  0.97   0.94  4.4 1.5
+## Belong_3 34  0.94  0.94  0.88   0.86  4.0 1.6
 ## 
 ## Non missing response frequency for each item
 ##             1    2    3    4    5    6    7 miss
-## Belong_1 0.03 0.10 0.23 0.16 0.23 0.19 0.06 0.03
-## Belong_2 0.03 0.06 0.25 0.19 0.16 0.25 0.06 0.00
-## Belong_3 0.06 0.16 0.13 0.23 0.26 0.10 0.06 0.03
+## Belong_1 0.03 0.09 0.21 0.21 0.24 0.18 0.06 0.03
+## Belong_2 0.03 0.06 0.23 0.23 0.17 0.23 0.06 0.00
+## Belong_3 0.06 0.15 0.12 0.26 0.26 0.09 0.06 0.03
 \end{verbatim}
 
 CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the belonging scale was 0.953.
@@ -2590,41 +2590,41 @@ CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the descr
 ## Call: psych::alpha(x = item_scores_df[c("rBlst_1", "Blst_2", "Blst_3", 
 ##     "Blst_4", "Blst_5", "Blst_6")])
 ## 
-##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean sd median_r
-##       0.84      0.86    0.89      0.51 6.2 0.044  2.5  1     0.52
+##   raw_alpha std.alpha G6(smc) average_r S/N  ase mean sd median_r
+##       0.85      0.87    0.89      0.53 6.7 0.04  2.4  1     0.55
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.76 0.84 0.93 
+## 0.77 0.85 0.93 
 ## 
 ##  Reliability if an item is dropped:
 ##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
-## rBlst_1      0.84      0.86    0.89      0.55 6.2    0.047 0.034  0.58
-## Blst_2       0.85      0.86    0.87      0.55 6.1    0.045 0.031  0.57
-## Blst_3       0.85      0.87    0.89      0.57 6.6    0.043 0.024  0.57
-## Blst_4       0.80      0.82    0.85      0.48 4.5    0.059 0.035  0.46
-## Blst_5       0.78      0.81    0.84      0.47 4.4    0.062 0.036  0.48
-## Blst_6       0.79      0.80    0.80      0.44 4.0    0.060 0.025  0.46
+## rBlst_1      0.85      0.87    0.89      0.57 6.6    0.043 0.029  0.59
+## Blst_2       0.86      0.87    0.87      0.57 6.5    0.040 0.026  0.59
+## Blst_3       0.85      0.87    0.89      0.58 6.9    0.040 0.022  0.59
+## Blst_4       0.80      0.83    0.85      0.49 4.9    0.053 0.030  0.48
+## Blst_5       0.80      0.83    0.84      0.49 4.8    0.056 0.031  0.49
+## Blst_6       0.80      0.81    0.82      0.47 4.4    0.053 0.023  0.48
 ## 
 ##  Item statistics 
 ##          n raw.r std.r r.cor r.drop mean   sd
-## rBlst_1 28  0.67  0.68  0.58   0.51  3.3 1.30
-## Blst_2  31  0.73  0.68  0.61   0.54  2.9 1.69
-## Blst_3  31  0.64  0.64  0.56   0.46  2.2 1.34
-## Blst_4  30  0.84  0.84  0.83   0.74  2.4 1.19
-## Blst_5  31  0.88  0.86  0.85   0.79  2.1 1.24
-## Blst_6  31  0.87  0.91  0.93   0.85  2.1 0.99
+## rBlst_1 31  0.69  0.69  0.60   0.54  3.2 1.29
+## Blst_2  34  0.75  0.69  0.63   0.55  2.8 1.68
+## Blst_3  34  0.66  0.66  0.58   0.49  2.1 1.31
+## Blst_4  33  0.85  0.85  0.84   0.76  2.3 1.19
+## Blst_5  34  0.88  0.86  0.85   0.80  2.0 1.21
+## Blst_6  34  0.86  0.91  0.92   0.83  2.1 0.97
 ## 
 ## Non missing response frequency for each item
 ##            1    2    3    4    5    6 miss
-## rBlst_1 0.07 0.21 0.29 0.29 0.07 0.07 0.12
-## Blst_2  0.32 0.16 0.13 0.13 0.23 0.03 0.03
-## Blst_3  0.39 0.35 0.06 0.13 0.03 0.03 0.03
-## Blst_4  0.23 0.37 0.20 0.13 0.07 0.00 0.06
-## Blst_5  0.45 0.26 0.10 0.16 0.03 0.00 0.03
-## Blst_6  0.29 0.42 0.16 0.13 0.00 0.00 0.03
+## rBlst_1 0.06 0.29 0.26 0.26 0.06 0.06 0.11
+## Blst_2  0.35 0.15 0.12 0.15 0.21 0.03 0.03
+## Blst_3  0.41 0.35 0.06 0.12 0.03 0.03 0.03
+## Blst_4  0.27 0.36 0.18 0.12 0.06 0.00 0.06
+## Blst_5  0.47 0.26 0.09 0.15 0.03 0.00 0.03
+## Blst_6  0.29 0.44 0.15 0.12 0.00 0.00 0.03
 \end{verbatim}
 
-CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the campus climate scale was 0.843. Since this value is \(\geq\) .80, it is within the realm of acceptability. Let's go ahead, though, and look at its subscales.
+CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the campus climate scale was 0.851. Since this value is \(\geq\) .80, it is within the realm of acceptability. Let's go ahead, though, and look at its subscales.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2639,31 +2639,31 @@ CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the desc
 ## Call: psych::alpha(x = item_scores_df[c("Blst_3", "Blst_2", "Blst_5")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
-##        0.7      0.72    0.71      0.46 2.6 0.094  2.4 1.2      0.5
+##       0.72      0.74    0.72      0.48 2.8 0.084  2.3 1.2     0.52
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.52 0.7 0.88 
+## 0.55 0.72 0.88 
 ## 
 ##  Reliability if an item is dropped:
 ##        raw_alpha std.alpha G6(smc) average_r  S/N alpha se var.r med.r
-## Blst_3      0.78      0.80    0.67      0.67 4.01    0.072    NA  0.67
-## Blst_2      0.67      0.67    0.50      0.50 2.01    0.117    NA  0.50
-## Blst_5      0.34      0.35    0.21      0.21 0.54    0.226    NA  0.21
+## Blst_3      0.78      0.81    0.68      0.68 4.19    0.067    NA  0.68
+## Blst_2      0.68      0.68    0.52      0.52 2.16    0.107    NA  0.52
+## Blst_5      0.39      0.40    0.25      0.25 0.67    0.199    NA  0.25
 ## 
 ##  Item statistics 
 ##         n raw.r std.r r.cor r.drop mean  sd
-## Blst_3 31  0.69  0.71  0.49   0.37  2.2 1.3
-## Blst_2 31  0.82  0.78  0.67   0.50  2.9 1.7
-## Blst_5 31  0.90  0.90  0.87   0.76  2.1 1.2
+## Blst_3 34  0.71  0.73  0.51   0.40  2.1 1.3
+## Blst_2 34  0.83  0.79  0.68   0.52  2.8 1.7
+## Blst_5 34  0.91  0.90  0.87   0.76  2.0 1.2
 ## 
 ## Non missing response frequency for each item
 ##           1    2    3    4    5    6 miss
-## Blst_3 0.39 0.35 0.06 0.13 0.03 0.03 0.03
-## Blst_2 0.32 0.16 0.13 0.13 0.23 0.03 0.03
-## Blst_5 0.45 0.26 0.10 0.16 0.03 0.00 0.03
+## Blst_3 0.41 0.35 0.06 0.12 0.03 0.03 0.03
+## Blst_2 0.35 0.15 0.12 0.15 0.21 0.03 0.03
+## Blst_5 0.47 0.26 0.09 0.15 0.03 0.00 0.03
 \end{verbatim}
 
-Cronbach's alpha for the campus climate stigma subscale was 0.700.
+Cronbach's alpha for the campus climate stigma subscale was 0.717.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2678,31 +2678,31 @@ Cronbach's alpha for the campus climate stigma subscale was 0.700.
 ## Call: psych::alpha(x = item_scores_df[c("rBlst_1", "Blst_4", "Blst_6")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean sd median_r
-##       0.84      0.85    0.81      0.65 5.6 0.052  2.6  1      0.6
+##       0.84      0.85    0.82      0.66 5.9 0.047  2.5  1      0.6
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.73 0.84 0.94 
+## 0.75 0.84 0.93 
 ## 
 ##  Reliability if an item is dropped:
 ##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
-## rBlst_1      0.88      0.89    0.81      0.81 8.3    0.039    NA  0.81
-## Blst_4       0.73      0.75    0.60      0.60 3.0    0.090    NA  0.60
-## Blst_6       0.71      0.71    0.55      0.55 2.4    0.103    NA  0.55
+## rBlst_1      0.88      0.89    0.80      0.80 7.9    0.039    NA  0.80
+## Blst_4       0.73      0.75    0.60      0.60 3.0    0.085    NA  0.60
+## Blst_6       0.74      0.74    0.59      0.59 2.8    0.088    NA  0.59
 ## 
 ##  Item statistics 
 ##          n raw.r std.r r.cor r.drop mean   sd
-## rBlst_1 28  0.83  0.82  0.64   0.60  3.3 1.30
-## Blst_4  30  0.89  0.90  0.85   0.74  2.4 1.19
-## Blst_6  31  0.89  0.92  0.88   0.79  2.1 0.99
+## rBlst_1 31  0.85  0.83  0.66   0.62  3.2 1.29
+## Blst_4  33  0.90  0.90  0.86   0.75  2.3 1.19
+## Blst_6  34  0.89  0.91  0.87   0.78  2.1 0.97
 ## 
 ## Non missing response frequency for each item
 ##            1    2    3    4    5    6 miss
-## rBlst_1 0.07 0.21 0.29 0.29 0.07 0.07 0.12
-## Blst_4  0.23 0.37 0.20 0.13 0.07 0.00 0.06
-## Blst_6  0.29 0.42 0.16 0.13 0.00 0.00 0.03
+## rBlst_1 0.06 0.29 0.26 0.26 0.06 0.06 0.11
+## Blst_4  0.27 0.36 0.18 0.12 0.06 0.00 0.06
+## Blst_6  0.29 0.44 0.15 0.12 0.00 0.00 0.03
 \end{verbatim}
 
-Cronbach's alpha for the campus climate responsiveness subscale was 0.836. Between the two subscales, it looks as if the responsivenes subscale is more internally consistent.
+Cronbach's alpha for the campus climate responsiveness subscale was 0.842. Between the two subscales, it looks as if the responsivenes subscale is more internally consistent.
 
 \hypertarget{distributional-characteristics-of-the-variables}{%
 \section{Distributional Characteristics of the Variables}\label{distributional-characteristics-of-the-variables}}
@@ -2723,7 +2723,7 @@ The \emph{str()} function let's us look at the variable format/measurement level
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    32 obs. of  17 variables:
+## 'data.frame':    35 obs. of  17 variables:
 ##  $ ID        : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iBIPOC_pr : num  0.333 0 0.5 0.333 1 ...
 ##  $ cmBlack   : int  0 5 10 6 5 20 0 0 0 4 ...
@@ -2760,15 +2760,15 @@ The difference between ``int'' (integer) and ``num'' (numerical) is that integer
 
 \begin{verbatim}
 ##           vars  n mean   sd median trimmed  mad min   max range  skew kurtosis
-## iBIPOC_pr    1 30 0.42 0.40   0.33    0.40 0.49   0  1.00  1.00  0.44    -1.39
-## cmBlack      2 32 7.53 8.61   5.00    6.23 7.41   0 29.00 29.00  1.10    -0.07
-## Belonging    3 31 4.24 1.52   4.00    4.28 1.97   1  7.00  6.00 -0.19    -0.93
-## ClimateBL    4 29 2.44 0.99   2.33    2.41 0.99   1  4.17  3.17  0.15    -1.15
+## iBIPOC_pr    1 33 0.45 0.41   0.33    0.44 0.49   0  1.00  1.00  0.29    -1.52
+## cmBlack      2 35 7.09 8.37   5.00    5.83 7.41   0 29.00 29.00  1.22     0.27
+## Belonging    3 34 4.25 1.46   4.00    4.29 1.48   1  7.00  6.00 -0.21    -0.75
+## ClimateBL    4 32 2.36 0.98   2.33    2.31 0.99   1  4.17  3.17  0.26    -1.12
 ##             se
 ## iBIPOC_pr 0.07
-## cmBlack   1.52
-## Belonging 0.27
-## ClimateBL 0.18
+## cmBlack   1.41
+## Belonging 0.25
+## ClimateBL 0.17
 \end{verbatim}
 
 \begin{Shaded}
@@ -2798,7 +2798,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$iBIPOC_pr
-## W = 0.81478, p-value = 0.0001234
+## W = 0.81879, p-value = 7.522e-05
 \end{verbatim}
 
 \begin{Shaded}
@@ -2812,7 +2812,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$cmBlack
-## W = 0.8114, p-value = 6.726e-05
+## W = 0.79608, p-value = 1.711e-05
 \end{verbatim}
 
 \begin{Shaded}
@@ -2826,7 +2826,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$Belonging
-## W = 0.9774, p-value = 0.7373
+## W = 0.98006, p-value = 0.7746
 \end{verbatim}
 
 \begin{Shaded}
@@ -2840,10 +2840,10 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$ClimateBL
-## W = 0.94983, p-value = 0.1812
+## W = 0.94352, p-value = 0.09427
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.811, \(p\) = 0.0001) and the proportion of BIPOC instructional staff(\(W\) = 0.815, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.7373) and the respondent's perception of campus climate for Black students (\(W\) = 0.950, \(p\) = 0.1812) did not differ differently from a normal distribution.
+CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.796, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.819, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.980, \(p\) = 0.7746) and the respondent's perception of campus climate for Black students (\(W\) = 0.944, \(p\) = 0.0943) did not differ differently from a normal distribution.
 
 \emph{Note. Owing to the open nature of the dataset, these values will change. While I have used inline text to update the values of the Shapiro Wilks' and associated significance test, the text narration is not automatically updated and may be inconsistent with the results.}
 
@@ -2906,8 +2906,8 @@ It is possible, then to analyze the Mahalanobis distance values.
 \end{Shaded}
 
 \begin{verbatim}
-##    vars  n mean   sd median trimmed  mad  min  max range skew kurtosis   se
-## X1    1 32 3.71 2.12   3.42     3.6 2.28 0.15 8.13  7.98 0.38    -0.81 0.37
+##    vars  n mean  sd median trimmed  mad  min  max range skew kurtosis   se
+## X1    1 35 3.73 2.2   2.97    3.61 1.93 0.16 8.62  8.47 0.56    -0.73 0.37
 \end{verbatim}
 
 Using this information we can determine cases that have a Mahalanobis distance values that exceeds three standard deviations around the median. In fact, we can have these noted in a column in the dataframe.
@@ -2927,7 +2927,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier  n
-## 1    FALSE 32
+## 1    FALSE 35
 \end{verbatim}
 
 \begin{Shaded}
@@ -2939,7 +2939,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier n
-## 1       32 0
+## 1       35 0
 \end{verbatim}
 
 \begin{Shaded}
@@ -2950,7 +2950,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier n
-## 1       32 0
+## 1       35 0
 \end{verbatim}
 
 \begin{Shaded}
@@ -2968,12 +2968,12 @@ Using this information we can determine cases that have a Mahalanobis distance v
 ## 5  5 1.0000000       5        4        4        4      6      1      1      1
 ## 6  6 0.0000000      20        5        6        5      5      1      1      2
 ##   Blst_5 Blst_6 rBlst_1 Belonging ResponseBL StigmaBL ClimateBL     Mahal
-## 1      2      2       3      6.33       2.33     3.33      2.83 2.6489551
-## 2      4      1       2      4.67       1.67     4.00      2.83 1.5353663
-## 3     NA      2      NA        NA       2.00     3.50        NA 0.1480728
-## 4      2      2       6      3.33       3.33     2.00      2.67 0.4787930
-## 5      1      1       2      4.00       1.33     1.00      1.17 4.0568827
-## 6      1      2       3      5.33       2.33     1.00      1.67 5.0889842
+## 1      2      2       3      6.33       2.33     3.33      2.83 2.9673480
+## 2      4      1       2      4.67       1.67     4.00      2.83 1.7371201
+## 3     NA      2      NA        NA       2.00     3.50        NA 0.1558085
+## 4      2      2       6      3.33       3.33     2.00      2.67 0.5402422
+## 5      1      1       2      4.00       1.33     1.00      1.17 3.2464362
+## 6      1      2       3      5.33       2.33     1.00      1.67 5.5422029
 ##   MOutlier
 ## 1    FALSE
 ## 2    FALSE
@@ -3002,15 +3002,15 @@ Since the focus of this chapter was on data diagnostics, the APA style writeup w
 \hypertarget{data-diagnostics}{%
 \subsection{Data Diagnostics}\label{data-diagnostics}}
 
-Data screening suggested that 34 individuals opened the survey link. Of those, 32 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria.
+Data screening suggested that 43 individuals opened the survey link. Of those, 38 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 35 met this criteria.
 
 Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
 
-Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.98\% of cells had missing data and 81.25\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.64\% of cells had missing data and 82.86\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
 
-Across the 32 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 29 cases. In this dataset we had 1.15\% missing across the df; 93.10\% of the rows had nonmissing data.
+Across the 35 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 32 cases. In this dataset we had 1.04\% missing across the df; 93.75\% of the rows had nonmissing data.
 
-Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.811, \(p\) = 0.0001) and the proportion of BIPOC instructional staff(\(W\) = 0.815, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.7373) and the respondent's perception of campus climate for Black students (\(W\) = 0.950, \(p\) = 0.1812) did not differ differently from a normal distribution.
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.796, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.819, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.980, \(p\) = 0.7746) and the respondent's perception of campus climate for Black students (\(W\) = 0.944, \(p\) = 0.0943) did not differ differently from a normal distribution.
 
 We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.
 
@@ -3041,21 +3041,21 @@ With some confidence that our scrubbed-and-scored variables are appropriate for 
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -1.67164 -0.72382 -0.02559  0.66490  1.66682 
+## -1.59678 -0.72788 -0.06864  0.58176  1.83125 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  2.58690    0.65218   3.967 0.000611 ***
-## Belonging    0.02799    0.13674   0.205 0.839623    
-## cmBlack     -0.02396    0.02160  -1.110 0.278664    
-## iBIPOC_pr   -0.36969    0.49354  -0.749 0.461417    
+## (Intercept)  2.48388    0.63582   3.907 0.000596 ***
+## Belonging    0.03683    0.13404   0.275 0.785651    
+## cmBlack     -0.01827    0.02097  -0.871 0.391660    
+## iBIPOC_pr   -0.48103    0.45328  -1.061 0.298354    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.9877 on 23 degrees of freedom
+## Residual standard error: 0.978 on 26 degrees of freedom
 ##   (5 observations deleted due to missingness)
-## Multiple R-squared:  0.07555,    Adjusted R-squared:  -0.04503 
-## F-statistic: 0.6265 on 3 and 23 DF,  p-value: 0.6052
+## Multiple R-squared:  0.06678,    Adjusted R-squared:  -0.0409 
+## F-statistic: 0.6202 on 3 and 26 DF,  p-value: 0.6083
 \end{verbatim}
 
 \begin{Shaded}
@@ -3071,7 +3071,7 @@ With some confidence that our scrubbed-and-scored variables are appropriate for 
 ## [13] "model"
 \end{verbatim}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.028, \(p\) = 0.840) nor the proportion of BIPOC instructional staff (\(B\) = -0.370, \(p\) = 0.461), nor the proportion of Black classmates (\(B\) = -0.024, \(p\) = 0.279) led to statistically significant changes in perceptions of campus climate for Black students. Although it accounted for 7.55\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.037, \(p\) = 0.786) nor the proportion of BIPOC instructional staff (\(B\) = -0.481, \(p\) = 0.298), nor the proportion of Black classmates (\(B\) = -0.018, \(p\) = 0.392) led to statistically significant changes in perceptions of campus climate for Black students. Although it accounted for 6.68\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3089,16 +3089,16 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##  
 ## 
 ##   Variable     M    SD   1           2           3          
-##   1. iBIPOC_pr 0.42 0.40                                    
+##   1. iBIPOC_pr 0.45 0.41                                    
 ##                                                             
-##   2. cmBlack   7.53 8.61 -.07                               
-##                          [-.42, .29]                        
+##   2. cmBlack   7.09 8.37 -.11                               
+##                          [-.44, .24]                        
 ##                                                             
-##   3. Belonging 4.24 1.52 .27         -.23                   
-##                          [-.11, .58] [-.54, .14]            
+##   3. Belonging 4.25 1.46 .26         -.22                   
+##                          [-.10, .56] [-.52, .12]            
 ##                                                             
-##   4. ClimateBL 2.44 0.99 -.14        -.24        -.04       
-##                          [-.49, .26] [-.55, .14] [-.40, .33]
+##   4. ClimateBL 2.36 0.98 -.18        -.17        -.06       
+##                          [-.51, .19] [-.49, .19] [-.40, .30]
 ##                                                             
 ## 
 ## Note. M and SD are used to represent mean and standard deviation, respectively.
@@ -3125,10 +3125,10 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##  
 ## 
 ##    Predictor      b      b_95%_CI  beta   beta_95%_CI sr2  sr2_95%_CI    r
-##  (Intercept) 2.59**  [1.24, 3.94]                                         
-##    Belonging   0.03 [-0.25, 0.31]  0.04 [-0.39, 0.48] .00 [-.03, .03]  .05
-##      cmBlack  -0.02 [-0.07, 0.02] -0.23 [-0.65, 0.20] .05 [-.11, .21] -.23
-##    iBIPOC_pr  -0.37 [-1.39, 0.65] -0.15 [-0.58, 0.27] .02 [-.09, .13] -.14
+##  (Intercept) 2.48**  [1.18, 3.79]                                         
+##    Belonging   0.04 [-0.24, 0.31]  0.05 [-0.35, 0.46] .00 [-.03, .04]  .04
+##      cmBlack  -0.02 [-0.06, 0.02] -0.17 [-0.57, 0.23] .03 [-.09, .14] -.16
+##    iBIPOC_pr  -0.48 [-1.41, 0.45] -0.21 [-0.61, 0.19] .04 [-.10, .18] -.18
 ##                                                                           
 ##                                                                           
 ##                                                                           
@@ -3137,8 +3137,8 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##                 
 ##                 
 ##                 
-##        R2 = .076
-##  95% CI[.00,.23]
+##        R2 = .067
+##  95% CI[.00,.21]
 ##                 
 ## 
 ## Note. A significant b-weight indicates the beta-weight and semi-partial correlation are also significant.
@@ -3776,10 +3776,10 @@ Recall one of the guidelines was to remove variables with more than 25\% missing
 \end{Shaded}
 
 \begin{verbatim}
-##    Blst_1 iBIPOC_pr    Blst_4  Belong_1  Belong_3    Blst_2    Blst_3    Blst_5 
-##   0.12500   0.06250   0.06250   0.03125   0.03125   0.03125   0.03125   0.03125 
-##    Blst_6   cEval_1  cEval_19 
-##   0.03125   0.03125   0.03125
+##     Blst_1  iBIPOC_pr     Blst_4   Belong_1   Belong_3     Blst_2     Blst_3 
+## 0.11428571 0.05714286 0.05714286 0.02857143 0.02857143 0.02857143 0.02857143 
+##     Blst_5     Blst_6    cEval_1   cEval_19 
+## 0.02857143 0.02857143 0.02857143 0.02857143
 \end{verbatim}
 
 Luckily, none of our variables have more than 25\% missing (\emph{or at least they didn't when I wrote this; the open nature of the survey and how it sources this chapter could change this}). If we did have a variable with more than 25\% missing, we would have to consider what to do about it.
@@ -4000,26 +4000,26 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 ## # A tibble: 20 x 6
 ##    term        estimate std.error statistic   p.value  nobs
 ##    <chr>          <dbl>     <dbl>     <dbl>     <dbl> <int>
-##  1 (Intercept)  2.84       0.625     4.55   0.0000960    32
-##  2 Belonging   -0.0153     0.126    -0.121  0.905        32
-##  3 cmBlack     -0.0296     0.0217   -1.36   0.184        32
-##  4 iBIPOC_pr   -0.0778     0.462    -0.168  0.868        32
-##  5 (Intercept)  2.88       0.619     4.65   0.0000724    32
-##  6 Belonging   -0.0266     0.123    -0.216  0.831        32
-##  7 cmBlack     -0.0289     0.0214   -1.35   0.188        32
-##  8 iBIPOC_pr   -0.103      0.439    -0.234  0.817        32
-##  9 (Intercept)  2.95       0.600     4.91   0.0000353    32
-## 10 Belonging   -0.00779    0.127    -0.0614 0.951        32
-## 11 cmBlack     -0.0288     0.0214   -1.34   0.189        32
-## 12 iBIPOC_pr   -0.418      0.475    -0.880  0.386        32
-## 13 (Intercept)  2.89       0.606     4.77   0.0000522    32
-## 14 Belonging   -0.0353     0.124    -0.285  0.777        32
-## 15 cmBlack     -0.0279     0.0212   -1.32   0.198        32
-## 16 iBIPOC_pr   -0.145      0.445    -0.325  0.748        32
-## 17 (Intercept)  2.90       0.632     4.59   0.0000859    32
-## 18 Belonging   -0.0280     0.126    -0.222  0.826        32
-## 19 cmBlack     -0.0281     0.0218   -1.29   0.209        32
-## 20 iBIPOC_pr   -0.118      0.447    -0.265  0.793        32
+##  1 (Intercept)   2.78      0.601      4.63  0.0000619    35
+##  2 Belonging    -0.0222    0.123     -0.181 0.858        35
+##  3 cmBlack      -0.0220    0.0213    -1.03  0.310        35
+##  4 iBIPOC_pr    -0.279     0.429     -0.651 0.520        35
+##  5 (Intercept)   2.80      0.599      4.67  0.0000544    35
+##  6 Belonging    -0.0272    0.123     -0.222 0.826        35
+##  7 cmBlack      -0.0214    0.0214    -1.00  0.325        35
+##  8 iBIPOC_pr    -0.306     0.431     -0.711 0.482        35
+##  9 (Intercept)   2.79      0.617      4.51  0.0000861    35
+## 10 Belonging    -0.0241    0.124     -0.195 0.847        35
+## 11 cmBlack      -0.0217    0.0211    -1.03  0.312        35
+## 12 iBIPOC_pr    -0.199     0.420     -0.475 0.638        35
+## 13 (Intercept)   2.80      0.632      4.44  0.000107     35
+## 14 Belonging    -0.0225    0.127     -0.177 0.860        35
+## 15 cmBlack      -0.0208    0.0217    -0.959 0.345        35
+## 16 iBIPOC_pr    -0.275     0.431     -0.638 0.528        35
+## 17 (Intercept)   2.79      0.599      4.65  0.0000577    35
+## 18 Belonging    -0.0267    0.122     -0.220 0.827        35
+## 19 cmBlack      -0.0222    0.0209    -1.06  0.296        35
+## 20 iBIPOC_pr    -0.245     0.427     -0.573 0.571        35
 \end{verbatim}
 
 \begin{Shaded}
@@ -4033,15 +4033,15 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 \begin{verbatim}
 ## Class: mipo    m = 5 
 ##          term m    estimate         ubar            b            t dfcom
-## 1 (Intercept) 5  2.89046308 0.3800146853 1.402721e-03 0.3816979504    28
-## 2   Belonging 5 -0.02259404 0.0156938264 1.196715e-04 0.0158374322    28
-## 3     cmBlack 5 -0.02864923 0.0004623656 4.779758e-07 0.0004629391    28
-## 4   iBIPOC_pr 5 -0.17228649 0.2058654746 1.946196e-02 0.2292198257    28
-##         df         riv      lambda        fmi
-## 1 26.07473 0.004429474 0.004409940 0.07289484
-## 2 25.94220 0.009150461 0.009067490 0.07754415
-## 3 26.16083 0.001240514 0.001238977 0.06973915
-## 4 22.17120 0.113444720 0.101886262 0.17324669
+## 1 (Intercept) 5  2.79273244 0.3720140516 9.160194e-05 0.3721239739    31
+## 2   Belonging 5 -0.02456240 0.0152744338 5.380522e-06 0.0152808904    31
+## 3     cmBlack 5 -0.02162317 0.0004525053 3.143697e-07 0.0004528825    31
+## 4   iBIPOC_pr 5 -0.26087860 0.1827024015 1.655713e-03 0.1846892574    31
+##         df          riv       lambda        fmi
+## 1 29.16783 0.0002954790 0.0002953917 0.06245094
+## 2 29.16410 0.0004227081 0.0004225295 0.06257737
+## 3 29.15202 0.0008336779 0.0008329835 0.06298566
+## 4 28.83851 0.0108748211 0.0107578316 0.07289906
 \end{verbatim}
 
 \begin{Shaded}
@@ -4058,11 +4058,11 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 \end{Shaded}
 
 \begin{verbatim}
-##          term    estimate  std.error statistic       df      p.value
-## 1 (Intercept)  2.89046308 0.61781708  4.678509 26.07473 7.803438e-05
-## 2   Belonging -0.02259404 0.12584686 -0.179536 25.94220 8.589118e-01
-## 3     cmBlack -0.02864923 0.02151602 -1.331530 26.16083 1.945013e-01
-## 4   iBIPOC_pr -0.17228649 0.47876907 -0.359853 22.17120 7.223622e-01
+##          term    estimate  std.error  statistic       df      p.value
+## 1 (Intercept)  2.79273244 0.61001965  4.5781024 29.16783 8.086828e-05
+## 2   Belonging -0.02456240 0.12361590 -0.1986994 29.16410 8.438766e-01
+## 3     cmBlack -0.02162317 0.02128104 -1.0160767 29.15202 3.179521e-01
+## 4   iBIPOC_pr -0.26087860 0.42975488 -0.6070404 28.83851 5.485741e-01
 \end{verbatim}
 
 \begin{Shaded}
@@ -4071,7 +4071,7 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 \end{Highlighting}
 \end{Shaded}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.023, \(p\) = 0.859) nor the proportion of BIPOC instructional staff (\(B\) = -0.172, \(p\) = 0.722) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.029, \(p\) = 0.195). Results are presented in Table X.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.025, \(p\) = 0.844) nor the proportion of BIPOC instructional staff (\(B\) = -0.261, \(p\) = 0.549) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.022, \(p\) = 0.318). Results are presented in Table X.
 
 \hypertarget{toward-the-apa-style-write-up-1}{%
 \section{Toward the APA Style Write-up}\label{toward-the-apa-style-write-up-1}}
@@ -4079,9 +4079,9 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 \hypertarget{methoddata-diagnostics}{%
 \subsection{Method/Data Diagnostics}\label{methoddata-diagnostics}}
 
-Data screening suggested that 34 individuals opened the survey link. Of those, 32 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 32 met this criteria. Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.98\% of cells had missing data and 81.25\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50\% missing to be included the multiple imputation \citep{katitas_getting_2019}.
+Data screening suggested that 43 individuals opened the survey link. Of those, 38 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 35 met this criteria. Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.64\% of cells had missing data and 82.86\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50\% missing to be included the multiple imputation \citep{katitas_getting_2019}.
 
-Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.811, \(p\) = 0.0001) and the proportion of BIPOC instructional staff(\(W\) = 0.815, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.7373) and the respondent's perception of campus climate for Black students (\(W\) = 0.950, \(p\) = 0.1812) did not differ differently from a normal distribution.
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.796, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.819, \(p\) = 0.0001) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.980, \(p\) = 0.7746) and the respondent's perception of campus climate for Black students (\(W\) = 0.944, \(p\) = 0.0943) did not differ differently from a normal distribution.
 
 We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.*
 
@@ -4090,7 +4090,7 @@ We managed missing data with multiple imputation \citep{enders_multiple_2017, ka
 \hypertarget{results-1}{%
 \subsection{Results}\label{results-1}}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.028, \(p\) = 0.840) nor the proportion of BIPOC instructional staff (\(B\) = -0.370, \(p\) = 0.461) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.024, \(p\) = 0.279). Although it accounted for 7.55\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.037, \(p\) = 0.786) nor the proportion of BIPOC instructional staff (\(B\) = -0.481, \(p\) = 0.298) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.018, \(p\) = 0.392). Although it accounted for 6.68\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
 
 \textbf{Some notes about this write-up}
 
@@ -4308,6 +4308,1732 @@ Assignment Component & Points Possible & Points Earned \\
 \hypertarget{refs}{%
 \chapter*{References}\label{refs}}
 \addcontentsline{toc}{chapter}{References}
+
+\hypertarget{SimpleMed}{%
+\chapter{Simple Mediation}\label{SimpleMed}}
+
+\href{https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=7ffb03e6-b34b-4e0b-8f10-ad080180b069}{Screencasted Lecture Link}
+
+The focus of this lecture is to estimate indirect effects (aka ``mediation''). We examine the logic/design required to support the argument that \emph{mediation} is the \emph{mechanism} that explains the X --\textgreater{} Y relationship. We also work three examples (one with covariates).
+
+At the outset, please note that although I rely heavily on Hayes \citeyearpar{hayes_introduction_2018} text and materials, I am using the R package \emph{lavaan} in these chapters. Very recently, Hayes has introduced a \href{https://www.processmacro.org/index.html}{PROCESS macro for R}. Because I am not yet up-to-speed on using this macro (it is not a typical R package) and because we will use \emph{lavaan} for confirmatory factor analysis and structural equation modeling, I have chosen to utilize the \emph{lavaan} package. A substantial difference is that the PROCESS macros use ordinary least squares and \emph{lavaan} uses maximum likelihood estimators.
+
+\hypertarget{navigating-this-lesson-4}{%
+\section{Navigating this Lesson}\label{navigating-this-lesson-4}}
+
+There is about 1 hour and 10 minutes of lecture. If you work through the materials with me it would be plan for an additional 1.5 hours.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, ocasionally there are some that cannot be created from within the R framework. Additionally, sometimes links fail. All original materials are provided at the \href{https://github.com/lhbikos/ReC_MultivariateModeling}{Github site} that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's \protect\hyperlink{ReCintro}{introduction}
+
+\hypertarget{learning-objectives-4}{%
+\subsection{Learning Objectives}\label{learning-objectives-4}}
+
+Learning objectives from this lecture include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Define mediation and indirect effect.
+\item
+  Distinguish the role of a mediating variable from independent variables, covariates, and moderators.
+\item
+  Identify the conditions upon which there can be justification to support the presence of a mediated effect.
+\item
+  Articulate the arguments for and against using the term, ``mediation.''
+\item
+  Using the R package \emph{lavaan},
+
+  \begin{itemize}
+  \tightlist
+  \item
+    specify a model with indirect effects,
+  \item
+    identify and interpret B weights, \emph{p} values, and \emph{CIs} for total, direct, and indirect effects,
+  \item
+    calculate the total effects of X and M on Y,
+  \item
+    identify the proportion of variance accounted for in predicting M and Y.
+  \end{itemize}
+\item
+  Hand calculate the values of an indirect, direct, and total effects from statistical output or a figure (just the \(B\) or \(\beta\), not the significance level)
+\end{itemize}
+
+\hypertarget{planning-for-practice-4}{%
+\subsection{Planning for Practice}\label{planning-for-practice-4}}
+
+The following suggestions for practice will involve specifying, testing, and interpreting a model with a single indirect effect (mediator).
+
+\begin{itemize}
+\tightlist
+\item
+  Rework the problem in the chapter by changing the random seed in the code that simulates the data. This should provide minor changes to the data, but the results will likely be very similar.
+\item
+  There are a number of variables in the dataset and there were a handful of simple mediations conducted in the journal article that sources the research vignette. Swap out one or more variables in the model of simple mediation and compare your solution to the one in the chapter and/or the research article.
+\item
+  Conduct a simple mediation with data to which you have access. This could include data you simulate on your own or from a published article.
+\end{itemize}
+
+\hypertarget{readings-resources-4}{%
+\subsection{Readings \& Resources}\label{readings-resources-4}}
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+\begin{itemize}
+\tightlist
+\item
+  Hayes, A. F. (2018). \emph{Introduction to mediation, moderation, and conditional process anlaysis: A regression-based approach}. New York, NY: Guilford Press. Available as an ebook from the SPU library: \url{https://ebookcentral-proquest-com.ezproxy.spu.edu/lib/spu/detail.action?docID=5109647}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Chapter 3, Simple mediation}: Hayes' text is another great example of a teaching tool that is accessible at both procedural and conceptual levels. I especially appreciate his attention to the controversies (even those directed toward his work). We deviate from his text in that we are not using the PROCESS macro\ldots and I'll address those concerns in the lecture.
+  \item
+    \textbf{Chapter 4, Causality and confounds}: A great chapter that addresses ``What happened to Baron \& Kenny''; partial v complete mediation; and conditions required for claims of causality. Procedurally, our focus in this chapter is on the role of covariates.
+  \item
+    \textbf{Appendix A: Using Process}: An essential tool for PROCESS users because, even when we are in the R environment, this is the ``idea book.'' That is, the place where all the path models are presented in figures.
+  \end{itemize}
+\item
+  Kim, P. Y., Kendall, D. L., \& Cheon, H.-S. (2017). Racial microaggressions, cultural mistrust, and mental health outcomes among Asian American college students. \emph{American Journal of Orthopsychiatry, 87}(6), 663--670. \url{https://doi-org.ezproxy.spu.edu/10.1037/ort0000203}
+\end{itemize}
+
+\hypertarget{packages-5}{%
+\subsection{Packages}\label{packages-5}}
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#will install the package if not already installed}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(lavaan))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"lavaan"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(semPlot))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"semPlot"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(tidyverse))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(psych))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"psych"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(formattable))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"formattable"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(semTable))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"semTable"}\NormalTok{)\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{estimating-indirect-effects-the-analytic-approach-often-termed-mediation}{%
+\section{\texorpdfstring{Estimating Indirect Effects (the analytic approach often termed \emph{mediation})}{Estimating Indirect Effects (the analytic approach often termed mediation)}}\label{estimating-indirect-effects-the-analytic-approach-often-termed-mediation}}
+
+\hypertarget{the-definitional-and-conceptual}{%
+\subsection{The definitional and conceptual}\label{the-definitional-and-conceptual}}
+
+As in Hayes text \citeyearpar{hayes_introduction_2018}, we will differentiate between \emph{moderation} and \emph{mediation}. \emph{Conditional process analysis} involves both! With each of these, we are seeking to understand the \emph{mechanism} at work that leads to the relationship (be it correlational, predictive, or causal)
+
+Even though this process has sometimes been termed \emph{causal modeling}, Hayes argues that his \emph{statistical approach} is not claiming to determine \emph{cause}; that is really left to the argument of the research design.
+
+\textbf{Moderation} (a review):
+
+\begin{itemize}
+\tightlist
+\item
+  Answers questions of \emph{when} or \emph{for whom} and is often the source of the answer, \emph{it depends}.
+\item
+  Think of our \emph{interaction} effects in ANOVA and regression
+\item
+  The effect of X on some variable Y is moderated by W if its size, sign, or strength depends on, or can be predicted, by W. Then we can say, ``W is a \emph{moderator} of X's effect on Y'' or ``W and X \emph{interact} in their influence on Y.''
+\item
+  The image below illustrates moderation with \emph{conceptual} and \emph{statistical} diagrams. Note that three predictors (IV, DV, their interaction) point to the DV.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/ModConcStat.jpg}
+\caption{Image of Hayes'style conceptual and statistical diagrams of a simple moderation}
+\end{figure}
+
+The classic plot of moderation results is often the best way to detect that an interaction was included in the analysis and helps understand the \emph{conditional} (e.g., for whom, under what conditions) nature of the analysis.
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/SimpleInteraction.jpg}
+\caption{Image of classic interaction graph that illustrates a moderated effect. The IV is on the X axis, DV on the Y axis, and two intersecting lines represent the differential/moderated effect of the IV on the DV by the moderator}
+\end{figure}
+
+\textbf{Mediation}:
+
+\begin{itemize}
+\tightlist
+\item
+  Answers questions of \emph{how} (I also think \emph{through} and \emph{via} to describe the proposed mediating mechanism)
+\item
+  Paths in a mediation model are \emph{direct} (X does not pass through M on its way to Y) and \emph{indirect} (X passes through M on its way to Y). Once we get into the statistics, we will also be focused on \emph{total} effects.
+\item
+  Hayes thinks in terms of \emph{antecedent} and \emph{consequent} variables. In a 3-variable, simple mediation, X and M are the antecedent variables; X and M are the consequent variables.\\
+\item
+  There is substantial debate and controversy about whether we can say ``the effect of X on Y is \emph{mediated} through M'' or whether we should say, ``There is a statistically significant indirect effect of X on Y thru M.'' Hayes comes down on the ``use mediation language'' side of the debate.\\
+\item
+  In sum, a simple mediation model is any causal system in which at least one causal antecedent X variable is proposed as influencing an outcome Y through a single intervening variable, M. In such a model there are two pathways by which X can influence Y.
+\item
+  The figure below doubles as both the conceptual and statistical diagram of evaluating a simple mediation -- a simple indirect effect.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/SimpleMed.jpg}
+\caption{Image of Hayes'style conceptual diagram of a simple moderation}
+\end{figure}
+
+\textbf{Conditional process analysis}:
+
+\begin{itemize}
+\tightlist
+\item
+  Used when the research goal is to understand the boundary conditions of the mechanism(s) by which a variable transmits its effect on another.\\
+\item
+  Typically, simultaneously, assesses the influence of mediating (indirect effects) and moderating (interactional effects) in a model-building fashion.
+\item
+  In a conditional process model, the moderator(s) may be hypothesized to influence one or more of the paths.
+\end{itemize}
+
+We will work toward building a conditional process model, a moderated mediation, over the next several chapters.
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=2.60417in,height=1.875in]{images/SimpleMed/CPAmodel.jpg}
+\caption{Image of conditional process analysis model where the moderator is hypothesized to change the a path; the path between the IV and mediator}\label{id}
+}
+\end{figure}
+
+\hypertarget{workflow-for-simple-mediation}{%
+\section{Workflow for Simple Mediation}\label{workflow-for-simple-mediation}}
+
+The workflow for a simple mediation is straightforward, however the figure below (i.e., the very traditional figure used to represent mediation) is very helpful in understanding the logic beneath mediation as the explanatory mechanism.
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/MedRationale.jpg}
+\caption{Image of conditional process analysis model where the mediator is hypothesized to change the a path; the path between the IV and mediator}
+\end{figure}
+
+The top figure represents the bivariate relationship between the independent and dependent variable. The result of a simple linear regression (one predictor) represent the \emph{total} effect of the IV on the DV. We can calculate this by simply regressing the DV onto the IV. The resulting \(B\) weight is known as the \emph{c} path. A bivariate correlation coefficient results in the same value -- only it is standardized (so would be the same as the \(\beta\) weight).
+
+The lower figure represents that the relationship between the IV and DV is \emph{mediated} by a third variable. We assign three labels to the paths: \emph{a}, between the IV and mediator; \emph{b}, between the mediator and DV; and \emph{c'} (c prime) between the IV and DV.
+
+Statistically speaking, a mediated relationship is supported when the value of \emph{c'} is statistically significantly lower than \emph{c}. If this occurs, then we can say that the mediator is sharing some of the variance in the prediction of the DV.
+
+You might already be imagining potential challenges to this model. For example, which variable should be the IV and which one should be the mediator? Can we switch them? You can -- and you will likely have very similar (if not identical) results. Good research design is what provides support for suggesting that mediation is the proper, casual, mechanism regarding the relationship between the IV and DV. An excellent review of the challenges of establishing a robust mediation model is provided by Kline \citeyearpar{kline_mediation_2015}, where he suggests the following as the minimally required elements of a mediation design:
+
+\begin{itemize}
+\tightlist
+\item
+  the IV is an experimental variable with random assignment to conditions;
+\item
+  the mediator is an individual difference variable that is not manipulated and is measured at a later time;and
+\item
+  the DV is measured at a third occasion
+\end{itemize}
+
+These criteria are in addition to the rather standard criteria for establishing causality \citep[see][ for a review]{stone-romero_research_2010}:
+
+\begin{itemize}
+\tightlist
+\item
+  temporal precedence,
+\item
+  statistical covariation, and
+\item
+  ruling out plausible rival hypotheses.
+\end{itemize}
+
+Some journals take this very seriously. In fact \href{https://www.journals.elsevier.com/journal-of-vocational-behavior/news/frequently-asked-questions-about-submitting-a-manuscript}{FAQs} in the Journal of Vocational Behavior make it clear that they will very rarely publish a ``mediation manuscript'' unless it has a minimum of three waves.
+
+Working through a mediation will help operationalize these concepts.
+
+\hypertarget{simple-mediation-in-lavaan-a-focus-on-the-mechanics}{%
+\section{\texorpdfstring{Simple Mediation in \emph{lavaan}: A focus on the mechanics}{Simple Mediation in lavaan: A focus on the mechanics}}\label{simple-mediation-in-lavaan-a-focus-on-the-mechanics}}
+
+The lavaan tutorial \citep{rosseel_lavaan_2020} provides a helpful model of how writing code to estimate an indirect effect. Using the lavaan tutorial as our guide, let's start with just a set of fake data with variable names that represent X (predictor, IV, antecedent), M (mediator, atencedent, consequent), and Y (outcome, DV, consequent).
+
+\hypertarget{simulate-fake-data}{%
+\subsection{Simulate Fake Data}\label{simulate-fake-data}}
+
+The code below is asking to create a dataset with a sample size of 100. The dataset has 3 variables, conveniently named X (predictor, antecedent, IV), M (mediator), and Y (outome, consequent, DV). The R code asks for random selection of numbers with a normal distribution. You can see that the M variable will be related to the X variable by + .5; and the Y variable will be related to the M variable by + .7. This rather ensures a statistically significant indirect effect.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210410}\NormalTok{)}
+\NormalTok{X }\OtherTok{\textless{}{-}} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{M }\OtherTok{\textless{}{-}} \FloatTok{0.5}\SpecialCharTok{*}\NormalTok{X }\SpecialCharTok{+} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{Y }\OtherTok{\textless{}{-}} \FloatTok{0.7}\SpecialCharTok{*}\NormalTok{M }\SpecialCharTok{+} \FunctionTok{rnorm}\NormalTok{(}\DecValTok{100}\NormalTok{)}
+\NormalTok{Data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{X =}\NormalTok{ X, }\AttributeTok{Y =}\NormalTok{ Y, }\AttributeTok{M =}\NormalTok{ M)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{specify-mediation-model}{%
+\subsection{Specify Mediation Model}\label{specify-mediation-model}}
+
+The package we are using is \emph{lavaan}. Hayes' model is \emph{path analysis}, which can be a form of structural equation modeling. As a quick reminder, in SPSS, PROCESS is limited to ordinary least squares regression. We will use maximum likliehood estimators for the Hayes/PROCESS examples, but \emph{lavaan} can take us further than PROCESS because
+
+\begin{itemize}
+\tightlist
+\item
+  We can (and, in later chapters, will) do latent variable modeling.
+\item
+  We can have more specificity and flexibility than the prescribed PROCESS models allow. I say this with all due respect to Hayes -- there is also a good deal of flexibility to be able to add multiple mediators and covariates within most of the Hayes' prescribed models.
+\end{itemize}
+
+Hayes text is still a great place to start because the conceptual and procedural information is clear and transferable to the R environment.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lavaan)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## This is lavaan 0.6-7
+\end{verbatim}
+
+\begin{verbatim}
+## lavaan is BETA software! Please report any bugs.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lavaan'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:psych':
+## 
+##     cor2cov
+\end{verbatim}
+
+Our atheoretical dataset makes it easy to identify which variable belongs in each role (X,Y,M). When specifying the paths in lavaan, here's what to keep in mind:
+
+\begin{itemize}
+\tightlist
+\item
+  Name your model/object (below is X, ``\textless-'' means ``is defined by'')
+\item
+  The model exists between 2 single quotation marks (the odd looking ' and ' at the beginning and end).
+\item
+  The \# of regression equations you need depends on the \# of variables that have arrows pointing to them. In a simple mediation, there are 3 variables with 2 variables having arrows pointing to them -- need 2 regression equations:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    one for the Mediator
+  \item
+    one for the DV (Y)
+  \end{itemize}
+\item
+  Operator for a regression analysis is the (tilde, \textasciitilde)
+\item
+  DV goes on left
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In first equation we regress both the X and M onto Y
+  \item
+    In second equation we regress M onto X
+  \end{itemize}
+\item
+  The asterisk (*) is a handy tool to label variables (don't confuse it as defining an interaction); this labeling as a, b, and c\_p (in traditional mediation, the total effect is labeled with a and the direct effect is c'{[}c prime{]}, but the script won't allow and extra single quotation mark, hence c\_p) is super helpful in interpreting the ouput
+\item
+  The indirect effect is created by multiplying the a and b paths.\\
+\item
+  The ``:='' sign is used when creating a new variable that is a function of variables in the model, but not in the dataset (i.e., the a and b path).
+\end{itemize}
+
+After specifying the model, we create an object that holds our results from the SEM. To obtain all the results from our of indirect effects, we also need to print a summary of the fit statistics, standardized estimates, r-squared, and confidence intervals.
+
+\emph{Other authors will write the model code more sensibly, predicting the mediator first, and then the Y variable. However, I found that by doing it this way, the semPlot produces a more sensible figure.}
+
+Also, because we set a random seed, you should get the same results, but if it differs a little, don't panic.
+Also, in Hayes text the direct path from X to Y is c' (``c prime''; where as c is reserved for the total effect of X on Y).
+
+Let's run the whole model.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210410}\NormalTok{) }\CommentTok{\#reset in case you choose to separate these sections}
+\NormalTok{model }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{          Y \textasciitilde{} b*M + c\_p*X }
+\StringTok{          M \textasciitilde{} a*X}
+\StringTok{          }
+\StringTok{          indirect :=  a*b}
+\StringTok{          direct  := c\_p}
+\StringTok{          total\_c  := c\_p + (a*b)}
+\StringTok{          \textquotesingle{}}
+\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(model, }\AttributeTok{data =}\NormalTok{ Data, }\AttributeTok{se=}\StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing=} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{)}
+\NormalTok{FDsummary }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(fit, }\AttributeTok{standardized=}\NormalTok{T, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{fit=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 14 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                          7
+##                                                       
+##   Number of observations                           100
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                92.701
+##   Degrees of freedom                                 3
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -287.127
+##   Loglikelihood unrestricted model (H1)       -287.127
+##                                                       
+##   Akaike (AIC)                                 588.253
+##   Bayesian (BIC)                               606.489
+##   Sample-size adjusted Bayesian (BIC)          584.382
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value RMSEA <= 0.05                             NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   Y ~                                                                   
+##     M          (b)    0.764    0.097    7.918    0.000    0.577    0.955
+##     X        (c_p)   -0.209    0.112   -1.867    0.062   -0.446   -0.001
+##   M ~                                                                   
+##     X          (a)    0.693    0.104    6.665    0.000    0.485    0.900
+##    Std.lv  Std.all
+##                   
+##     0.764    0.719
+##    -0.209   -0.163
+##                   
+##     0.693    0.574
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .Y                -0.044    0.107   -0.413    0.680   -0.260    0.161
+##    .M                 0.106    0.105    1.010    0.313   -0.100    0.310
+##    Std.lv  Std.all
+##    -0.044   -0.034
+##     0.106    0.086
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .Y                 1.031    0.148    6.950    0.000    0.734    1.301
+##    .M                 1.037    0.144    7.220    0.000    0.754    1.327
+##    Std.lv  Std.all
+##     1.031    0.590
+##     1.037    0.670
+## 
+## R-Square:
+##                    Estimate
+##     Y                 0.410
+##     M                 0.330
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     indirect          0.529    0.089    5.954    0.000    0.355    0.708
+##     direct           -0.209    0.112   -1.866    0.062   -0.446   -0.001
+##     total_c           0.321    0.125    2.568    0.010    0.054    0.567
+##    Std.lv  Std.all
+##     0.529    0.413
+##    -0.209   -0.163
+##     0.321    0.250
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{FD\_ParamEsts }\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(fit, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{FDsummary}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $FIT
+##              npar              fmin             chisq                df 
+##             7.000             0.000             0.000             0.000 
+##            pvalue    baseline.chisq       baseline.df   baseline.pvalue 
+##                NA            92.701             3.000             0.000 
+##               cfi               tli              logl unrestricted.logl 
+##             1.000             1.000          -287.127          -287.127 
+##               aic               bic            ntotal              bic2 
+##           588.253           606.489           100.000           584.382 
+##             rmsea    rmsea.ci.lower    rmsea.ci.upper      rmsea.pvalue 
+##             0.000             0.000             0.000                NA 
+##              srmr 
+##             0.000 
+## 
+## $PE
+##         lhs op       rhs    label exo         est         se          z
+## 1         Y  ~         M        b   0  0.76435996 0.09652859  7.9184825
+## 2         Y  ~         X      c_p   0 -0.20861348 0.11173871 -1.8669759
+## 3         M  ~         X        a   0  0.69268167 0.10392556  6.6651713
+## 4         Y ~~         Y            0  1.03100570 0.14834106  6.9502383
+## 5         M ~~         M            0  1.03690713 0.14360623  7.2204883
+## 6         X ~~         X            1  1.06310942 0.00000000         NA
+## 7         Y ~1                      0 -0.04434521 0.10738844 -0.4129421
+## 8         M ~1                      0  0.10642551 0.10539643  1.0097639
+## 9         X ~1                      1 -0.19457819 0.00000000         NA
+## 10 indirect :=       a*b indirect   0  0.52945814 0.08892327  5.9541009
+## 11   direct :=       c_p   direct   0 -0.20861348 0.11179462 -1.8660422
+## 12  total_c := c_p+(a*b)  total_c   0  0.32084465 0.12495930  2.5675932
+## 13        Y r2         Y            0  0.40958958         NA         NA
+## 14        M r2         M            0  0.32972838         NA         NA
+##          pvalue    ci.lower      ci.upper      std.lv     std.all     std.nox
+## 1  2.442491e-15  0.57657158  0.9554829338  0.76435996  0.71943062  0.71943062
+## 2  6.190495e-02 -0.44637206 -0.0009074259 -0.20861348 -0.16277130 -0.15786609
+## 3  2.643574e-11  0.48516770  0.8996769257  0.69268167  0.57421980  0.55691534
+## 4  3.646639e-12  0.73428101  1.3014220066  1.03100570  0.59041042  0.59041042
+## 5  5.180301e-13  0.75440642  1.3272578298  1.03690713  0.67027162  0.67027162
+## 6            NA  1.06310942  1.0631094199  1.06310942  1.00000000  1.06310942
+## 7  6.796490e-01 -0.26018823  0.1613575388 -0.04434521 -0.03355778 -0.03355778
+## 8  3.126084e-01 -0.10043004  0.3095687447  0.10642551  0.08556600  0.08556600
+## 9            NA -0.19457819 -0.1945781883 -0.19457819 -0.18871446 -0.19457819
+## 10 2.615055e-09  0.35537200  0.7084867508  0.52945814  0.41311131  0.40066195
+## 11 6.203546e-02 -0.44637206 -0.0009074259 -0.20861348 -0.16277130 -0.15786609
+## 12 1.024073e-02  0.05415297  0.5670554787  0.32084465  0.25034001  0.24279586
+## 13           NA          NA            NA          NA          NA          NA
+## 14           NA          NA            NA          NA          NA          NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{FD\_ParamEsts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         lhs op       rhs    label    est    se      z pvalue ci.lower ci.upper
+## 1         Y  ~         M        b  0.764 0.097  7.918  0.000    0.575    0.955
+## 2         Y  ~         X      c_p -0.209 0.112 -1.867  0.062   -0.451   -0.001
+## 3         M  ~         X        a  0.693 0.104  6.665  0.000    0.485    0.900
+## 4         Y ~~         Y           1.031 0.148  6.950  0.000    0.803    1.372
+## 5         M ~~         M           1.037 0.144  7.220  0.000    0.795    1.373
+## 6         X ~~         X           1.063 0.000     NA     NA    1.063    1.063
+## 7         Y ~1                    -0.044 0.107 -0.413  0.680   -0.259    0.161
+## 8         M ~1                     0.106 0.105  1.010  0.313   -0.096    0.317
+## 9         X ~1                    -0.195 0.000     NA     NA   -0.195   -0.195
+## 10 indirect :=       a*b indirect  0.529 0.089  5.954  0.000    0.358    0.710
+## 11   direct :=       c_p   direct -0.209 0.112 -1.866  0.062   -0.451   -0.001
+## 12  total_c := c_p+(a*b)  total_c  0.321 0.125  2.568  0.010    0.055    0.568
+##    std.lv std.all std.nox
+## 1   0.764   0.719   0.719
+## 2  -0.209  -0.163  -0.158
+## 3   0.693   0.574   0.557
+## 4   1.031   0.590   0.590
+## 5   1.037   0.670   0.670
+## 6   1.063   1.000   1.063
+## 7  -0.044  -0.034  -0.034
+## 8   0.106   0.086   0.086
+## 9  -0.195  -0.189  -0.195
+## 10  0.529   0.413   0.401
+## 11 -0.209  -0.163  -0.158
+## 12  0.321   0.250   0.243
+\end{verbatim}
+
+\hypertarget{interpret-the-output}{%
+\subsection{Interpret the Output}\label{interpret-the-output}}
+
+Note that in the script we ask (and get) two sets of parameter estimates. The second set (in the really nice dataframe) includes bootstrapped, bias-corrected confidence intervals. Bias-corrected confidence interals have the advantage of being more powerful and bias-free. Note, though, that when the CI crosses 0, the effect is NS.
+
+So let's look at this step-by-step.
+
+\begin{itemize}
+\tightlist
+\item
+  Overall, our model accounted for 40.96\% of the variance in the IV and 32.97\% of the variance in the mediator.
+\item
+  a path = 0.693, \(p\) = 0.000
+\item
+  b path = 0.764, \(p\) = 0.000
+\item
+  the indirect effect is a product of the a and b paths (0.693 * 0.764 = 0.529); while we don't hand calculate it's significance, we see that it is \(p\) = 0.000
+\item
+  the direct effect (c', c prime, or c\_p) is the isolated effect of X on Y when including M. We hope this value is LOWER than the total effect because this means that including M shared some of the variance in predicting Y: c' = -0.209, \(p\) = 0.062, and it is no longer signifcant.
+\item
+  we also see the total effect; this value is
+
+  \begin{itemize}
+  \tightlist
+  \item
+    identical to the value of simply predicting Y on X (with no M it the model)
+  \item
+    the value of a(b) + c\_p: 0.693(0.764) + -0.209 = 0.321 (\(p\) = 0.010)
+  \end{itemize}
+\end{itemize}
+
+Here's a demonstration that the total effect is, simply, predicting Y from X (also, the correlation between X and Y:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fitXY }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(Y }\SpecialCharTok{\textasciitilde{}}\NormalTok{ X, }\AttributeTok{data =}\NormalTok{ Data)}
+\FunctionTok{summary}\NormalTok{(fitXY)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = Y ~ X, data = Data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.2631 -0.8288  0.0902  0.9637  3.5891 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)  
+## (Intercept)   0.0370     0.1315   0.281    0.779  
+## X             0.3208     0.1253   2.560    0.012 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.292 on 98 degrees of freedom
+## Multiple R-squared:  0.06267,    Adjusted R-squared:  0.05311 
+## F-statistic: 6.552 on 1 and 98 DF,  p-value: 0.012
+\end{verbatim}
+
+Which is the same as the bivariate correlation. The only trick is that the bivariate correlation produces a standardized result; so it would be the \(\beta\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(psych)}
+\NormalTok{XY\_r }\OtherTok{\textless{}{-}} \FunctionTok{corr.test}\NormalTok{(Data[}\FunctionTok{c}\NormalTok{(}\StringTok{"Y"}\NormalTok{, }\StringTok{"X"}\NormalTok{)])}
+\NormalTok{XY\_r}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:corr.test(x = Data[c("Y", "X")])
+## Correlation matrix 
+##      Y    X
+## Y 1.00 0.25
+## X 0.25 1.00
+## Sample Size 
+## [1] 100
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##      Y    X
+## Y 0.00 0.01
+## X 0.01 0.00
+## 
+##  To see confidence intervals of the correlations, print with the short=FALSE option
+\end{verbatim}
+
+\hypertarget{a-table-and-a-figure}{%
+\subsection{A Table and a Figure}\label{a-table-and-a-figure}}
+
+We can use the package \href{https://rdrr.io/cran/semPlot/man/semPaths.html}{semPlot} to create a figure that includes the values on the path.
+
+Here's what the base package gets us
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(semPlot)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Registered S3 methods overwritten by 'huge':
+##   method    from   
+##   plot.sim  BDgraph
+##   print.sim BDgraph
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{semPaths}\NormalTok{(fit, }\CommentTok{\#must identify the model you want to map}
+         \AttributeTok{what =} \StringTok{"est"}\NormalTok{, }\CommentTok{\#"est" plots the estimates, but keeps it greyscale with no fading}
+         \CommentTok{\#whatLabels = "stand", \#"stand" changes to standardized values}
+         \AttributeTok{layout =} \StringTok{\textquotesingle{}tree\textquotesingle{}}\NormalTok{, }\AttributeTok{rotation =} \DecValTok{2}\NormalTok{, }\CommentTok{\#together, puts predictors on left, IVs on right }
+         \AttributeTok{edge.label.cex =} \FloatTok{1.00}\NormalTok{, }\CommentTok{\#font size of parameter values}
+         \CommentTok{\#edge.color = "black", \#overwrites the green/black coloring}
+         \AttributeTok{sizeMan=}\DecValTok{10}\NormalTok{, }\CommentTok{\#size of squares/observed/"manifest" variables}
+         \AttributeTok{fade=}\ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#if TRUE, there lines are faded such that weaker lines correspond with lower values {-}{-} a cool effect, but tough for journals}
+         \AttributeTok{esize=}\DecValTok{2}\NormalTok{, }
+         \AttributeTok{asize=}\DecValTok{3}\NormalTok{,}
+         \CommentTok{\#label.prop = .5,}
+         \AttributeTok{label.font =} \FloatTok{2.5}\NormalTok{, }\CommentTok{\#controls size (I think) of font for labels}
+         \AttributeTok{label.scale =} \ConstantTok{TRUE}\NormalTok{, }\CommentTok{\#if false, the labels will not scale to fit inside the nodes}
+         \AttributeTok{nDigits =} \DecValTok{3}\NormalTok{, }\CommentTok{\#decimal places (default is 2)}
+         \AttributeTok{residuals =} \ConstantTok{FALSE}\NormalTok{,}\CommentTok{\#excludes residuals (and variances) from the path diagram}
+         \AttributeTok{nCharNodes =} \DecValTok{0}\NormalTok{, }\CommentTok{\#specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)}
+         \AttributeTok{intercepts =} \ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#gets rid of those annoying triangles (intercepts) in the path diagram)}
+\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"Fake Data:  Simple Mediation"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/FakyDaty Simple Plot-1.pdf}
+
+Hayes has great examples of APA style tables. I haven't yet found a package that will turn this output into a journal-ready table, however the \emph{semTable} package can at least write the output to a .csv file and you can further manipulate it into a table.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(semTable)}
+\NormalTok{fitTab1 }\OtherTok{\textless{}{-}} \FunctionTok{semTable}\NormalTok{(fit, }\AttributeTok{columns =} \FunctionTok{c}\NormalTok{(}\StringTok{"est"}\NormalTok{, }\StringTok{"se"}\NormalTok{, }\StringTok{"p"}\NormalTok{, }\StringTok{"rsquare"}\NormalTok{),  }\AttributeTok{columnLabels =} \FunctionTok{c}\NormalTok{(}\AttributeTok{eststars =} \StringTok{"Estimate"}\NormalTok{), }\AttributeTok{paramSets =} \FunctionTok{c}\NormalTok{(}\StringTok{"composites"}\NormalTok{, }\StringTok{"loadings"}\NormalTok{, }\StringTok{"slopes"}\NormalTok{, }\StringTok{"intercepts"}\NormalTok{, }\StringTok{"residualvariances"}\NormalTok{), }\AttributeTok{file =} \StringTok{"fitTABLE"}\NormalTok{, }\AttributeTok{type =} \StringTok{"csv"}\NormalTok{, }\AttributeTok{print.results =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{results-2}{%
+\subsection{Results}\label{results-2}}
+
+A simple mediation model examined the degree to which M mediated the relation of X on Y. Using the \emph{lavaan} package (v 0.6-7) in R, coefficients for each path, the indirect effect, and total effects were calculated. These values are presented in Table 1 and illustrated in Figure 1. Results suggested that 32.97\% of the variance in M and 40.96\% of the variance in Y were accounted for in the model. The indirect effect (\(B\) = 0.529, \(p\) = 0.000) was statistically significant; the direct effect (\(B\) = -0.209, \(p\) = 0.062) was not. Comparing the nonsignificant direct effect to the statistically significant total effect (\(B\) = 0.321, \(p\) = 0.010) is consistent with the notion that the effect of X on Y is explained through M.
+
+\hypertarget{research-vignette-4}{%
+\section{Research Vignette}\label{research-vignette-4}}
+
+The research vignette comes from the Kim, Kendall, and Cheon's \citeyearpar{kim_racial_2017}, ``Racial Microaggressions, Cultural Mistrust, and Mental Health Outcomes Among Asian American College Students.'' Participants were 156 Asian American undergraduate students in the Pacific Northwest. The researchers posited the a priori hypothesis that cultural mistrust would mediate the relationship between racial microaggressions and two sets of outcomes: mental health (e.g., depression, anxiety, well-being) and help-seeking.
+
+Variables used in the study included:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{REMS}: Racial and Ethnic Microaggressions Scale (Nadal, 2011). The scale includes 45 items on a 2-point scale where 0 indicates no experience of a microaggressive event and 1 indicates it was experienced at least once within the past six months. Higher scores indicate more experience of microaggressions.
+\item
+  \textbf{CMI}: Cultural Mistrust Inventory (Terrell \& Terrell, 1981). This scale was adapted to assess cultural mistrust harbored among Asian Americans toward individuals from the mainstream U.S. culture (e.g., Whites). The CMI includes 47 items on a 7-point scale where higher scores indicate a higher degree of cultural mistrust.
+\item
+  \textbf{ANX}, \textbf{DEP}, \textbf{PWB}: Subscales of the Mental Health Inventory (Veit \& Ware, 1983) that assess the mental health outcomes of anxiety (9 items), depression (4 items), and psychological well-being (14 items). Higher scores (on a 6 point scale) indicate stronger endorsement of the mental health outcome being assessed.
+\item
+  \textbf{HlpSkg}: The Attiudes Toward Seeking Professional Psychological Help -- Short Form (Fischer \& Farina, 1995) includes 10 items on a 4-point scale (0 = disagree, 3 = agree) where higher scores indicate more favorable attitudes toward help seeking.
+\end{itemize}
+
+\hypertarget{simulate-data-from-the-journal-article}{%
+\subsection{Simulate Data from the Journal Article}\label{simulate-data-from-the-journal-article}}
+
+First, we simulate the data from the means, standard deviations, and correlation matrix from the journal article.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Entering the intercorrelations, means, and standard deviations from the journal article}
+\NormalTok{mu }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(.}\DecValTok{34}\NormalTok{, }\FloatTok{3.00}\NormalTok{, }\FloatTok{2.98}\NormalTok{, }\FloatTok{2.36}\NormalTok{, }\FloatTok{3.50}\NormalTok{, }\FloatTok{1.64}\NormalTok{)}
+\NormalTok{sd }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(.}\DecValTok{16}\NormalTok{, .}\DecValTok{83}\NormalTok{, .}\DecValTok{99}\NormalTok{, .}\DecValTok{90}\NormalTok{, .}\DecValTok{90}\NormalTok{, .}\DecValTok{53}\NormalTok{)}
+\NormalTok{r\_mat }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{ (}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,   .}\DecValTok{59}\NormalTok{, .}\DecValTok{26}\NormalTok{,   .}\DecValTok{34}\NormalTok{,  }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{25}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{02}\NormalTok{,}
+\NormalTok{                  .}\DecValTok{59}\NormalTok{, }\FloatTok{1.00}\NormalTok{, .}\DecValTok{12}\NormalTok{,   .}\DecValTok{19}\NormalTok{,  }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{28}\NormalTok{, .}\DecValTok{00}\NormalTok{, }
+\NormalTok{                  .}\DecValTok{26}\NormalTok{,  .}\DecValTok{12}\NormalTok{, }\FloatTok{1.00}\NormalTok{, .}\DecValTok{66}\NormalTok{,  }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{55}\NormalTok{, .}\DecValTok{07}\NormalTok{,}
+\NormalTok{                  .}\DecValTok{34}\NormalTok{,  .}\DecValTok{19}\NormalTok{, .}\DecValTok{66}\NormalTok{,  }\FloatTok{1.00}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{66}\NormalTok{, .}\DecValTok{05}\NormalTok{,}
+                 \SpecialCharTok{{-}}\NormalTok{.}\DecValTok{25}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{28}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{55}\NormalTok{,}\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{66}\NormalTok{,  }\FloatTok{1.00}\NormalTok{, .}\DecValTok{08}\NormalTok{, }
+                 \SpecialCharTok{{-}}\NormalTok{.}\DecValTok{02}\NormalTok{,  .}\DecValTok{00}\NormalTok{,  .}\DecValTok{07}\NormalTok{, .}\DecValTok{05}\NormalTok{, .}\DecValTok{08}\NormalTok{,  }\DecValTok{1}\NormalTok{), }\AttributeTok{ncol =} \DecValTok{6}\NormalTok{)}
+\CommentTok{\#Creating a covariance matrix}
+\NormalTok{cov\_mat }\OtherTok{\textless{}{-}}\NormalTok{ sd }\SpecialCharTok{\%*\%} \FunctionTok{t}\NormalTok{(sd) }\SpecialCharTok{*}\NormalTok{ r\_mat}
+
+\CommentTok{\#Set random seed so that the following matrix always gets the same results.}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210409}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(MASS)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'MASS'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:formattable':
+## 
+##     area
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     select
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kim\_df }\OtherTok{\textless{}{-}} \FunctionTok{mvrnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{156}\NormalTok{, }\AttributeTok{mu=}\NormalTok{mu, }\AttributeTok{Sigma =}\NormalTok{ cov\_mat, }\AttributeTok{empirical =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{colMeans}\NormalTok{(Kim\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.34 3.00 2.98 2.36 3.50 1.64
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Checking our work against the original correlation matrix}
+\FunctionTok{round}\NormalTok{(}\FunctionTok{cor}\NormalTok{(Kim\_df),}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]
+## [1,]  1.00  0.59  0.26  0.34 -0.25 -0.02
+## [2,]  0.59  1.00  0.12  0.19 -0.28  0.00
+## [3,]  0.26  0.12  1.00  0.66 -0.55  0.07
+## [4,]  0.34  0.19  0.66  1.00 -0.66  0.05
+## [5,] -0.25 -0.28 -0.55 -0.66  1.00  0.08
+## [6,] -0.02  0.00  0.07  0.05  0.08  1.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#look at the first 6 rows of the new df}
+\FunctionTok{head}\NormalTok{(Kim\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        REMS      CMI      ANX      DEP      PWB    HlpSk
+## 1 0.5632213 3.659748 4.104905 1.955481 3.287428 1.918057
+## 2 0.4164574 2.405398 3.189049 1.574824 4.250802 1.701437
+## 3 0.2823777 1.822439 3.820871 2.515103 3.272359 1.342201
+## 4 0.3301192 4.877980 3.298069 2.219149 3.310993 1.450270
+## 5 0.2119648 2.110152 3.068806 2.145528 3.429861 1.909203
+## 6 0.5961068 4.087986 3.420916 3.129796 2.914344 1.900283
+\end{verbatim}
+
+Let's check the descriptives to see if they align with those in the article.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(psych)}
+\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(Kim\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       vars   n mean   sd median trimmed  mad   min  max range  skew kurtosis
+## REMS     1 156 0.34 0.16   0.32    0.34 0.16 -0.12 0.77  0.89 -0.02    -0.01
+## CMI      2 156 3.00 0.83   3.01    3.00 0.73  0.90 5.42  4.51 -0.01     0.07
+## ANX      3 156 2.98 0.99   2.98    2.98 0.88  0.32 5.53  5.21 -0.04     0.17
+## DEP      4 156 2.36 0.90   2.41    2.37 0.90 -0.24 4.73  4.96 -0.11    -0.17
+## PWB      5 156 3.50 0.90   3.52    3.50 0.85  1.16 6.48  5.32  0.01     0.22
+## HlpSk    6 156 1.64 0.53   1.69    1.66 0.53 -0.07 2.90  2.97 -0.36     0.28
+##         se
+## REMS  0.01
+## CMI   0.07
+## ANX   0.08
+## DEP   0.07
+## PWB   0.07
+## HlpSk 0.04
+\end{verbatim}
+
+There are a number of reasons I love the Kim et al. \citeyearpar{kim_racial_2017} manuscript. One is that their approach was openly one that tested \emph{alternate models}. Byrne \citeyearpar{byrne_structural_2016} credits Joreskog \citep{bollen_testing_1993} with classifying the researcher's model testing approach in three ways. If someone is \emph{strictly confirmatory}, they only test the model they proposed and then accept or reject it without further alteration. While this is the tradition of null hypothesis significance testing, it contributes to the ``file drawer problem'' of unpublished, non-significant, findings. Additionally, the data are them discarded -- potentially losing valuable resource. The \emph{alternative models} approach is to propose a handful of competing models before beginning the analysis and then evaluating to see if one model is superior to the other. The third option is \emph{model generating}. In this case the researcher begins with a theoretically proposed model. In the presence of poor fit, the researcher seeks to identify the source of misfit -- respecifying it to best represent the sample data. The researcher must use caution to produce a model that fits well and is meaningful.
+
+Several of the Kim et al. \citeyearpar{kim_racial_2017} models were non-significant. To demonstrate a model that is statistically significant, I will test the hypothesis that racial microaggressions (REMS, the X variable) influence depression (DEP, the Y variable) through cultural mistrust (CMI, the M variable).
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/Kim_SimpMed.jpg}
+\caption{Image of the simple mediation model from Kim et al.}
+\end{figure}
+
+\hypertarget{specify-the-model-in-lavaan}{%
+\subsection{\texorpdfstring{Specify the Model in \emph{lavaan}}{Specify the Model in lavaan}}\label{specify-the-model-in-lavaan}}
+
+I am a big fan of ``copying the model.'' In specifying my model I used our simple mediation template above
+
+\begin{itemize}
+\tightlist
+\item
+  replaced the Y, X, and M with variables names
+\item
+  replacing the name of the df
+\item
+  updated the object names (so I could use them in the same .rmd file)
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lavaan)}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210410}\NormalTok{) }\CommentTok{\#reset in case you choose to separate these sections}
+\NormalTok{Kim\_model }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{          PWB \textasciitilde{} b*CMI + c\_p*REMS }
+\StringTok{          CMI \textasciitilde{}a*REMS}
+\StringTok{          }
+\StringTok{          indirect :=  a*b}
+\StringTok{          direct  := c\_p}
+\StringTok{          total\_c  := c\_p + (a*b)}
+\StringTok{          \textquotesingle{}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kim\_fit }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(Kim\_model, }\AttributeTok{data =}\NormalTok{ Kim\_df, }\AttributeTok{se=}\StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing=} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kim\_summary }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(Kim\_fit, }\AttributeTok{standardized=}\NormalTok{T, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{fit=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 23 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                          7
+##                                                       
+##   Number of observations                           156
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                81.362
+##   Degrees of freedom                                 3
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -355.521
+##   Loglikelihood unrestricted model (H1)       -355.521
+##                                                       
+##   Akaike (AIC)                                 725.042
+##   Bayesian (BIC)                               746.391
+##   Sample-size adjusted Bayesian (BIC)          724.234
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value RMSEA <= 0.05                             NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   PWB ~                                                                 
+##     CMI        (b)   -0.220    0.118   -1.873    0.061   -0.452    0.015
+##     REMS     (c_p)   -0.732    0.509   -1.437    0.151   -1.718    0.266
+##   CMI ~                                                                 
+##     REMS       (a)    3.061    0.292   10.494    0.000    2.469    3.616
+##    Std.lv  Std.all
+##                   
+##    -0.220   -0.203
+##    -0.732   -0.130
+##                   
+##     3.061    0.590
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .PWB               4.410    0.275   16.009    0.000    3.912    4.958
+##    .CMI               1.959    0.113   17.351    0.000    1.754    2.194
+##    Std.lv  Std.all
+##     4.410    4.916
+##     1.959    2.368
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .PWB               0.733    0.085    8.601    0.000    0.567    0.901
+##    .CMI               0.446    0.053    8.465    0.000    0.339    0.553
+##    Std.lv  Std.all
+##     0.733    0.911
+##     0.446    0.652
+## 
+## R-Square:
+##                    Estimate
+##     PWB               0.089
+##     CMI               0.348
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     indirect         -0.675    0.367   -1.839    0.066   -1.433    0.053
+##     direct           -0.732    0.510   -1.436    0.151   -1.718    0.266
+##     total_c          -1.406    0.365   -3.856    0.000   -2.122   -0.713
+##    Std.lv  Std.all
+##    -0.675   -0.120
+##    -0.732   -0.130
+##    -1.406   -0.250
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kim\_ParamEsts }\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(Kim\_fit, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{Kim\_summary}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $FIT
+##              npar              fmin             chisq                df 
+##             7.000             0.000             0.000             0.000 
+##            pvalue    baseline.chisq       baseline.df   baseline.pvalue 
+##                NA            81.362             3.000             0.000 
+##               cfi               tli              logl unrestricted.logl 
+##             1.000             1.000          -355.521          -355.521 
+##               aic               bic            ntotal              bic2 
+##           725.042           746.391           156.000           724.234 
+##             rmsea    rmsea.ci.lower    rmsea.ci.upper      rmsea.pvalue 
+##             0.000             0.000             0.000                NA 
+##              srmr 
+##             0.000 
+## 
+## $PE
+##         lhs op       rhs    label exo        est         se         z
+## 1       PWB  ~       CMI        b   0 -0.2203938 0.11768579 -1.872731
+## 2       PWB  ~      REMS      c_p   0 -0.7317072 0.50927052 -1.436775
+## 3       CMI  ~      REMS        a   0  3.0606250 0.29164729 10.494269
+## 4       PWB ~~       PWB            0  0.7328330 0.08520156  8.601169
+## 5       CMI ~~       CMI            0  0.4462151 0.05271274  8.465033
+## 6      REMS ~~      REMS            1  0.0254359 0.00000000        NA
+## 7       PWB ~1                      0  4.4099618 0.27546349 16.009242
+## 8       CMI ~1                      0  1.9593875 0.11292431 17.351335
+## 9      REMS ~1                      1  0.3400000 0.00000000        NA
+## 10 indirect :=       a*b indirect   0 -0.6745428 0.36683075 -1.838839
+## 11   direct :=       c_p   direct   0 -0.7317072 0.50952535 -1.436057
+## 12  total_c := c_p+(a*b)  total_c   0 -1.4062500 0.36467949 -3.856126
+## 13      PWB r2       PWB            0  0.0894309         NA        NA
+## 14      CMI r2       CMI            0  0.3481000         NA        NA
+##          pvalue   ci.lower    ci.upper     std.lv    std.all    std.nox
+## 1  0.0611055748 -0.4520943  0.01517990 -0.2203938 -0.2032521 -0.2032521
+## 2  0.1507819099 -1.7176138  0.26594569 -0.7317072 -0.1300813 -0.8156264
+## 3  0.0000000000  2.4693608  3.61560824  3.0606250  0.5900000  3.6993761
+## 4  0.0000000000  0.5671305  0.90093387  0.7328330  0.9105691  0.9105691
+## 5  0.0000000000  0.3389408  0.55289361  0.4462151  0.6519000  0.6519000
+## 6            NA  0.0254359  0.02543590  0.0254359  1.0000000  0.0254359
+## 7  0.0000000000  3.9116153  4.95818727  4.4099618  4.9157385  4.9157385
+## 8  0.0000000000  1.7537845  2.19372375  1.9593875  2.3683108  2.3683108
+## 9            NA  0.3400000  0.34000000  0.3400000  2.1318438  0.3400000
+## 10 0.0659388362 -1.4331562  0.05265107 -0.6745428 -0.1199187 -0.7519058
+## 11 0.1509862575 -1.7176138  0.26594569 -0.7317072 -0.1300813 -0.8156264
+## 12 0.0001151982 -2.1222575 -0.71330366 -1.4062500 -0.2500000 -1.5675322
+## 13           NA         NA          NA         NA         NA         NA
+## 14           NA         NA          NA         NA         NA         NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kim\_ParamEsts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         lhs op       rhs    label    est    se      z pvalue ci.lower ci.upper
+## 1       PWB  ~       CMI        b -0.220 0.118 -1.873  0.061   -0.456    0.012
+## 2       PWB  ~      REMS      c_p -0.732 0.509 -1.437  0.151   -1.697    0.293
+## 3       CMI  ~      REMS        a  3.061 0.292 10.494  0.000    2.458    3.598
+## 4       PWB ~~       PWB           0.733 0.085  8.601  0.000    0.589    0.923
+## 5       CMI ~~       CMI           0.446 0.053  8.465  0.000    0.355    0.569
+## 6      REMS ~~      REMS           0.025 0.000     NA     NA    0.025    0.025
+## 7       PWB ~1                     4.410 0.275 16.009  0.000    3.915    4.959
+## 8       CMI ~1                     1.959 0.113 17.351  0.000    1.753    2.193
+## 9      REMS ~1                     0.340 0.000     NA     NA    0.340    0.340
+## 10 indirect :=       a*b indirect -0.675 0.367 -1.839  0.066   -1.443    0.032
+## 11   direct :=       c_p   direct -0.732 0.510 -1.436  0.151   -1.697    0.293
+## 12  total_c := c_p+(a*b)  total_c -1.406 0.365 -3.856  0.000   -2.133   -0.722
+##    std.lv std.all std.nox
+## 1  -0.220  -0.203  -0.203
+## 2  -0.732  -0.130  -0.816
+## 3   3.061   0.590   3.699
+## 4   0.733   0.911   0.911
+## 5   0.446   0.652   0.652
+## 6   0.025   1.000   0.025
+## 7   4.410   4.916   4.916
+## 8   1.959   2.368   2.368
+## 9   0.340   2.132   0.340
+## 10 -0.675  -0.120  -0.752
+## 11 -0.732  -0.130  -0.816
+## 12 -1.406  -0.250  -1.568
+\end{verbatim}
+
+\hypertarget{interpret-the-output-1}{%
+\subsection{Interpret the Output}\label{interpret-the-output-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  Overall, our model accounted for 8.94\% of the variance in the IV and 34.81\% of the variance in the mediator.
+\item
+  a path = 3.061, \(p\) = 0.000
+\item
+  b path = -0.220, \(p\) = 0.061
+\item
+  the indirect effect is a product of the a and b paths (-0.675); while we don't hand calculate it's significance, we see that it is \(p\) = 0.066; the bias-corrected bootstrapped confidence intervals can sometimes be more lenient than \(p\) values; it is important they don't cross zero. They don't: CI95 -1.443 to 0.032\\
+\item
+  the direct effect (c', c prime, or c\_p) is the isolated effect of X on Y when including M. We hope this value is LOWER than the total effect because this means that including M shared some of the variance in predicting Y: c' = -0.732, \(p\) = 0.151, and it is no longer signifcant.
+\item
+  we also see the total effect; this value is
+\item
+  identical to the value of simply predicting Y on X (with no M it the model)
+\item
+  the value of a(b) + c\_p: 3.061(-0.220) + -0.732 = -1.406 (\(p\) = 0.000)
+\end{itemize}
+
+\hypertarget{a-figure-and-a-table}{%
+\subsection{A Figure and a Table}\label{a-figure-and-a-table}}
+
+I make it a practice to immediately plot what I did. Because the plotting packages use our models, this can be a helpful self-check of our work.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(semPlot)}
+\FunctionTok{semPaths}\NormalTok{(Kim\_fit, }\CommentTok{\#must identiy the model you want to map}
+         \AttributeTok{what =} \StringTok{"est"}\NormalTok{, }\CommentTok{\#"est" plots the estimates, but keeps it greyscale with no fading}
+         \CommentTok{\#whatLabels = "stand", \#"stand" changes to standardized values}
+         \AttributeTok{layout =} \StringTok{\textquotesingle{}tree\textquotesingle{}}\NormalTok{, }\AttributeTok{rotation =} \DecValTok{2}\NormalTok{, }\CommentTok{\#together, puts predictors on left, IVs on right }
+         \AttributeTok{edge.label.cex =} \FloatTok{1.00}\NormalTok{, }\CommentTok{\#font size of parameter values}
+         \CommentTok{\#edge.color = "black", \#overwrites the green/black coloring}
+         \AttributeTok{sizeMan=}\DecValTok{10}\NormalTok{, }\CommentTok{\#size of squares/observed/"manifest" variables}
+         \AttributeTok{fade=}\ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#if TRUE, there lines are faded such that weaker lines correspond with lower values {-}{-} a cool effect, but tough for journals}
+         \AttributeTok{esize=}\DecValTok{2}\NormalTok{, }
+         \AttributeTok{asize=}\DecValTok{3}\NormalTok{,}
+         \CommentTok{\#label.prop = .5,}
+         \AttributeTok{label.font =} \FloatTok{2.5}\NormalTok{, }\CommentTok{\#controls size (I think) of font for labels}
+         \AttributeTok{label.scale =} \ConstantTok{TRUE}\NormalTok{, }\CommentTok{\#if false, the labels will not scale to fit inside the nodes}
+         \AttributeTok{nDigits =} \DecValTok{3}\NormalTok{, }\CommentTok{\#decimal places (default is 2)}
+         \AttributeTok{residuals =} \ConstantTok{FALSE}\NormalTok{,}\CommentTok{\#excludes residuals (and variances) from the path diagram}
+         \AttributeTok{nCharNodes =} \DecValTok{0}\NormalTok{, }\CommentTok{\#specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)}
+         \AttributeTok{intercepts =} \ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#gets rid of those annoying triangles (intercepts) in the path diagram)}
+\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"Depression by Racial Microaggressions via Cultural Mistrust"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/semPLOT of PMI-1.pdf}
+
+The semTable package can be used to write results to an outfile.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(semTable)}
+\NormalTok{fitTab1 }\OtherTok{\textless{}{-}} \FunctionTok{semTable}\NormalTok{(Kim\_fit, }\AttributeTok{columns =} \FunctionTok{c}\NormalTok{(}\StringTok{"est"}\NormalTok{, }\StringTok{"se"}\NormalTok{, }\StringTok{"p"}\NormalTok{, }\StringTok{"rsquare"}\NormalTok{),  }\AttributeTok{columnLabels =} \FunctionTok{c}\NormalTok{(}\AttributeTok{eststars =} \StringTok{"Estimate"}\NormalTok{), }\AttributeTok{paramSets =} \FunctionTok{c}\NormalTok{(}\StringTok{"composites"}\NormalTok{, }\StringTok{"loadings"}\NormalTok{, }\StringTok{"slopes"}\NormalTok{, }\StringTok{"intercepts"}\NormalTok{, }\StringTok{"residualvariances"}\NormalTok{), }\AttributeTok{file =} \StringTok{"pmi\_fitTABLE"}\NormalTok{, }\AttributeTok{type =} \StringTok{"csv"}\NormalTok{, }\AttributeTok{print.results =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+For the purpose of the OER, and because it's good trainng, I also think it can be useful to make our own table. For me, it facilitates my conceptual understanding of (a) what the statistic is doing and (b) the results of our specific data.
+
+Table 1
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.00}}@{}}
+\toprule
+Model Coefficients Assessing Cultural Mistrust as a Mediator Between Racial Microaggressions and Well-Being \\
+\midrule
+\endhead
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lccc@{}}
+\toprule
+& & & \\
+\midrule
+\endhead
+& Cultural Mistrust (M) & & Well-Being (Y) \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcccccccc@{}}
+\toprule
+& & & & & & & & \\
+\midrule
+\endhead
+Antecedent & path & \(B\) & \(SE\) & \(p\) & path & \(B\) & \(SE\) & \(p\) \\
+constant & \(i_{M}\) & 1.959 & 0.113 & 0.000 & \(i_{Y}\) & 4.410 & 0.275 & 0.000 \\
+REMS (X) & \(a\) & 3.061 & 0.292 & 0.000 & \(c'\) & -0.732 & 0.509 & 0.151 \\
+CMI (M) & & & & & \(b\) & -0.220 & 0.118 & 0.061 \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lccc@{}}
+\toprule
+& & & \\
+\midrule
+\endhead
+& \(R^2\) = 34.81\% & & \(R^2\) = 8.94\% \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{results-3}{%
+\subsection{Results}\label{results-3}}
+
+A simple mediation model examined the degree to which cultural mistrust mediated the relation of racial microaggressions on depressive symptoms Using the \emph{lavaan} package (v 0.6-7) in R, coefficients for each path, the indirect effect, and total effects were calculated. These values are presented in Table 1 and illustrated in Figure 1. Results suggested that 34.81\% of the variance in cultural mistrust and 8.94\%of the variance in depression were accounted for by the model. When the mediator was included in the model, bias-corrected confidence intervals surrounding the indirect effect (\(B\) = -0.675, \(p\) = 0.066, CI95 -1.443 to 0.032) were not quite statistically significant. Consistent with mediation, the value of the total effect was larger in magnitude and statistically significant (\(B\) = -1.406, \(p\) = 0.000, CI95 -2.133 to -0.722) than the smaller and non-significant direct effect (\(B\) = -0.732, \(p\) = 0.151, CI95 -1.697 to 0.293).
+
+\hypertarget{considering-covariates}{%
+\section{Considering Covariates}\label{considering-covariates}}
+
+Hayes Chapter 4 \citeyearpar{hayes_introduction_2018} considers the role of covariates (e.g., other variables that could account for some of the variance in the model). When previous research (or commonsense, or detractors) suggest you should include them\ldots its worth a try. If they are non-significant and/or your variables continue to explain variance over-and-above their contribution, then you have gained ground in ruling out plausible rival hypotheses and are adding to causal evidence.
+
+They are relatively easy to specify in \emph{lavaan}. Just look at to where the arrows point and then write the path!
+
+Let's say we are concerned that anxiety covaries with cultural mistrust and PWB We'll add it as a covariate to both.
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/Kim_wCovs.jpg}
+\caption{Image of the simple mediation model from Kim et al.}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210410}\NormalTok{)}
+\NormalTok{Kim\_fit\_covs }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{          PWB \textasciitilde{} b*CMI + c\_p*REMS }
+\StringTok{          CMI \textasciitilde{}a*REMS}
+\StringTok{          CMI \textasciitilde{} covM*ANX}
+\StringTok{          PWB \textasciitilde{} covY*ANX}
+
+\StringTok{          indirect :=  a*b}
+\StringTok{          direct  := c\_p}
+\StringTok{          total\_c  := c\_p + (a*b)}
+\StringTok{          \textquotesingle{}}
+\NormalTok{Kim\_fit\_covs }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(Kim\_fit\_covs, }\AttributeTok{data =}\NormalTok{ Kim\_df, }\AttributeTok{se=}\StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing =} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{)}
+\NormalTok{Kcov\_sum }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(Kim\_fit\_covs, }\AttributeTok{standardized=}\NormalTok{T, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{fit=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 25 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                          9
+##                                                       
+##   Number of observations                           156
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               134.067
+##   Degrees of freedom                                 5
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -329.168
+##   Loglikelihood unrestricted model (H1)       -329.168
+##                                                       
+##   Akaike (AIC)                                 676.337
+##   Bayesian (BIC)                               703.785
+##   Sample-size adjusted Bayesian (BIC)          675.297
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value RMSEA <= 0.05                             NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   PWB ~                                                                 
+##     CMI        (b)   -0.250    0.100   -2.509    0.012   -0.447   -0.066
+##     REMS     (c_p)    0.131    0.511    0.256    0.798   -0.863    1.153
+##   CMI ~                                                                 
+##     REMS       (a)    3.109    0.312    9.972    0.000    2.486    3.718
+##     ANX     (covM)   -0.030    0.052   -0.578    0.563   -0.129    0.073
+##   PWB ~                                                                 
+##     ANX     (covY)   -0.480    0.063   -7.596    0.000   -0.598   -0.356
+##    Std.lv  Std.all
+##                   
+##    -0.250   -0.230
+##     0.131    0.023
+##                   
+##     3.109    0.599
+##    -0.030   -0.036
+##                   
+##    -0.480   -0.528
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .PWB               5.636    0.285   19.766    0.000    5.100    6.200
+##    .CMI               2.032    0.164   12.388    0.000    1.701    2.355
+##    Std.lv  Std.all
+##     5.636    6.283
+##     2.032    2.457
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .PWB               0.524    0.064    8.206    0.000    0.388    0.643
+##    .CMI               0.445    0.053    8.457    0.000    0.335    0.550
+##    Std.lv  Std.all
+##     0.524    0.651
+##     0.445    0.651
+## 
+## R-Square:
+##                    Estimate
+##     PWB               0.349
+##     CMI               0.349
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     indirect         -0.776    0.321   -2.417    0.016   -1.455   -0.214
+##     direct            0.131    0.511    0.256    0.798   -0.863    1.153
+##     total_c          -0.646    0.373   -1.731    0.083   -1.398    0.079
+##    Std.lv  Std.all
+##    -0.776   -0.138
+##     0.131    0.023
+##    -0.646   -0.115
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kcov\_ParEsts}\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(Kim\_fit\_covs, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{Kcov\_sum}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $FIT
+##              npar              fmin             chisq                df 
+##             9.000             0.000             0.000             0.000 
+##            pvalue    baseline.chisq       baseline.df   baseline.pvalue 
+##                NA           134.067             5.000             0.000 
+##               cfi               tli              logl unrestricted.logl 
+##             1.000             1.000          -329.168          -329.168 
+##               aic               bic            ntotal              bic2 
+##           676.337           703.785           156.000           675.297 
+##             rmsea    rmsea.ci.lower    rmsea.ci.upper      rmsea.pvalue 
+##             0.000             0.000             0.000                NA 
+##              srmr 
+##             0.000 
+## 
+## $PE
+##         lhs op       rhs    label exo        est         se          z
+## 1       PWB  ~       CMI        b   0 -0.2497502 0.09956147 -2.5085030
+## 2       PWB  ~      REMS      c_p   0  0.1309468 0.51068059  0.2564162
+## 3       CMI  ~      REMS        a   0  3.1089393 0.31175531  9.9723701
+## 4       CMI  ~       ANX     covM   0 -0.0300322 0.05198649 -0.5776923
+## 5       PWB  ~       ANX     covY   0 -0.4803760 0.06323940 -7.5961503
+## 6       PWB ~~       PWB            0  0.5236894 0.06381737  8.2060640
+## 7       CMI ~~       CMI            0  0.4453962 0.05266753  8.4567510
+## 8      REMS ~~      REMS            1  0.0254359 0.00000000         NA
+## 9      REMS ~~       ANX            1  0.0409200 0.00000000         NA
+## 10      ANX ~~       ANX            1  0.9738173 0.00000000         NA
+## 11      PWB ~1                      0  5.6362494 0.28514695 19.7661218
+## 12      CMI ~1                      0  2.0324566 0.16407293 12.3875193
+## 13     REMS ~1                      1  0.3400000 0.00000000         NA
+## 14      ANX ~1                      1  2.9800000 0.00000000         NA
+## 15 indirect :=       a*b indirect   0 -0.7764583 0.32118731 -2.4174627
+## 16   direct :=       c_p   direct   0  0.1309468 0.51093612  0.2562879
+## 17  total_c := c_p+(a*b)  total_c   0 -0.6455116 0.37291311 -1.7309973
+## 18      PWB r2       PWB            0  0.3492987         NA         NA
+## 19      CMI r2       CMI            0  0.3492964         NA         NA
+##          pvalue   ci.lower    ci.upper     std.lv     std.all    std.nox
+## 1  1.212439e-02 -0.4474766 -0.06635469 -0.2497502 -0.23032523 -0.2303252
+## 2  7.976295e-01 -0.8627072  1.15281186  0.1309468  0.02327942  0.1459650
+## 3  0.000000e+00  2.4857344  3.71801761  3.1089393  0.59931360  3.7577735
+## 4  5.634719e-01 -0.1292826  0.07255185 -0.0300322 -0.03582154 -0.0362999
+## 5  3.042011e-14 -0.5982298 -0.35643425 -0.4803760 -0.52841362 -0.5354701
+## 6  2.220446e-16  0.3884796  0.64286913  0.5236894  0.65070130  0.6507013
+## 7  0.000000e+00  0.3352469  0.54995342  0.4453962  0.65070356  0.6507036
+## 8            NA  0.0254359  0.02543590  0.0254359  1.00000000  0.0254359
+## 9            NA  0.0409200  0.04092000  0.0409200  0.26000000  0.0409200
+## 10           NA  0.9738173  0.97381731  0.9738173  1.00000000  0.9738173
+## 11 0.000000e+00  5.0996172  6.20009556  5.6362494  6.28266844  6.2826684
+## 12 0.000000e+00  1.7013065  2.35450817  2.0324566  2.45662936  2.4566294
+## 13           NA  0.3400000  0.34000000  0.3400000  2.13184382  0.3400000
+## 14           NA  2.9800000  2.98000000  2.9800000  3.01979540  2.9800000
+## 15 1.562914e-02 -1.4547978 -0.21398042 -0.7764583 -0.13803704 -0.8655100
+## 16 7.977285e-01 -0.8627072  1.15281186  0.1309468  0.02327942  0.1459650
+## 17 8.345224e-02 -1.3981671  0.07871598 -0.6455116 -0.11475762 -0.7195450
+## 18           NA         NA          NA         NA          NA         NA
+## 19           NA         NA          NA         NA          NA         NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Kcov\_ParEsts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         lhs op       rhs    label    est    se      z pvalue ci.lower ci.upper
+## 1       PWB  ~       CMI        b -0.250 0.100 -2.509  0.012   -0.447   -0.066
+## 2       PWB  ~      REMS      c_p  0.131 0.511  0.256  0.798   -0.854    1.158
+## 3       CMI  ~      REMS        a  3.109 0.312  9.972  0.000    2.480    3.717
+## 4       CMI  ~       ANX     covM -0.030 0.052 -0.578  0.563   -0.129    0.074
+## 5       PWB  ~       ANX     covY -0.480 0.063 -7.596  0.000   -0.594   -0.348
+## 6       PWB ~~       PWB           0.524 0.064  8.206  0.000    0.424    0.681
+## 7       CMI ~~       CMI           0.445 0.053  8.457  0.000    0.358    0.568
+## 8      REMS ~~      REMS           0.025 0.000     NA     NA    0.025    0.025
+## 9      REMS ~~       ANX           0.041 0.000     NA     NA    0.041    0.041
+## 10      ANX ~~       ANX           0.974 0.000     NA     NA    0.974    0.974
+## 11      PWB ~1                     5.636 0.285 19.766  0.000    5.091    6.192
+## 12      CMI ~1                     2.032 0.164 12.388  0.000    1.709    2.368
+## 13     REMS ~1                     0.340 0.000     NA     NA    0.340    0.340
+## 14      ANX ~1                     2.980 0.000     NA     NA    2.980    2.980
+## 15 indirect :=       a*b indirect -0.776 0.321 -2.417  0.016   -1.486   -0.229
+## 16   direct :=       c_p   direct  0.131 0.511  0.256  0.798   -0.854    1.158
+## 17  total_c := c_p+(a*b)  total_c -0.646 0.373 -1.731  0.083   -1.392    0.079
+##    std.lv std.all std.nox
+## 1  -0.250  -0.230  -0.230
+## 2   0.131   0.023   0.146
+## 3   3.109   0.599   3.758
+## 4  -0.030  -0.036  -0.036
+## 5  -0.480  -0.528  -0.535
+## 6   0.524   0.651   0.651
+## 7   0.445   0.651   0.651
+## 8   0.025   1.000   0.025
+## 9   0.041   0.260   0.041
+## 10  0.974   1.000   0.974
+## 11  5.636   6.283   6.283
+## 12  2.032   2.457   2.457
+## 13  0.340   2.132   0.340
+## 14  2.980   3.020   2.980
+## 15 -0.776  -0.138  -0.866
+## 16  0.131   0.023   0.146
+## 17 -0.646  -0.115  -0.720
+\end{verbatim}
+
+\hypertarget{a-figure-and-a-table-1}{%
+\subsection{A Figure and a Table}\label{a-figure-and-a-table-1}}
+
+Let's look at a figure to see see if we did what we think we did. And to also get a graphic representation of our results. The semplot package does this easily, but the figure is more statistical than conceptual and would require more tinkering for a journal article.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{semPaths}\NormalTok{(Kim\_fit\_covs, }\CommentTok{\#must identiy the model you want to map}
+         \AttributeTok{what =} \StringTok{"est"}\NormalTok{, }\CommentTok{\#"est" plots the estimates, but keeps it greyscale with no fading}
+         \CommentTok{\#whatLabels = "stand", \#"stand" changes to standardized values}
+         \AttributeTok{layout =} \StringTok{\textquotesingle{}tree\textquotesingle{}}\NormalTok{, }\AttributeTok{rotation =} \DecValTok{2}\NormalTok{, }\CommentTok{\#together, puts predictors on left, IVs on right }
+         \AttributeTok{edge.label.cex =} \FloatTok{1.00}\NormalTok{, }\CommentTok{\#font size of parameter values}
+         \CommentTok{\#edge.color = "black", \#overwrites the green/black coloring}
+         \AttributeTok{sizeMan=}\DecValTok{10}\NormalTok{, }\CommentTok{\#size of squares/observed/"manifest" variables}
+         \AttributeTok{fade=}\ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#if TRUE, there lines are faded such that weaker lines correspond with lower values {-}{-} a cool effect, but tough for journals}
+         \AttributeTok{esize=}\DecValTok{2}\NormalTok{, }
+         \AttributeTok{asize=}\DecValTok{3}\NormalTok{,}
+         \CommentTok{\#label.prop = .5,}
+         \AttributeTok{label.font =} \FloatTok{2.5}\NormalTok{, }\CommentTok{\#controls size (I think) of font for labels}
+         \AttributeTok{label.scale =} \ConstantTok{TRUE}\NormalTok{, }\CommentTok{\#if false, the labels will not scale to fit inside the nodes}
+         \AttributeTok{nDigits =} \DecValTok{3}\NormalTok{, }\CommentTok{\#decimal places (default is 2)}
+         \AttributeTok{residuals =} \ConstantTok{FALSE}\NormalTok{,}\CommentTok{\#excludes residuals (and variances) from the path diagram}
+         \AttributeTok{nCharNodes =} \DecValTok{0}\NormalTok{, }\CommentTok{\#specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)}
+         \AttributeTok{intercepts =} \ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#gets rid of those annoying triangles (intercepts) in the path diagram)}
+\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"Entrepreneurial Withdrawal by eDistress via Negative Affect (\& some covariates("}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/semPLOT for model w covs-1.pdf}
+
+The path coefficients appear to be correct, but this is really a statistical map and doesn't relay the concept of mediation well.
+
+Below is code to create an outfile that could help with creating a table in a word document or spreadsheet. There will be output that is produced with SEM models that won't be relevant for this project.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{KimCOVTab }\OtherTok{\textless{}{-}} \FunctionTok{semTable}\NormalTok{(Kim\_fit\_covs, }\AttributeTok{columns =} \FunctionTok{c}\NormalTok{(}\StringTok{"est"}\NormalTok{, }\StringTok{"se"}\NormalTok{, }\StringTok{"p"}\NormalTok{, }\StringTok{"rsquare"}\NormalTok{),  }\AttributeTok{columnLabels =} \FunctionTok{c}\NormalTok{(}\AttributeTok{eststars =} \StringTok{"Estimate"}\NormalTok{), }\AttributeTok{paramSets =} \FunctionTok{c}\NormalTok{(}\StringTok{"composites"}\NormalTok{, }\StringTok{"loadings"}\NormalTok{, }\StringTok{"slopes"}\NormalTok{, }\StringTok{"intercepts"}\NormalTok{, }\StringTok{"residualvariances"}\NormalTok{), }\AttributeTok{file =} \StringTok{"ESTRESScov\_fitTABLE"}\NormalTok{, }\AttributeTok{type =} \StringTok{"csv"}\NormalTok{, }\AttributeTok{print.results =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Table 2
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.00}}@{}}
+\toprule
+Model Coefficients Assessing Cultural Mistrust as a Mediator Between Racial Microaggressions and Well-Being \\
+\midrule
+\endhead
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lccc@{}}
+\toprule
+& & & \\
+\midrule
+\endhead
+& Cultural Mistrust (M) & & Well-Being (Y) \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcccccccc@{}}
+\toprule
+& & & & & & & & \\
+\midrule
+\endhead
+Antecedent & path & \(B\) & \(SE\) & \(p\) & path & \(B\) & \(SE\) & \(p\) \\
+constant & \(i_{M}\) & 2.032 & 0.164 & 0.000 & \(i_{Y}\) & 5.636 & 0.285 & 0.000 \\
+REMS (X) & \(a\) & 3.109 & 0.312 & 0.000 & \(c'\) & 0.131 & 0.511 & 0.798 \\
+CMI (M) & & & & & \(b\) & -0.250 & 0.100 & 0.012 \\
+ANX (Cov) & & -0.030 & 0.052 & 0.563 & & -0.480 & 0.063 & 0.000 \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lccc@{}}
+\toprule
+& & & \\
+\midrule
+\endhead
+& \(R^2\) = 34.93\% & & \(R^2\) = 34.93\% \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{apa-style-write-up}{%
+\subsection{APA Style Write-up}\label{apa-style-write-up}}
+
+There are varying models for reporting the results of mediation. The Kim et al. \citep{kim_racial_2017} writeup is a great example. Rather than copying it directly, I have modeled my table after the ones in Hayes \citeyearpar{hayes_introduction_2018} text. You'll notice that information in the table and text are minimally overlapping. APA style cautions us against redundancy in text and table.
+
+\textbf{Results}
+
+A simple mediation model examined the degree to which cultural mistrust mediated the effect of racial microaggressions on psychological well-being. Using the \emph{lavaan} package (v 0.6-7) in R, coefficients for the each path, the indirect effect, and total effects were calculated. The effect of covariate, anxiety, was mapped onto both the mediator and dependent variable. These values are presented in Table 3 and illustrated in Figure 3. Results suggested that 34.93\% of the variance in cultural mistrust and 34.93\% of the variance in well-being were accounted for by the model. Supporting the notion of a mediated model, there was a statistically significant indirect effect (\(B\) = -0.776, \(p\) = 0.016, CI95 -1.486 to -0.229) in combination with a non-significant direct effect (\(B\) = 0.131, \(p\) = 0.798, CI95 -0.854 to 1.158). Curiously, though, the total effect (\(B\) = -0.646, \(p\) = 0.083, CI95 -1.392 to 0.079) was also non-significant.
+
+\hypertarget{residual-and-related-questions}{%
+\section{Residual and Related Questions\ldots{}}\label{residual-and-related-questions}}
+
+..that you might have; or at least I had, but if had answered them earlier it would have disrupt the flow.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Are you sure you can claim a significant indirect effect in the presence of a non-significant total effect? Hayes \citeyearpar{hayes_introduction_2018} is.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In the section subtitled, ``What about Baron \& Kenny'' (chapter 4), Hayes argues from both logical/philosophical and statistical perspectives that the size of the total effect does not constrain or determine the size of the indirect effect. That is, an indirect effect can be different from zero even when the total effect is not (pp.~117-119).\\
+  \end{itemize}
+\item
+  The output we get is different from the output in the journal article being used as the research vignette. Why? And should we worry about it?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We are simulating data. This gives us some advantages in that (unless we specify it), we never have missingness and our variables should be normally distributed. Because we are working from means, standard deviations, and correlations, our data will never be the same as the original researcher. That said, we can compare our results to the journal to \emph{check out work.} In fact, in this very chapter, I got turned around (e.g., first accidentally swapping the mediator and IV; then using the wrong DV) and was able to compare my work against the journal article to correct my errors.
+  \end{itemize}
+\item
+  Some of the statistics you are reporting are different than the ones in Hayes and the ones that use the PROCESS macro (e.g., what happened to the \emph{F} test)?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The default estimator for \emph{lavaan} is maximum likelihood (ML) and Hayes uses ordinary least squares (OLS). This affects both the values of coefficients, standard errors, AND the type of statistics that are reported.
+  \item
+    You can ask for OLS regression by adding the statement ``estimator =''GLS". Even with this option, I have not discovered a way to obtain the \emph{F} tests for the overall model. Researchers seem to be comfortable with this, even asking for less than we did (e.g., many do not request R square).
+  \item
+    Best I can tell, researchers who do want this might use a combination of packages, using GLS estimators in \emph{lavaan} (this easily gets them the bootstrapped CIs) and the move to a different regression package to get the intercepts and \emph{F} tests. If I did this I would triple check to make sure that all the output really lined up.
+  \end{itemize}
+\item
+  Why did we ignore the traditional fit statistics associated with structural equation modeling (e.g., CFI, RMSEA).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I hesitate to do this with models that do not include latent variables. Therefore, we asked for an ``in-between'' amount of info that should be sufficient for publication submission (any editor may have their own preferences and ask for more).
+  \end{itemize}
+\item
+  What if I have missing data?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    When we enter the \emph{lavaan} world we do get options other than multiple imputation. In today's example we used the ``sem'' fitting function. Unless otherwise specified, listwise deletion (deleting the entire case when one of its variables is used to estimate the model) is the default in \emph{lavaan}. If data are MCAR or MAR, you can add the argument \emph{missing = ``ml''} (or its alias \emph{missing = ``fiml''}). More here \url{https://users.ugent.be/~yrosseel/lavaan/lavaan2.pdf} on the 1.7/Missing data in lavaan slide.
+  \item
+    That said, the type of estimator matters. If you estimate your data with GLS (generalized least squares) or WLS (weighted least squares), you are required to have complete data (however you got it). We used maximum likelihood and, even though we had non-missing data, I used the \emph{missing = ``fiml''} code.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{practice-problems-4}{%
+\section{Practice Problems}\label{practice-problems-4}}
+
+The three problems described below are designed to grow with the subsequent chapters on complex mediation and conditional process analysis (i.e,. moderated mediation). Therefore, I recommend that you select a dataset that includes at least four variables. If you are new to this topic, you may wish to select variables that are all continuously scaled. The IV and moderator (next chapters) could be categorical (if they are dichotomous, please use 0/1 coding; if they have more than one category it is best if they are ordered). You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
+
+The suggested practice problem for this chapter is to conduct a simple mediation.
+
+\hypertarget{problem-1-rework-the-research-vignette-as-demonstrated-but-change-the-random-seed}{%
+\subsection{Problem \#1: Rework the research vignette as demonstrated, but change the random seed}\label{problem-1-rework-the-research-vignette-as-demonstrated-but-change-the-random-seed}}
+
+If this topic feels a bit overwhelming, simply change the random seed in the data simulation, then rework the problem. This should provide minor changes to the data (maybe in the second or third decimal point), but the results will likely be very similar.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, or M roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-2-rework-the-research-vignette-but-swap-one-or-more-variables}{%
+\subsection{Problem \#2: Rework the research vignette, but swap one or more variables}\label{problem-2-rework-the-research-vignette-but-swap-one-or-more-variables}}
+
+Use the simulated data, but select one of the other models that was evaluated in the Kim et al. \citeyearpar{kim_racial_2017} study. Compare your results to those reported in the mansucript.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, or M roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-3-use-other-data-that-is-available-to-you}{%
+\subsection{Problem \#3: Use other data that is available to you}\label{problem-3-use-other-data-that-is-available-to-you}}
+
+Using data for which you have permission and access (e.g., IRB approved data you have collected or from your lab; data you simulate from a published article; data from an open science repository; data from other chapters in this OER), complete a simple mediation.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, or M roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] MASS_7.3-53       semTable_1.8      semPlot_1.1.2     lavaan_0.6-7     
+##  [5] apaTables_2.0.8   mice_3.13.0       sjstats_0.18.0    formattable_0.2.1
+##  [9] qualtRics_3.1.4   forcats_0.5.0     stringr_1.4.0     dplyr_1.0.2      
+## [13] purrr_0.3.4       readr_1.4.0       tidyr_1.1.2       tibble_3.0.4     
+## [17] ggplot2_3.3.3     tidyverse_1.3.0   psych_2.0.12     
+## 
+## loaded via a namespace (and not attached):
+##   [1] readxl_1.3.1        backports_1.2.0     Hmisc_4.4-2        
+##   [4] BDgraph_2.63        igraph_1.2.6        plyr_1.8.6         
+##   [7] splines_4.0.4       TH.data_1.0-10      digest_0.6.27      
+##  [10] htmltools_0.5.0     matrixcalc_1.0-3    fansi_0.4.1        
+##  [13] magrittr_2.0.1      Rsolnp_1.16         checkmate_2.0.0    
+##  [16] lisrelToR_0.1.4     cluster_2.1.0       openxlsx_4.2.3     
+##  [19] modelr_0.1.8        sandwich_3.0-0      jpeg_0.1-8.1       
+##  [22] sem_3.1-11          MBESS_4.8.0         colorspace_2.0-0   
+##  [25] rvest_0.3.6         haven_2.3.1         xfun_0.19          
+##  [28] crayon_1.3.4        jsonlite_1.7.2      lme4_1.1-26        
+##  [31] regsem_1.6.2        survival_3.2-7      zoo_1.8-8          
+##  [34] glue_1.4.2          gtable_0.3.0        emmeans_1.5.3      
+##  [37] mi_1.0              sjmisc_2.8.5        abind_1.4-5        
+##  [40] scales_1.1.1        mvtnorm_1.1-1       DBI_1.1.0          
+##  [43] Rcpp_1.0.5          xtable_1.8-4        performance_0.6.1  
+##  [46] htmlTable_2.1.0     tmvnsim_1.0-2       foreign_0.8-81     
+##  [49] Formula_1.2-4       stats4_4.0.4        truncnorm_1.0-8    
+##  [52] htmlwidgets_1.5.3   httr_1.4.2          RColorBrewer_1.1-2 
+##  [55] ellipsis_0.3.1      pkgconfig_2.0.3     XML_3.99-0.5       
+##  [58] nnet_7.3-15         kutils_1.70         dbplyr_2.0.0       
+##  [61] utf8_1.1.4          reshape2_1.4.4      tidyselect_1.1.0   
+##  [64] rlang_0.4.9         effectsize_0.4.1    munsell_0.5.0      
+##  [67] cellranger_1.1.0    tools_4.0.4         cli_2.2.0          
+##  [70] generics_0.1.0      sjlabelled_1.1.7    broom_0.7.3        
+##  [73] fdrtool_1.2.15      evaluate_0.14       arm_1.11-2         
+##  [76] yaml_2.2.1          knitr_1.30          fs_1.5.0           
+##  [79] stationery_0.98.30  zip_2.1.1           glasso_1.11        
+##  [82] pbapply_1.4-3       nlme_3.1-151        whisker_0.4        
+##  [85] xml2_1.3.2          compiler_4.0.4      rstudioapi_0.13    
+##  [88] curl_4.3            png_0.1-7           huge_1.3.4.1       
+##  [91] reprex_0.3.0        statmod_1.4.35      pbivnorm_0.6.0     
+##  [94] stringi_1.5.3       parameters_0.10.1   qgraph_1.6.5       
+##  [97] rockchalk_1.8.144   lattice_0.20-41     Matrix_1.2-18      
+## [100] nloptr_1.2.2.2      vctrs_0.3.6         pillar_1.4.7       
+## [103] lifecycle_0.2.0     OpenMx_2.18.1       estimability_1.3   
+## [106] data.table_1.13.4   insight_0.11.1      corpcor_1.6.9      
+## [109] R6_2.5.0            latticeExtra_0.6-29 bookdown_0.21      
+## [112] gridExtra_2.3       codetools_0.2-18    gtools_3.8.2       
+## [115] boot_1.3-25         assertthat_0.2.1    rjson_0.2.20       
+## [118] withr_2.3.0         mnormt_2.0.2        multcomp_1.4-15    
+## [121] bayestestR_0.8.0    parallel_4.0.4      hms_0.5.3          
+## [124] grid_4.0.4          rpart_4.1-15        coda_0.19-4        
+## [127] minqa_1.2.4         rmarkdown_2.6       carData_3.0-4      
+## [130] d3Network_0.5.2.1   lubridate_1.7.9.2   base64enc_0.1-3
+\end{verbatim}
 
   \bibliography{STATSnMETH.bib}
 

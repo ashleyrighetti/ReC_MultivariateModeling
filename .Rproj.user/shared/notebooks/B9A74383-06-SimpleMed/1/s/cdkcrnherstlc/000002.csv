@@ -1,0 +1,1 @@
+"0","Kim_fit <- sem(Kim_model, data = Kim_df, se=""bootstrap"", missing= 'fiml')"

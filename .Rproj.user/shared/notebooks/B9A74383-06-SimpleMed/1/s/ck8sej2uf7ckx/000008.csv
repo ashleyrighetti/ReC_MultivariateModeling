@@ -1,0 +1,13 @@
+"0","COVtot_CIlo <- digits(Kcov_ParEsts$ci.lower[17], 3) #lower confidence interval
+COVtot_CIlo
+"
+"1","[1]"
+"1"," -1.392"
+"1","
+"
+"0","COVtot_CIup <- digits(Kcov_ParEsts$ci.upper[17], 3) #upper confidence interval"
+"0","COVtot_CIup"
+"1","[1]"
+"1"," 0.079"
+"1","
+"

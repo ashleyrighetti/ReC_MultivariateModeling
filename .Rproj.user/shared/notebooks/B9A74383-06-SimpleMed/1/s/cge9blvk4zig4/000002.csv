@@ -1,0 +1,19 @@
+"0","set.seed(210410)"
+"2","Warning messages:
+"
+"2","1: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/lhbikos/OneDrive - Seattle Pacific University/ReCenterPsychStats/ReC_MultivariateModeling/ReC_MultivariateModeling/index.Rmd'
+"
+"2","2: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/lhbikos/OneDrive - Seattle Pacific University/ReCenterPsychStats/ReC_MultivariateModeling/ReC_MultivariateModeling/index.Rmd'
+"
+"0","X <- rnorm(100)"
+"0","M <- 0.5*X + rnorm(100)"
+"0","Y <- 0.7*M + rnorm(100)"
+"0","Data <- data.frame(X = X, Y = Y, M = M)"
