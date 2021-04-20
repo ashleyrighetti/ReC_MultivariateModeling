@@ -5845,7 +5845,7 @@
                     ]
                 ]
             },
-            "keyword": "Aggressiveness, Blacks, Distress, gendered racial microaggressions, gendered racism, Human Females, Human Sex Differences, Oppression, racism, Racism, Rating Scales, sexism, Sexism, stress, Stress, Test Construction, Test Validity",
+            "keyword": "Test Construction, Rating Scales, Test Validity, Human Sex Differences, Distress, Stress, Human Females, Sexism, Blacks, Oppression, racism, Racism, gendered racism, sexism, stress, gendered racial microaggressions, Aggressiveness",
             "note": "Publisher: American Psychological Association",
             "page": "289-302",
             "title": "Construction and initial validation of the Gendered Racial Microaggressions Scale for Black women",
@@ -5894,7 +5894,7 @@
                     ]
                 ]
             },
-            "keyword": "assessment of medical treatment outcomes, conference presentation, Measurement, Medical Treatment (General), patients, Treatment Effectiveness Evaluation, usefulness of physical vs mental component summary measures",
+            "keyword": "Measurement, assessment of medical treatment outcomes, conference presentation, Medical Treatment (General), patients, Treatment Effectiveness Evaluation, usefulness of physical vs mental component summary measures",
             "note": "Publisher: Lippincott Williams & Wilkins",
             "page": "264-279",
             "title": "Comparison of methods for the scoring and statistical analysis of SF-36 health profile and summary measures: Summary of results from the medical outcomes study",
@@ -5932,7 +5932,7 @@
                     ]
                 ]
             },
-            "keyword": "assessment of effective & ineffective coping, Coping Behavior, Natural Disasters, Personality Measures, psychometric properties & construction of Brief COPE, Psychometrics, survivors of Hurricane Andrew, Test Construction",
+            "keyword": "Psychometrics, Test Construction, Coping Behavior, Personality Measures, assessment of effective & ineffective coping, Natural Disasters, psychometric properties & construction of Brief COPE, survivors of Hurricane Andrew",
             "note": "Publisher: Lawrence Erlbaum",
             "page": "92-100",
             "title": "You want to measure coping but your protocol’s too long: Consider the Brief COPE",
@@ -5968,6 +5968,158 @@
             "title": "Multidimensional Inventory of Black Identity: A Preliminary Investigation of Reliability and Construct Validity",
             "title-short": "Multidimensional Inventory of Black Identity",
             "type": "article-journal"
+        },
+        {
+            "DOI": "0022-3514/86",
+            "URL": "https://www.sesp.org/files/The%20Moderator-Baron.pdf",
+            "author": [
+                {
+                    "family": "Baron",
+                    "given": "Reuben M"
+                },
+                {
+                    "family": "Kenny",
+                    "given": "David A"
+                }
+            ],
+            "container-title": "Journal of Personality and Social Psychology",
+            "id": "baron_moderator-mediator_1986",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        1986
+                    ]
+                ]
+            },
+            "page": "1173-1182",
+            "title": "The Moderator-Mediator Variable Distinction in Social Psychological Research: Conceptual, Strategic, and Statistical Considerations",
+            "title-short": "The Moderator-Mediator Variable Distinction in Social Psychological Research",
+            "type": "article-journal",
+            "volume": "51"
+        },
+        {
+            "URL": "https://paolotoffanin.wordpress.com/2017/05/06/multiple-mediator-analysis-with-lavaan/",
+            "abstract": "A brief introduction to mediation analysis with R and the package lavaan",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        17
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Toffanin",
+                    "given": "Paolo"
+                }
+            ],
+            "container-title": "paolotoffanin",
+            "id": "toffanin_multiple-mediator_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        5
+                    ]
+                ]
+            },
+            "title": "Multiple-mediator analysis with lavaan",
+            "type": ""
+        },
+        {
+            "DOI": "10.1037/0022-0167.53.3.372",
+            "ISSN": "0022-0167",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2006-08780-009&site=ehost-live",
+            "abstract": "P. A. Frazier, A. P. Tix, and K. E. Barron (2004) highlighted a normal theory method popularized by R. M. Baron and D. A. Kenny (1986) for testing the statistical significance of indirect effects (i.e., mediator variables) in multiple regression contexts. However, simulation studies suggest that this method lacks statistical power relative to some other approaches. The authors describe an alternative developed by P. E. Shrout and N. Bolger (2002) based on bootstrap resampling methods. An example and step-by-step guide for performing bootstrap mediation analyses are provided. The test of joint significance is also briefly described as an alternative to both the normal theory and bootstrap methods. The relative advantages and disadvantages of each approach in terms of precision in estimating confidence intervals of indirect effects, Type I error, and Type II error are discussed. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        18
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Mallinckrodt",
+                    "given": "Brent"
+                },
+                {
+                    "family": "Abraham",
+                    "given": "W. Todd"
+                },
+                {
+                    "family": "Wei",
+                    "given": "Meifen"
+                },
+                {
+                    "family": "Russell",
+                    "given": "Daniel W."
+                }
+            ],
+            "container-title": "Journal of Counseling Psychology",
+            "id": "mallinckrodt_advances_2006",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006,
+                        7
+                    ]
+                ]
+            },
+            "keyword": "bootstrap methods, Confidence Limits (Statistics), errors, indirect effects, multiple regression, Multiple Regression, Prediction Errors, statistical mediation, statistical power, Statistical Power, Statistical Significance, test of joint significance",
+            "note": "Publisher: American Psychological Association",
+            "page": "372-378",
+            "title": "Advances in testing the statistical significance of mediation effects",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "DOI": "10.1037/0022-0167.52.3.358",
+            "ISSN": "0022-0167",
+            "URL": "https://ezproxy.spu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&AuthType=ip&db=psyh&AN=2005-08078-009&site=ehost-live",
+            "abstract": "In this survey study of 430 undergraduates, elements of the social competencies and interpersonal processes model (B. Mallinckrodt, 2000) were tested. Two social competencies were hypothesized to mediate the direct effects of 2 independent variables, attachment anxiety and avoidance, on 2 outcomes, psychological distress and perceived social support. Social self-efficacy was expected to be a significant mediator only for attachment anxiety. Emotional awareness, construed as low levels of alexithymia, was expected to be a significant mediator only for attachment avoidance. A bootstrap method was used to estimate the significance of indirect effects. Structural equation analyses suggested that, instead of specialized significant parings of one mediator with one independent variable, both social self-efficacy and emotional awareness served as significant mediators for both attachment anxiety and attachment avoidance. (PsycINFO Database Record (c) 2016 APA, all rights reserved)",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2021,
+                        4,
+                        18
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Mallinckrodt",
+                    "given": "Brent"
+                },
+                {
+                    "family": "Wei",
+                    "given": "Meifen"
+                }
+            ],
+            "container-title": "Journal of Counseling Psychology",
+            "id": "mallinckrodt_attachment_2005",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005,
+                        7
+                    ]
+                ]
+            },
+            "keyword": "adult social competencies, alexithymia, attachment behavior, Attachment Behavior, causal mediation, college students, College Students, Distress, Interpersonal Interaction, interpersonal processes, psychological distress, social self-efficacy, Social Skills, social support, Social Support",
+            "note": "Publisher: American Psychological Association",
+            "page": "358-367",
+            "title": "Attachment, Social Competencies, Social Support, and Psychological Distress",
+            "type": "article-journal",
+            "volume": "52"
         }
     ],
     "project_biblios": [

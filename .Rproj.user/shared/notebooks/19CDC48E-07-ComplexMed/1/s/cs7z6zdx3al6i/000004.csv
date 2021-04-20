@@ -1,0 +1,4 @@
+"0","library(tidyverse)"
+"0","Lewis_df <- Lewis_df%>%"
+"0","  as.data.frame %>%"
+"0","  rename(GRMS = V1, Sprtlty = V2, SocSup = V3, Engmt = V4, DisEngmt = V5, GRIcntlty = V6, MtnlHlth = V7, PhysHlth = V8)"
