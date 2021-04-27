@@ -1,0 +1,52 @@
+"0","sim_slopes(Mod_a_path, pred = GRMS, modx = GRIcntlty)"
+"1","[1m[4mJOHNSON-NEYMAN INTERVAL[24m[22m"
+"1"," "
+"1","
+
+"
+"1","When GRIcntlty is [7mINSIDE[27m the interval [3.02, 9.11], the slope of GRMS is p < .05."
+"1",""
+"1","
+
+"
+"1","[3mNote: The range of observed values of GRIcntlty is [23m[2.72, 9.56]"
+"1",""
+"1","
+
+"
+"1","[1m[4mSIMPLE SLOPES ANALYSIS[24m[22m"
+"1"," "
+"1","
+
+"
+"1","[3mSlope of GRMS when GRIcntlty = 4.68 (- 1 SD): 
+
+[23m"
+"1","  Est.   S.E.   t val.      p
+------ ------ -------- ------
+  0.24   0.06     4.06   0.00"
+"1","
+"
+"1","
+"
+"1","[3mSlope of GRMS when GRIcntlty = 5.71 (Mean): 
+
+[23m"
+"1","  Est.   S.E.   t val.      p
+------ ------ -------- ------
+  0.24   0.04     6.39   0.00"
+"1","
+"
+"1","
+"
+"1","[3mSlope of GRMS when GRIcntlty = 6.74 (+ 1 SD): 
+
+[23m"
+"1","  Est.   S.E.   t val.      p
+------ ------ -------- ------
+  0.25   0.05     4.81   0.00"
+"1","
+"
+"1","
+"
+"0","#sim_slopes(Mod_a_path, pred=GRIcntlty, modx = GRMS) #sometimes I like to look at it in reverse -- like in the plots"

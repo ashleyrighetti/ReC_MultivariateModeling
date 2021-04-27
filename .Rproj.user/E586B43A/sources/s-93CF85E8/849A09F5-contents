@@ -1,0 +1,414 @@
+---
+title: "Conditional Process Analysis I"
+author: "Lynette H. Bikos, PhD, ABPP"
+date: "04/18/2020"
+output: word_document
+always_allow_html: yes
+csl: apa-single-spaced.csl
+bibliography: StatsnMethods.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA) #keeps out the hashtags in the knits
+```
+
+```{r Clear Global Env}
+# Clear your Global Environment
+rm(list=ls())
+```
+
+```{r elimniates scientific notation}
+options(scipen=999)#eliminates scientific notation
+```
+
+![Image of PhD Comic about time needed for writing code](code.jpg){#id .class width=750 height=300px}
+
+**Screencast Playlist link:**  https://spu.hosted.panopto.com/...
+
+
+## navigating this lectuRette
+
+About 45 minutes.  Add another hour to work through and digest the materials.
+
+The focus of this lecture is the moderated mediation.  That is, are the effects of the indirect effect (sign, significance, strength, presence/absence) *conditional* on the effects of the moderator.
+
+In this lecture we work an example "all at once, up front."  In the follow-up lecture, we take the piecemeal approach by Hayes.  The hope is that by the end (of both) you have a conceptual understanding of this complex analysis.
+
+### quiz pRep
+
+* Define and interpret the index of moderated mediation?
+* Recognize conditional process modeling from R script.
+* Distinguish between moderated mediation and mediated moderation.
+* Interpret "the usual" things we find in regression:  B/beta weights, R, $R^{2}$.
+
+
+### planning for youR homewoRk
+
+A continuation from the previous week.  See grading template (RMD file) in SP folder.
+
+### Readings & ResouRces
+
+* Hayes, A. F. (2018). *Introduction to mediation, moderation, and conditional process anlaysis:  A regression-based approach*. New York, NY: Guilford Press. Available as an ebook from the SPU library:  https://ebookcentral-proquest-com.ezproxy.spu.edu/lib/spu/detail.action?docID=5109647 
+  - **Chapter 11, CPA fundamentals**:  In this chapter Hayes disentangles conditional indirect effects.  We work a great example on workplace teams where we test the conditional indirect effect on the b path.  
+  - **Chapter 12, More CPA examples**:  Assigned now, but intended for the second half of the lecture.  Procedurally, our focus in this chapter is on the role of covariates. 
+  - **Appendix A:  Using Process**:  An essential tool for PROCESS users because, even when we are in the R environment, this is the "idea book." That is, the place where all the path models are presented in figures.
+* Cole, M. S., Walter, F., & Bruch, H. (2008). Affective mechanisms linking dysfunctional behavior to performance in work teams: A moderated mediation study. *Journal of Applied Psychology, 93*(5), 945–958. https://doi-org.ezproxy.spu.edu/10.1037/0021-9010.93.5.945
+  - This article is the source for the chapter exercise that we work. Focus on Method/Results so we can compare to variations we will do as part of the lecture.
+  
+
+# Conditional Process Analysis
+
+*Hayes coined the term and suggests we also talk about "conditional process modeling."*
+
+**Conditional process analysis**:  used when the analytical goal is to describe and understand the conditional nature of the mechanism or mechanisms by which a variable transmits its effect on another.
+
+We are integrating moderation and mediation mechanisms together into a single integrated analytical model. 
+
+* **Mediator**: Any causal system in which at least one causal antecedent X variable is proposed as influencing an outcome Y through a intervening variable M.  In this model, there are two pathways by which X can influence Y:  *direct* effect of X on Y, and *indirect* effect of X on Y through M. 
+    + Answers question, "How does X affect Y"
+    + Partitions the X-to-Y relationship into two paths of influence: direct, indirect.
+    + Indirect effect contains two componetns (a,b) that when multipled (a*b) yield an estimate of how much these two cases that differ by one unit on X are estimated to differ on Y through the effect of X on M, which in turn affects Y.
+    + Keywords: how, through, via, indirect effect
+* **Moderator**:  The effect of X on some variable Y is moderated by W if its size, sign, or strength depends on or can be predicted by W.
+    + Stated another way, W and X *interact* in their influence on Y.  
+    + Moderators help establish the boundary conditions of an effect or the circumstances, stimuli, or type of people for which the effect is large v. small, present v. absent, positive v. negative, and so forth.
+    + Keywords:  "it depends," interaction effect.
+
+**Why engage both mediators and moderators?**  Hayes suggest that if we have only a mediator(s) in the model that we lose information if we "reduce complex responses that no doubt differ from person to person or situation to situation" (p. 394).  He adds that "all effects are moderated by something" (p. 394). Correspondingly, he recommends we add them to a mediation anlaysis.
+
+Hayes suggests that "more complete" (p. 395) analyses model the mechanisms at work linking X to Y (mediator[s]) while simultaneously allowing those effects to be contingent on context, circumstance, or individual difference (moderator[s]).
+
+**Conditional direct and indirect effects**.  Mediation analyses produce indirect (the product of a sequence of effects that are assumed to be causal) and direct (the unique contribution of X to Y, controlling for other variables in the model) effects.  These effects (the X-to-Y/direct and X-to-W-to-Y/indirect), can also be moderated.  This is our quest!
+
+Figure 11.2 in the text illustrates conceptually and statistically that we can specify moderation of any combination of direct and indirect paths/effects.
+
+![image](Fig11_2.JPG){#id .class width=300 height=500px}
+
+Within the CPA framework we have lots of options that generally fall into two categories:
+
+* *Moderated mediation*:  when an indirect effect of X on Y through M is moderated; the mechanism represented by the *X-to-M-to-Y* chain of events operates to varying degrees (or not at all) for certain people or in certain contexts. 
+
+    + Any model in which the indirect effect (a*b) changes as a function of one or more moderators.  These moderators can be operating on the a, b, or c' paths or any possible combination of the three
+    + X could moderate its own indirect effect on Y through M if the effect of M on Y depends on X, or
+    + The indirect effect of X on Y through M could be contingent on a fourth variable if that fourth variable W moderates one or more of the relationships in a three-variable causal system, or
+    + An indirect effect could be contingent on a moderator variable
+
+* *Mediated moderation*:  an interaction between X and some moderator W on Y is carried through a mediator M; 
+    +	mediated moderation analysis is simply a mediation analysis with the product of two variables serving as the causal agent of focus
+    + An interaction between a moderator W and causal agent X on outcome Y could operate through a mediator M
+
+Hayes argues that the mediated moderation hypotheses are "regularly articulated and tested by scientists" (p. 459).  He warns, though, that we should not confuse the "abundance of published examples of mediated moderation anlayses...with the meaningfulness of the procedure itself" (p. 460).  He later adds that mediation moderation is "neither interesting nor meaningful."  Why?  
+
+*  Conceptualizing a process in terms of a mediated moderation misdirects attention toward a variable in the model that actually doesn't measure anything.
+*   Most often there are moderated mediation models that are identical in equations and resulting coefficients - the difference is in the resulting attentional focus and interpretation.
+*   Hayes recommends that models proposing mediated moderation be recast in terms of moderated mediation process.
+*   Consequently, we will not work a mediated moderation, but there is an example in chapter 12.
+
+
+## Motivating Example:  TEAM
+
+The model we are testing [@cole_affective_2008]is pedicting a team supervisor's assessment of team performance (perform, Y) from group members' ratings of dysfunctional behavior (dysfunc,X), mediated by the degree to which group members perceive that their work environment is filled with negative emotions (negtone, M).  The relationship between negative tone and performance is expected to be moderated by ability to regulate display of negative emotions (negexp, W) such that when team members are able to hide how they are feeling from others, the team can stay focused on the task at hand.
+
+Restated:  the effect of negative affective tone of the work environment (M) on team performance (Y) is hypothesized as contingent on the ability of the team members to hide their feelings from the team, with a stronger negative effect of negative affective tone (M) on performance (Y) in teams that express their negativity rather than conceal it.
+
+Looking at the diagram, we can see two equations are needed to explain the model:
+
+$$M = i_{M}+aX+e_{m}$$
+
+$$Y=i_{Y}+c'X+b_{1}M+b_{2}W+b_{3}MW+e_{Y}$$
+
+*  *dysfunc*: participants rated the level of *dysfunctional behavior of team members* (e.g., how often members did things to weaken the work of others or hinder change and innovation).  Higher scores reflect more dysfunction in the team.
+*  *negtone*:a rating of *negative affective tone* of the group.  How often they felt "angry," "disgusted," etc.  Higher scores reflect a more negative affective tone of the work environment.
+*  *negexp*: supervisor ratings of how easy it is to read the nonverbal signals team members (*nonverbal negative expressivity*) emote about how they are feeling.  Higher scores mean the members of the team are more more verbally expressive about negative affective states.
+*  *perform*:  the team supervisor provided an assessment of *team performance* in general, such as how efficient and timely the team is, whether the team meets its manufacturing objectives, etc.  Higher scores reflect better performance.
+
+![image](Fig11_2.JPG){#id .class width=300 height=400px}
+
+*Note.*  I cannot move forward without saying that this model includes data from multiple team members (X, M) and their supervisor (W, Y).  I cannot believe Hayes used this because it belongs in a multilevel model.  Unfortunately, the dataset does not include group ID, or we could have done it when we study HLM. I did check the article and the authors at least acknowledge the nesting is an issue.  They provide a rationale and justification for aggregating team members' responses so that there is 1 per group.
+```{r Install Packages}
+#will install the package if not already installed
+if(!require(lavaan)){install.packages("lavaan")}
+if(!require(semPlot)){install.packages("semPlot")}
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(psych)){install.packages("psych")}
+```
+
+```{r quick peek at data}
+library(psych)
+TEAMSdat <- read.csv ("teams.csv", header = TRUE)
+str(TEAMSdat)
+round(describe(TEAMSdat),3)
+```
+
+In the code below
+
+* First specify the equations, hints
+    + the a,b,c, labels are affixed with the *(asterisk)
+    + interaction terms are identifed with the colon
+* Create code for the intercepts (Y and M) with the form:  VarName ~ VarName.mean*1
+* Create code for the mean and variance of all moderators (W, Z, etc.); these will be used in simple slopes.
+    + Means use the form:  VarName ~ VarName.mean*1
+    + Variances use the form:  VarName ~~VarName.var*VarName
+* Calculate the *index of moderated mediation*:  quantifies the relationship between the moderator and the indirect effect.  
+    + To the degree that the value of the IMM is different from zero and the associated inferential test is statistically significant (bootstrapped confidence intervals are preferred; more powerful), we can conclude that the indirect effect is moderated.
+      + The IMM is used in the formula to calculate the conditional indirect effects.
+      +  Hayes argues that a statistically significant IMM suggest they ar (boom, done, p. 430).
+* Create code to calculate indirect effects conditional on (*M* +/- 1*SD*) moderator with the general form:
+    + product of the indirect effect (a*b) PLUS
+    + the product of the IMM and the moderated value
+* IF THE DIRECT PATH IS MODERATED...it's not, but you would use a similar pattern to do such, stay tuned. You do, though, create a direct path anyway (it's just direct := c_p).
+* Although they don't tend to be reported, you can create total effects conditional on the (*M* +/- 1*SD*).  These are simply the sum of the c_p and all indirect paths, specified individually, at their *M* +/- 1*SD* conditional values.
+    
+```{r open lavaan}
+library(lavaan)
+```
+
+```{r specify lavaan model}
+set.seed(190505)
+TEAMSmodmed <- '
+    #equations
+    negtone ~ a*dysfunc
+    perform ~ b1*negtone + b2*negexp + b3*negexp:negtone + c_p*dysfunc
+
+   #intercepts
+    perform ~ perform.mean*1
+    negtone ~ negtone.mean*1
+
+    #means, variances of W for simple slopes
+    negexp ~ negexp.mean*1
+    negexp ~~ negexp.var*negexp
+    
+    #index of moderated mediation, the moderated path multiplied by the interaction term
+    imm := a*b3
+
+    #Note that we first create the indirect product, then add to it the product of the imm and the SD level.
+    indirect.SDbelow := a*b1 + imm*(negexp.mean - sqrt(negexp.var))
+    indirect.mean := a*b1 + imm*(negexp.mean)
+    indirect.SDabove := a*b1 + imm*(negexp.mean + sqrt(negexp.var))
+
+    #direct effect
+    direct := c_p
+
+    #total effect
+    total.SDbelow := c_p + indirect.SDbelow
+    total.mean := c_p + indirect.mean
+    total.SDabove := c_p + indirect.SDabove
+ '
+TEAMSmodmed_fit <- sem(TEAMSmodmed, data = TEAMSdat, missing = 'fiml', se = "bootstrap", bootstrap = 1000)
+summary(TEAMSmodmed_fit, standardized = TRUE, rsq=T, ci=TRUE)    
+parameterEstimates(TEAMSmodmed_fit, boot.ci.type = "bca.simple", standardized=TRUE)
+```
+
+
+```{r export lavaan table}
+library(semTable)
+TeamsMODMEDTab1 <- semTable(TEAMSmodmed_fit, columns = c("est", "se", "p", "rsquare"),  columnLabels = c(eststars = "Estimate"), paramSets = c("composites", "loadings", "slopes", "intercepts", "residualvariances"), file = "TeamsMODMEDTab1", type = "csv", print.results = TRUE)
+```
+
+Play and pray with *semPlot*. Cycling through the tree, tree2, circle, circle2, and spring options (all with rotations of 1, 2, 3, 4), I liked this one best.  Not a traditional Hayes rendering, but the DV is clearly identified.  You can see the mediation direct (dysfunc to perform) and indirect path (dysfunc thru negtone to perform) rather clearly. And the interaction term clearly points to perform.  Remember that 
+
+```{r semPlot of serial PMI model}
+library(semPlot)
+semPaths(TEAMSmodmed_fit, #must identiy the model you want to map
+         what = "est", #"est" plots the estimates, but keeps it greyscale with no fading
+         #whatLabels = "stand", #"stand" changes to standardized values
+         layout = 'tree', rotation = 2, #together, puts predictors on left, IVs on right 
+         #layout = 'circle',
+         edge.label.cex = 1.00, #font size of parameter values
+         #edge.color = "black", #overwrites the green/black coloring
+         sizeMan=10, #size of squares/observed/"manifest" variables
+         fade=FALSE, #if TRUE, there lines are faded such that weaker lines correspond with lower values -- a cool effect, but tough for journals
+         esize=2, 
+         asize=3,
+         #label.prop = .5,
+         label.font = 2.5, #controls size (I think) of font for labels
+         label.scale = TRUE, #if false, the labels will not scale to fit inside the nodes
+         nDigits = 3, #decimal places (default is 2)
+         residuals = FALSE,#excludes residuals (and variances) from the path diagram
+         nCharNodes = 0, #specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)
+         intercepts = FALSE, #gets rid of those annoying triangles (intercepts) in the path diagram)
+)
+title("Teams:  Moderated Mediation")
+```
+
+###What have we learned?
+
+*  We accounted for 19% of the variance in the negtone (M) and 26% in perform (Y).
+*  Is there a significant indirect effect?  There's no *one* answer.  Because we evaluated conditional indirect effects, we look at them, individually.  And yes, at the mean and +1SD levels, the indirect effect is signficant.  
+*  The moderator term is statistically significant (*B* = 0-.517, *p* = 0.032).
+*  Curiously, the IMM appears to not be statistically significant by it's *p* value (*B* = -0.320, *p* = 0.098), BUT REMEMBER WE USE THE CIs, and they do not cross zero (-0.869	-0.056).  This suggests that the indirect effects ARE statistically significant from each other.  Hayes would say this saves us from further probing (or comparing) indirect effects.
+
+There are a couple of options for presenting formulas.  I like the two-formula option as it makes (to me) more clear the model:
+
+$$\hat{M}=0.026+0.620X$$
+$$\hat{Y}=-0.012+0.366X-0.436M-0.019W-0.517MW$$
+
+The article authors graphed only the interaction term (the moderation of the effect of NEGTONE on PERFORM by NEGEXP  Hayes did the same (and you'll see that he recommends a piecewise approach to understanding the data in the next chapter).
+
+Since I'm only aware of packages that work with *lavaan* when there are LVs, let's simplify the equation for the *lm()* function in base R and get the plot that way.
+
+I'm loading the *jtools* package because I like the *lavaan* output better (obtained from the *summ()* function.
+
+```{r open jtools}
+library(jtools)
+```
+
+```{r OLS specification}
+ModMed_OLS <- lm(perform~negtone*negexp + dysfunc, data=TEAMSdat)
+summ(ModMed_OLS, digits = 3)
+```
+
+Take a quick look to see if those values are similar to the ones returned with *lavaan* (we only get them for the PERFORM DV).
+
+Since they are, let's ask for an interaction plot with the package *interactions*.
+
+```{r open tools for interaction plots}
+library(interactions)
+library(ggplot2)
+```
+
+```{r interaction plot}
+interact_plot(ModMed_OLS, pred = negtone, modx = negexp, x.label = "Negative Tone of the Work Climate (M)", y.label = "Team Performance (Y)")
+```
+
+## Writing it up
+
+**Results**
+
+**Preliminary Analyses**
+
+*  Missing data analysis and managing missing data
+*  Bivariate correlations, means, SDs
+*  Distributional characteristics, assumptions, etc.
+*  Rule-out any concerns.
+
+**Primary Analyses**
+
+Our analysis evaluated a moderation mediation model predicting team performance (Y) from team dysfunction (X) mediated by negative tone (M).  We further hypothesized that the negative tone/performance relationship would be moderated by negative expression (W). Data were analyzed with maximum likelihood estimation in the R package *lavaan* (v. 0.6-5); the significance of effects were tested with 1000 bootstrapped confidence intervals. We accounted for 19% of the variance in the negtone (M) and 26% in perform (Y). Results suggested that the indirect effect was moderated at mean and at one SD above the mean (but not at -1SD).  Further, the index of moderated moderation suggested that these effects are statistically significant from each other (*B* = -0.320, *p* = 0.098, CI95 -0.869	to -0.056).  Complete results are presented in Table 1 and conceptual and statistical diagrams of the proposed model are presented in Figure 1.  
+
+$$\hat{M}=0.026+0.620X$$
+$$\hat{Y}=-0.012+0.366X-0.436M-0.019W-0.517MW$$
+
+# Bonus Track: 
+
+![Image of a filmstrip](film-strip-1.jpg){#id .class width=620 height=211}
+
+```{r fresh start}
+#fresh start for bonus real problem
+rm(list = ls())
+```
+
+## Recreated Data Example:  Moderated Mediation
+
+https://ademos.people.uic.edu/Chapter15.html#5_moderated_mediation_analyses_using_%E2%80%9Clavaan%E2%80%9D_package
+Provides super helpful information on how to make up data for an analysis and then run it in different packages, including *lavaan*.
+
+For fun, I'm using Demos' instructions, but working the Chapter 11 problem [@cole_affective_2008] in Hayes, backwards (identifying no variables, just X,Y,W, a, b, c roles). 
+
+This tool (creating data with the results you want) unleashes a world of possibility -- you can "rework" articles from the information they provide in their tables.  If you'd like to do this with an article (with the same variable constellations as appropriate for the homework) you like/found in lieue of the homework "as assigned," I'd approve/encourage it!
+
+To establish the results we want, I'm getting information for the model from Table 12.1/Model Coefficients for the CPA and descriptive statistics from Hayes' dataset, disaster.csv.
+
+```{r Establishing Results for MadeUp Data}
+set.seed(190505)
+#First, using output from any example, transfer the regression weights to the proper paths.
+#I'm using Table 11.1 in Hayes' text for the TEAMS example.
+a = .620 #effect of X on M
+
+b1 = -.436 #effect of M on Y
+
+b2 = -.019# effect of W on Y
+
+b3 = -.517 #effect of MxW interaction on Y
+
+c_p = .366 #direct effect of X on Y
+
+```
+
+
+In recreating this dataset, I need the *N* for the whole dataset.  And also the *M*s and *SD*s for the X (dysfunc), M (negtone) and W (negexp) variables. We also need to recreate the formulas for M and Y (similar to writing regression equations...just backwards)  You can look either at a figure or a table, making sure all the predictors are accounted for.
+
+Just a reminder, this example is intended to be a "recipe" using the X, Y, M, W, a, b, c, c_p labels.  I'm merely using the Hayes' data as another resource to practice (e.g., properly specify and verify by checking against the model).
+
+
+```{r descriptives b}
+library(psych)
+TEAMSdat <- read.csv ("teams.csv", header = TRUE)
+str(TEAMSdat)
+round(describe(TEAMSdat),3)
+```
+
+
+```{r Establishing Characteristics of MadeUp Data}
+n <- 60 #Set sample size
+
+X <- rnorm(n, .04, .37) #IV:dysfunc, M = .04, SD = .37
+
+W <- rnorm(n, -.01, .54) #Moderator: negexp, M = -.01 SD = .54)
+ 
+M <- a*X + rnorm(n, .05, .52) #Mediator: negtone M = .05, SD = .52
+#The mediator variable is created as a function of its predictors (in this case only X) with some random noise thrown in the mix
+
+Y <- c_p*X + b1*M + b2*W +b3*X*W  + rnorm(n, -.03, .52) #DV: perform, M = -.03, SD = .52 
+#Similar to the mediator, the DV is a function of its predictors (in this case X, M, W, the MW interaction) with some random noise thrown in the mix
+```
+
+Now we make the dataframe
+That which you want to name the variable precedes the names we created above.
+```{r Making the Dataframe}
+ReCreatedData <- data.frame(Y=Y, X=X, M=M, W=W)
+str(ReCreatedData)
+round(describe(ReCreatedData),3)
+```
+
+If you are doing this on your own, you may wish to check it against the original data.  The *M*s and *SD*s should be close.  I'm seeing that the +/- signs are changing on my means. They are so close to zero that I'm not (terribly) alarmed.  We'll see if the overall results of the moderated mediation model changes.
+
+Below is the script using just the Y, X, M, and W terms.  Hopefully, it will serve as a template for you in the future.
+
+```{r respecify lavaan}
+set.seed(190505)
+ReCrModMed <- '
+    #equations
+    M ~ a*X
+    Y ~ b1*M + b2*W + b3*W:M + c_p*X
+
+   #intercepts
+    Y ~ Y.mean*1
+    M ~ M.mean*1
+
+    #means, variances of W for simple slopes
+    W ~ W.mean*1
+    W ~~ W.var*W
+    
+    #index of moderated mediation, the moderated path multiplied by the interaction term
+    imm := a*b3
+
+    #Note that we first create the indirect product, then add to it the product of the imm and the SD level.
+    indirect.SDbelow := a*b1 + imm*(W.mean - sqrt(W.var))
+    indirect.mean := a*b1 + imm*(W.mean)
+    indirect.SDabove := a*b1 + imm*(W.mean + sqrt(W.var))
+
+    #direct effect
+    direct := c_p
+
+    #total effect
+    total.SDbelow := c_p + indirect.SDbelow
+    total.mean := c_p + indirect.mean
+    total.SDabove := c_p + indirect.SDabove
+ '
+ReCrModMed_fit <- sem(ReCrModMed, data = ReCreatedData, se = "bootstrap", bootstrap = 1000)
+summary(ReCrModMed_fit, standardized = TRUE, rsq=T, ci=TRUE)    
+parameterEstimates(ReCrModMed_fit, boot.ci.type = "bca.simple", standardized=TRUE)
+```
+
+
+You'll notice that the general trend of the output follows the results we got.  Why?  We made up the data.
+
+```{r sesionInfo}
+sessionInfo()
+```
+
+# References
+
+

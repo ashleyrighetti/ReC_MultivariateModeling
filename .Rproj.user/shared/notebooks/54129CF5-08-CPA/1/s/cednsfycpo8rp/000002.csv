@@ -1,0 +1,60 @@
+"0","library(jtools) #the summ function creates a terrific regression table"
+"0","library(interactions)"
+"0","library(ggplot2)"
+"0",""
+"0","Mod_a_path <- lm(DisEngmt~GRMS*GRIcntlty, data=Lewis_df)"
+"0","summ(Mod_a_path, digits = 3)"
+"1","[4mMODEL INFO:[24m"
+"1",""
+"1","
+"
+"1",""
+"1","[3mObservations:[23m"
+"1",""
+"1"," "
+"1",""
+"1","212"
+"1",""
+"1","
+"
+"1",""
+"1","[3mDependent Variable:[23m"
+"1",""
+"1"," "
+"1",""
+"1","DisEngmt"
+"1",""
+"1","
+"
+"1","[3mType:[23m"
+"1"," "
+"1","OLS linear regression"
+"1"," "
+"1","
+
+"
+"1","[4mMODEL FIT:[24m"
+"1",""
+"1","
+"
+"1","[3mF[23m(3,208) = 14.099, [3mp[23m = 0.000
+[3mR² = [23m0.169
+[3mAdj. R² = [23m0.157"
+"1"," "
+"1","
+
+"
+"1","[3mStandard errors: OLS[23m"
+"1",""
+"1","
+"
+"1","------------------------------------------------------
+                         Est.    S.E.   t val.       p
+-------------------- -------- ------- -------- -------
+(Intercept)             1.417   0.517    2.741   0.007
+GRMS                    0.212   0.231    0.919   0.359
+GRIcntlty              -0.027   0.090   -0.299   0.765
+GRMS:GRIcntlty          0.006   0.039    0.144   0.886
+------------------------------------------------------"
+"1","
+"

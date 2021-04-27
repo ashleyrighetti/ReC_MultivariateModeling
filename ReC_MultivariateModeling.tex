@@ -111,6 +111,20 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifxetex
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
@@ -152,7 +166,7 @@
 \chapter*{PREFACE}\label{preface}}
 \addcontentsline{toc}{chapter}{PREFACE}
 
-\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 19 Apr 2021}
+\textbf{If you are viewing this document, you should know that this is a book-in-progress. Early drafts are released for the purpose teaching my classes and gaining formative feedback from a host of stakeholders. The document was last updated on 26 Apr 2021}
 
 \href{https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c932455e-ef06-444a-bdca-acf7012d759a}{Screencasted Lecture Link}
 
@@ -897,10 +911,10 @@ APA Style, and in particular the Journal Article Reporting Standards (JARS) for 
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 48
+## [1] 50
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 48 individuals opened the survey link.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 50 individuals opened the survey link.
 
 Next let's filter in only those who consented to take the survey. Because Qualtrics discontinued the survey for everyone who did not consent, we do not have to worry that their data is unintentionally included, but it can be useful to mention the number of non-consenters in the summary of missing data.
 
@@ -914,10 +928,10 @@ Next let's filter in only those who consented to take the survey. Because Qualtr
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 42
+## [1] 43
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 48 individuals opened the survey link. Of those, 42, granted consent and proceeded into the survey items.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 50 individuals opened the survey link. Of those, 43, granted consent and proceeded into the survey items.
 
 In this particular study, the categories used to collect race were U.S.-centric. Thus, they were only shown if the respondent indicated that the course being rated was taught by an institution in the U.S. Therefore, an an additional inclusion criteria for this specific research model should be that the course was taught in the U.S.
 
@@ -930,10 +944,10 @@ In this particular study, the categories used to collect race were U.S.-centric.
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 37
+## [1] 38
 \end{verbatim}
 
-CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 48 individuals opened the survey link. Of those, 42, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 37 met this criteria.
+CAPTURING RESULTS FOR WRITING IT UP: Data screening suggested that 50 individuals opened the survey link. Of those, 43, granted consent and proceeded into the survey items. A further inclusion criteria was that the course was taught in the U.S; 38 met this criteria.
 
 \hypertarget{renaming-variables}{%
 \subsection{Renaming Variables}\label{renaming-variables}}
@@ -1002,7 +1016,7 @@ It can be helpful to save outfile of progress as we go along. Here I save this r
 \hypertarget{methodprocedure}{%
 \subsection{Method/Procedure}\label{methodprocedure}}
 
-Data screening suggested that 48 individuals opened the survey link. Of those, 42 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 37 met this criteria.
+Data screening suggested that 50 individuals opened the survey link. Of those, 43 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 38 met this criteria.
 
 \hypertarget{practice-problems}{%
 \section{Practice Problems}\label{practice-problems}}
@@ -1513,7 +1527,7 @@ I use \emph{different} names for the object/df in my R environment than I use fo
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    37 obs. of  25 variables:
+## 'data.frame':    38 obs. of  25 variables:
 ##  $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iRace1   : int  3 3 3 3 1 3 3 3 1 0 ...
 ##  $ iRace2   : int  1 NA 1 1 NA NA 3 NA NA 0 ...
@@ -1594,7 +1608,7 @@ Our next step is to conduct a preliminary missing data analysis at the item leve
 \end{Shaded}
 
 \begin{verbatim}
-##  int [1:37] 3 3 3 3 1 3 3 3 1 0 ...
+##  int [1:38] 3 3 3 3 1 3 3 3 1 0 ...
 \end{verbatim}
 
 Looking at the structure of our data, the iRace(1 thru 10) variables are in ``int'' or integer format. This means that they are represented as whole numbers. We need them to be represented as factors. R handles factors represented as words well. Therefore, let's use our codebook to reformat this variable as a an ordered factor, with words instead of numbers.
@@ -1648,7 +1662,7 @@ Let's check the structure to see if they are factors.
 \end{Shaded}
 
 \begin{verbatim}
-## Rows: 37
+## Rows: 38
 ## Columns: 35
 ## $ ID        <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17...
 ## $ iRace1    <int> 3, 3, 3, 3, 1, 3, 3, 3, 1, 0, 2, 1, 1, 1, 3, 3, 3, 1, 3, ...
@@ -1773,7 +1787,7 @@ We can grab the descriptives for the \emph{prop\_miss} variable to begin to unde
 
 \begin{verbatim}
 ##    vars  n mean   sd median trimmed mad min   max range skew kurtosis   se
-## X1    1 37 3.44 9.43      0    0.88   0   0 36.36 36.36 2.72     6.18 1.55
+## X1    1 38 3.35 9.31      0    0.85   0   0 36.36 36.36 2.77     6.48 1.51
 \end{verbatim}
 
 \begin{Shaded}
@@ -1824,7 +1838,7 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 3.44%
+## [1] 3.35%
 \end{verbatim}
 
 \begin{Shaded}
@@ -1834,10 +1848,10 @@ Missing data analysis commonly looks at proportions by:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 83.78%
+## [1] 84.21%
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.44\% of cells had missing data and 83.78\% of cases had nonmissing data.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.35\% of cells had missing data and 84.21\% of cases had nonmissing data.
 
 \hypertarget{analyzing-missing-data-patterns}{%
 \subsection{Analyzing Missing Data Patterns}\label{analyzing-missing-data-patterns}}
@@ -2025,8 +2039,8 @@ Using the \emph{describe()} function from the \emph{psych} package, we can inves
 \end{Shaded}
 
 \begin{verbatim}
-##    vars  n mean   sd median trimmed mad min   max range skew kurtosis  se
-## X1    1 37  3.6 9.73      0    1.08   0   0 33.33 33.33  2.4     4.26 1.6
+##    vars  n mean   sd median trimmed mad min   max range skew kurtosis   se
+## X1    1 38 3.51 9.62      0    1.04   0   0 33.33 33.33 2.45     4.51 1.56
 \end{verbatim}
 
 \begin{Shaded}
@@ -2051,7 +2065,7 @@ Using the \emph{describe()} function from the \emph{psych} package, we can inves
 ## [1] 33
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 37 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 38 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%.
 
 We need to decide what is our retention threshhold. Twenty percent seems to be a general rule of thumb. Let's delete all cases with missingness at 20\% or greater.
 
@@ -2067,10 +2081,10 @@ We need to decide what is our retention threshhold. Twenty percent seems to be a
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 34
+## [1] 35
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 37 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 34 cases.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 38 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 35 cases.
 
 With a decision about the number of cases we are going to include, we can continue to analyze missingness.
 
@@ -2098,7 +2112,7 @@ Again, we look at missingness as the proportion of
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.98%
+## [1] 0.95%
 \end{verbatim}
 
 \begin{Shaded}
@@ -2108,10 +2122,10 @@ Again, we look at missingness as the proportion of
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 94.12%
+## [1] 94.29%
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 37 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 34 cases. In this dataset we had 0.98\% missing across the df; 94.12\% of the rows had nonmissing data.
+CUMULATIVE CAPTURE FOR WRITING IT UP: Across the 38 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 35 cases. In this dataset we had 0.95\% missing across the df; 94.29\% of the rows had nonmissing data.
 
 Let's look again at missing patterns and mechanisms.
 
@@ -2222,9 +2236,9 @@ All analyses were completed in R Studio (v. 1.4.1106) with R (v. 4.0.4).
 
 Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
 
-Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.44\% of cells had missing data and 83.78\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.35\% of cells had missing data and 84.21\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
 
-Across the 37 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 34 cases. In this dataset we had 0.98\% missing across the df; 94.12\% of the rows had nonmissing data.
+Across the 38 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 35 cases. In this dataset we had 0.95\% missing across the df; 94.29\% of the rows had nonmissing data.
 
 \hypertarget{practice-problems-1}{%
 \section{Practice Problems}\label{practice-problems-1}}
@@ -2551,31 +2565,31 @@ From this, we create tiny dfs, one for each of the alpha coefficients we need to
 ## Call: psych::alpha(x = item_scores_df[c("Belong_1", "Belong_2", "Belong_3")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
-##       0.96      0.96    0.94      0.88  22 0.013  4.2 1.5     0.88
+##       0.96      0.96    0.95      0.89  23 0.012  4.2 1.5     0.89
 ## 
 ##  lower alpha upper     95% confidence boundaries
 ## 0.93 0.96 0.98 
 ## 
 ##  Reliability if an item is dropped:
-##          raw_alpha std.alpha G6(smc) average_r  S/N alpha se var.r med.r
-## Belong_1      0.94      0.94    0.88      0.88 14.5    0.021    NA  0.88
-## Belong_2      0.90      0.91    0.83      0.83  9.6    0.031    NA  0.83
-## Belong_3      0.96      0.96    0.93      0.93 26.1    0.012    NA  0.93
+##          raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
+## Belong_1      0.94      0.94    0.89      0.89  16    0.020    NA  0.89
+## Belong_2      0.91      0.91    0.84      0.84  10    0.029    NA  0.84
+## Belong_3      0.97      0.97    0.93      0.93  29    0.011    NA  0.93
 ## 
 ##  Item statistics 
 ##           n raw.r std.r r.cor r.drop mean  sd
-## Belong_1 36  0.96  0.96  0.94   0.90  4.3 1.5
-## Belong_2 37  0.98  0.98  0.97   0.95  4.4 1.5
-## Belong_3 36  0.94  0.94  0.89   0.87  4.1 1.6
+## Belong_1 37  0.96  0.96  0.94   0.91  4.2 1.5
+## Belong_2 38  0.98  0.98  0.97   0.95  4.3 1.5
+## Belong_3 37  0.94  0.94  0.89   0.88  4.0 1.6
 ## 
 ## Non missing response frequency for each item
 ##             1    2    3    4    5    6    7 miss
-## Belong_1 0.03 0.08 0.22 0.19 0.22 0.19 0.06 0.03
-## Belong_2 0.03 0.05 0.24 0.22 0.16 0.24 0.05 0.00
-## Belong_3 0.06 0.14 0.14 0.25 0.25 0.11 0.06 0.03
+## Belong_1 0.03 0.11 0.22 0.19 0.22 0.19 0.05 0.03
+## Belong_2 0.03 0.08 0.24 0.21 0.16 0.24 0.05 0.00
+## Belong_3 0.05 0.16 0.14 0.24 0.24 0.11 0.05 0.03
 \end{verbatim}
 
-CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the belonging scale was 0.955.
+CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the belonging scale was 0.958.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2591,40 +2605,40 @@ CAPTURE FOR THE APA STYLE WRITE-UP(since these are generally placed in the descr
 ##     "Blst_4", "Blst_5", "Blst_6")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean sd median_r
-##       0.86      0.87     0.9      0.54 6.9 0.038  2.4  1     0.56
+##       0.86      0.88     0.9      0.55 7.3 0.035  2.3  1     0.57
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.78 0.86 0.93 
+## 0.79 0.86 0.93 
 ## 
 ##  Reliability if an item is dropped:
 ##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
-## rBlst_1      0.85      0.87    0.89      0.57 6.8    0.041 0.028  0.60
-## Blst_2       0.86      0.87    0.88      0.57 6.7    0.038 0.025  0.61
-## Blst_3       0.86      0.88    0.89      0.59 7.3    0.037 0.021  0.61
-## Blst_4       0.81      0.83    0.85      0.50 5.0    0.050 0.029  0.49
-## Blst_5       0.80      0.83    0.85      0.50 5.0    0.052 0.030  0.51
-## Blst_6       0.81      0.82    0.82      0.48 4.6    0.050 0.022  0.48
+## rBlst_1      0.85      0.88    0.90      0.58 7.0    0.039 0.027  0.61
+## Blst_2       0.87      0.88    0.88      0.59 7.1    0.036 0.023  0.63
+## Blst_3       0.87      0.88    0.90      0.61 7.7    0.035 0.019  0.63
+## Blst_4       0.82      0.84    0.86      0.52 5.3    0.047 0.027  0.50
+## Blst_5       0.82      0.84    0.85      0.52 5.3    0.048 0.029  0.52
+## Blst_6       0.82      0.83    0.83      0.49 4.9    0.047 0.021  0.50
 ## 
 ##  Item statistics 
 ##          n raw.r std.r r.cor r.drop mean   sd
-## rBlst_1 33  0.70  0.70  0.61   0.55  3.1 1.27
-## Blst_2  36  0.75  0.70  0.64   0.57  2.7 1.67
-## Blst_3  36  0.66  0.67  0.58   0.50  2.1 1.30
-## Blst_4  35  0.85  0.86  0.84   0.77  2.3 1.18
-## Blst_5  36  0.88  0.86  0.85   0.80  2.0 1.18
-## Blst_6  36  0.87  0.91  0.92   0.84  2.1 0.95
+## rBlst_1 34  0.72  0.72  0.63   0.58  3.1 1.30
+## Blst_2  37  0.76  0.71  0.65   0.58  2.7 1.67
+## Blst_3  37  0.67  0.67  0.59   0.51  2.1 1.29
+## Blst_4  36  0.86  0.86  0.85   0.78  2.2 1.18
+## Blst_5  37  0.88  0.86  0.85   0.80  1.9 1.18
+## Blst_6  37  0.87  0.91  0.92   0.85  2.0 0.96
 ## 
 ## Non missing response frequency for each item
 ##            1    2    3    4    5    6 miss
-## rBlst_1 0.06 0.30 0.27 0.24 0.06 0.06 0.11
-## Blst_2  0.36 0.17 0.11 0.14 0.19 0.03 0.03
-## Blst_3  0.42 0.33 0.08 0.11 0.03 0.03 0.03
-## Blst_4  0.29 0.37 0.17 0.11 0.06 0.00 0.05
-## Blst_5  0.47 0.28 0.08 0.14 0.03 0.00 0.03
-## Blst_6  0.31 0.44 0.14 0.11 0.00 0.00 0.03
+## rBlst_1 0.09 0.29 0.26 0.24 0.06 0.06 0.11
+## Blst_2  0.38 0.16 0.11 0.14 0.19 0.03 0.03
+## Blst_3  0.43 0.32 0.08 0.11 0.03 0.03 0.03
+## Blst_4  0.31 0.36 0.17 0.11 0.06 0.00 0.05
+## Blst_5  0.49 0.27 0.08 0.14 0.03 0.00 0.03
+## Blst_6  0.32 0.43 0.14 0.11 0.00 0.00 0.03
 \end{verbatim}
 
-CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the campus climate scale was 0.856. Since this value is \(\geq\) .80, it is within the realm of acceptability. Let's go ahead, though, and look at its subscales.
+CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the description of each measure in the Method section, I am not doing a cumulative capture): Cronbach's alpha for the campus climate scale was 0.863. Since this value is \(\geq\) .80, it is within the realm of acceptability. Let's go ahead, though, and look at its subscales.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2639,31 +2653,31 @@ CAPTURE FOR THE APA STYLE WRITE-UP (since these are generally placed in the desc
 ## Call: psych::alpha(x = item_scores_df[c("Blst_3", "Blst_2", "Blst_5")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean  sd median_r
-##       0.72      0.74    0.72      0.49 2.9 0.081  2.3 1.2     0.52
+##       0.73      0.75    0.73       0.5   3 0.078  2.3 1.2     0.53
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.56 0.72 0.88 
+## 0.58 0.73 0.88 
 ## 
 ##  Reliability if an item is dropped:
-##        raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
-## Blst_3      0.78      0.81    0.68      0.68 4.3    0.064    NA  0.68
-## Blst_2      0.69      0.69    0.52      0.52 2.2    0.103    NA  0.52
-## Blst_5      0.40      0.41    0.26      0.26 0.7    0.190    NA  0.26
+##        raw_alpha std.alpha G6(smc) average_r  S/N alpha se var.r med.r
+## Blst_3      0.79      0.81    0.69      0.69 4.40    0.062    NA  0.69
+## Blst_2      0.69      0.69    0.53      0.53 2.27    0.099    NA  0.53
+## Blst_5      0.42      0.43    0.28      0.28 0.76    0.181    NA  0.28
 ## 
 ##  Item statistics 
 ##         n raw.r std.r r.cor r.drop mean  sd
-## Blst_3 36  0.71  0.73  0.52   0.40  2.1 1.3
-## Blst_2 36  0.83  0.80  0.68   0.53  2.7 1.7
-## Blst_5 36  0.91  0.91  0.87   0.77  2.0 1.2
+## Blst_3 37  0.72  0.74  0.53   0.41  2.1 1.3
+## Blst_2 37  0.84  0.80  0.69   0.54  2.7 1.7
+## Blst_5 37  0.91  0.91  0.87   0.77  1.9 1.2
 ## 
 ## Non missing response frequency for each item
 ##           1    2    3    4    5    6 miss
-## Blst_3 0.42 0.33 0.08 0.11 0.03 0.03 0.03
-## Blst_2 0.36 0.17 0.11 0.14 0.19 0.03 0.03
-## Blst_5 0.47 0.28 0.08 0.14 0.03 0.00 0.03
+## Blst_3 0.43 0.32 0.08 0.11 0.03 0.03 0.03
+## Blst_2 0.38 0.16 0.11 0.14 0.19 0.03 0.03
+## Blst_5 0.49 0.27 0.08 0.14 0.03 0.00 0.03
 \end{verbatim}
 
-Cronbach's alpha for the campus climate stigma subscale was 0.721.
+Cronbach's alpha for the campus climate stigma subscale was 0.728.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -2678,31 +2692,31 @@ Cronbach's alpha for the campus climate stigma subscale was 0.721.
 ## Call: psych::alpha(x = item_scores_df[c("rBlst_1", "Blst_4", "Blst_6")])
 ## 
 ##   raw_alpha std.alpha G6(smc) average_r S/N   ase mean sd median_r
-##       0.85      0.86    0.82      0.67 6.1 0.044  2.5  1     0.61
+##       0.85      0.87    0.83      0.69 6.6 0.041  2.4  1     0.63
 ## 
 ##  lower alpha upper     95% confidence boundaries
-## 0.76 0.85 0.93 
+## 0.77 0.85 0.94 
 ## 
 ##  Reliability if an item is dropped:
 ##         raw_alpha std.alpha G6(smc) average_r S/N alpha se var.r med.r
-## rBlst_1      0.88      0.89    0.80      0.80 8.2    0.037    NA  0.80
-## Blst_4       0.74      0.76    0.61      0.61 3.2    0.080    NA  0.61
-## Blst_6       0.75      0.75    0.60      0.60 3.0    0.082    NA  0.60
+## rBlst_1      0.88      0.89    0.81      0.81 8.5    0.035    NA  0.81
+## Blst_4       0.75      0.77    0.63      0.63 3.4    0.075    NA  0.63
+## Blst_6       0.76      0.77    0.62      0.62 3.3    0.076    NA  0.62
 ## 
 ##  Item statistics 
 ##          n raw.r std.r r.cor r.drop mean   sd
-## rBlst_1 33  0.85  0.83  0.67   0.64  3.1 1.27
-## Blst_4  35  0.90  0.91  0.86   0.76  2.3 1.18
-## Blst_6  36  0.89  0.91  0.87   0.79  2.1 0.95
+## rBlst_1 34  0.86  0.84  0.69   0.66  3.1 1.30
+## Blst_4  36  0.91  0.91  0.87   0.77  2.2 1.18
+## Blst_6  37  0.89  0.91  0.87   0.80  2.0 0.96
 ## 
 ## Non missing response frequency for each item
 ##            1    2    3    4    5    6 miss
-## rBlst_1 0.06 0.30 0.27 0.24 0.06 0.06 0.11
-## Blst_4  0.29 0.37 0.17 0.11 0.06 0.00 0.05
-## Blst_6  0.31 0.44 0.14 0.11 0.00 0.00 0.03
+## rBlst_1 0.09 0.29 0.26 0.24 0.06 0.06 0.11
+## Blst_4  0.31 0.36 0.17 0.11 0.06 0.00 0.05
+## Blst_6  0.32 0.43 0.14 0.11 0.00 0.00 0.03
 \end{verbatim}
 
-Cronbach's alpha for the campus climate responsiveness subscale was 0.848. Between the two subscales, it looks as if the responsivenes subscale is more internally consistent.
+Cronbach's alpha for the campus climate responsiveness subscale was 0.855. Between the two subscales, it looks as if the responsivenes subscale is more internally consistent.
 
 \hypertarget{distributional-characteristics-of-the-variables}{%
 \section{Distributional Characteristics of the Variables}\label{distributional-characteristics-of-the-variables}}
@@ -2723,7 +2737,7 @@ The \emph{str()} function let's us look at the variable format/measurement level
 \end{Shaded}
 
 \begin{verbatim}
-## 'data.frame':    37 obs. of  17 variables:
+## 'data.frame':    38 obs. of  17 variables:
 ##  $ ID        : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ iBIPOC_pr : num  0.333 0 0.5 0.333 1 ...
 ##  $ cmBlack   : int  0 5 10 6 5 20 0 0 0 4 ...
@@ -2760,13 +2774,13 @@ The difference between ``int'' (integer) and ``num'' (numerical) is that integer
 
 \begin{verbatim}
 ##           vars  n mean   sd median trimmed  mad min   max range  skew kurtosis
-## iBIPOC_pr    1 35 0.44 0.40   0.33    0.42 0.49   0  1.00  1.00  0.37    -1.45
-## cmBlack      2 37 7.19 8.15   5.00    6.03 7.41   0 29.00 29.00  1.22     0.38
-## Belonging    3 36 4.26 1.46   4.00    4.30 1.48   1  7.00  6.00 -0.19    -0.82
-## ClimateBL    4 34 2.32 0.98   2.33    2.27 0.99   1  4.17  3.17  0.30    -1.06
+## iBIPOC_pr    1 36 0.44 0.40   0.33    0.42 0.49   0  1.00  1.00  0.37    -1.42
+## cmBlack      2 38 7.00 8.12   5.00    5.84 7.41   0 29.00 29.00  1.25     0.46
+## Belonging    3 37 4.20 1.49   4.00    4.23 1.48   1  7.00  6.00 -0.15    -0.91
+## ClimateBL    4 35 2.29 0.99   2.33    2.23 0.99   1  4.17  3.17  0.32    -1.07
 ##             se
 ## iBIPOC_pr 0.07
-## cmBlack   1.34
+## cmBlack   1.32
 ## Belonging 0.24
 ## ClimateBL 0.17
 \end{verbatim}
@@ -2798,7 +2812,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$iBIPOC_pr
-## W = 0.8162, p-value = 4.309e-05
+## W = 0.82348, p-value = 4.939e-05
 \end{verbatim}
 
 \begin{Shaded}
@@ -2812,7 +2826,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$cmBlack
-## W = 0.81266, p-value = 2.367e-05
+## W = 0.80586, p-value = 1.379e-05
 \end{verbatim}
 
 \begin{Shaded}
@@ -2826,7 +2840,7 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$Belonging
-## W = 0.97685, p-value = 0.6384
+## W = 0.97551, p-value = 0.5767
 \end{verbatim}
 
 \begin{Shaded}
@@ -2840,10 +2854,10 @@ We can also apply the Shapiro-Wilk test of normality to each of our variables. W
 ##  Shapiro-Wilk normality test
 ## 
 ## data:  item_scores_df$ClimateBL
-## W = 0.94036, p-value = 0.06319
+## W = 0.93431, p-value = 0.03763
 \end{verbatim}
 
-CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.813, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.816, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.6384) and the respondent's perception of campus climate for Black students (\(W\) = 0.940, \(p\) = 0.0632) did not differ differently from a normal distribution.
+CUMULATIVE CAPTURE FOR THE APA STYLE WRITE-UP: Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.806, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.823, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.976, \(p\) = 0.5767) and the respondent's perception of campus climate for Black students (\(W\) = 0.934, \(p\) = 0.0376) did not differ differently from a normal distribution.
 
 \emph{Note. Owing to the open nature of the dataset, these values will change. While I have used inline text to update the values of the Shapiro Wilks' and associated significance test, the text narration is not automatically updated and may be inconsistent with the results.}
 
@@ -2906,8 +2920,8 @@ It is possible, then to analyze the Mahalanobis distance values.
 \end{Shaded}
 
 \begin{verbatim}
-##    vars  n mean  sd median trimmed  mad  min  max range skew kurtosis   se
-## X1    1 37 3.75 2.2   3.07     3.6 2.03 0.17 9.18  9.01 0.66    -0.37 0.36
+##    vars  n mean   sd median trimmed  mad  min  max range skew kurtosis   se
+## X1    1 38 3.75 2.21   3.15    3.62 2.25 0.19 9.27  9.08 0.61     -0.4 0.36
 \end{verbatim}
 
 Using this information we can determine cases that have a Mahalanobis distance values that exceeds three standard deviations around the median. In fact, we can have these noted in a column in the dataframe.
@@ -2927,7 +2941,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier  n
-## 1    FALSE 37
+## 1    FALSE 38
 \end{verbatim}
 
 \begin{Shaded}
@@ -2939,7 +2953,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier n
-## 1       37 0
+## 1       38 0
 \end{verbatim}
 
 \begin{Shaded}
@@ -2950,7 +2964,7 @@ Using this information we can determine cases that have a Mahalanobis distance v
 
 \begin{verbatim}
 ##   MOutlier n
-## 1       37 0
+## 1       38 0
 \end{verbatim}
 
 \begin{Shaded}
@@ -2968,12 +2982,12 @@ Using this information we can determine cases that have a Mahalanobis distance v
 ## 5  5 1.0000000       5        4        4        4      6      1      1      1
 ## 6  6 0.0000000      20        5        6        5      5      1      1      2
 ##   Blst_5 Blst_6 rBlst_1 Belonging ResponseBL StigmaBL ClimateBL     Mahal
-## 1      2      2       3      6.33       2.33     3.33      2.83 3.0381255
-## 2      4      1       2      4.67       1.67     4.00      2.83 1.7069803
-## 3     NA      2      NA        NA       2.00     3.50        NA 0.1714991
-## 4      2      2       6      3.33       3.33     2.00      2.67 0.5499552
-## 5      1      1       2      4.00       1.33     1.00      1.17 3.4958694
-## 6      1      2       3      5.33       2.33     1.00      1.67 5.2623439
+## 1      2      2       3      6.33       2.33     3.33      2.83 3.0887370
+## 2      4      1       2      4.67       1.67     4.00      2.83 1.7791058
+## 3     NA      2      NA        NA       2.00     3.50        NA 0.1863186
+## 4      2      2       6      3.33       3.33     2.00      2.67 0.5130016
+## 5      1      1       2      4.00       1.33     1.00      1.17 3.1774793
+## 6      1      2       3      5.33       2.33     1.00      1.67 5.3309540
 ##   MOutlier
 ## 1    FALSE
 ## 2    FALSE
@@ -3002,15 +3016,15 @@ Since the focus of this chapter was on data diagnostics, the APA style writeup w
 \hypertarget{data-diagnostics}{%
 \subsection{Data Diagnostics}\label{data-diagnostics}}
 
-Data screening suggested that 48 individuals opened the survey link. Of those, 42 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 37 met this criteria.
+Data screening suggested that 50 individuals opened the survey link. Of those, 43 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 38 met this criteria.
 
 Available item analysis (AIA; \citep{parent_handling_2013}) is a strategy for managing missing data that uses available data for analysis and excludes cases with missing data points only for analyses in which the data points would be directly involved. Parent (2013) suggested that AIA is equivalent to more complex methods (e.g., multiple imputation) across a number of variations of sample size, magnitude of associations among items, and degree of missingness. Thus, we utilized Parent's recommendations to guide our approach to managing missing data. Missing data analyses were conducted with tools in base R as well as the R packages, \emph{psych} (v. 1.0.12) and \emph{mice} (v. 3.13.0).
 
-Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.44\% of cells had missing data and 83.78\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
+Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.35\% of cells had missing data and 84.21\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with less than 90\% missing to continue to the scoring stage. Guided by Parent's \citeyearpar{parent_handling_2013} AIA approach, scales with three items were scored if at least two items were non-missing; the scale with four items was scored if it at least three non-missing items; and the scale with six items was scored if it had at least five non-missing items.
 
-Across the 37 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 34 cases. In this dataset we had 0.98\% missing across the df; 94.12\% of the rows had nonmissing data.
+Across the 38 cases for which the scoring protocol was applied, missingness ranged from 0\% to 33\%. After eliminating cases with greater than 20\% missing, the dataset analyzed included 35 cases. In this dataset we had 0.95\% missing across the df; 94.29\% of the rows had nonmissing data.
 
-Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.813, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.816, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.6384) and the respondent's perception of campus climate for Black students (\(W\) = 0.940, \(p\) = 0.0632) did not differ differently from a normal distribution.
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.806, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.823, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.976, \(p\) = 0.5767) and the respondent's perception of campus climate for Black students (\(W\) = 0.934, \(p\) = 0.0376) did not differ differently from a normal distribution.
 
 We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.
 
@@ -3041,21 +3055,21 @@ With some confidence that our scrubbed-and-scored variables are appropriate for 
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -1.58813 -0.73192 -0.08389  0.63337  1.84086 
+## -1.52062 -0.73534 -0.01292  0.61904  1.90366 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)  2.592842   0.606405   4.276   0.0002 ***
-## Belonging   -0.002023   0.127297  -0.016   0.9874    
-## cmBlack     -0.020633   0.020658  -0.999   0.3265    
-## iBIPOC_pr   -0.402952   0.439351  -0.917   0.3669    
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  2.31588    0.57674   4.015 0.000384 ***
+## Belonging    0.05035    0.12260   0.411 0.684342    
+## cmBlack     -0.01550    0.02056  -0.754 0.456936    
+## iBIPOC_pr   -0.45576    0.44324  -1.028 0.312328    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 0.968 on 28 degrees of freedom
+## Residual standard error: 0.9806 on 29 degrees of freedom
 ##   (5 observations deleted due to missingness)
-## Multiple R-squared:  0.05913,    Adjusted R-squared:  -0.04167 
-## F-statistic: 0.5866 on 3 and 28 DF,  p-value: 0.6288
+## Multiple R-squared:  0.05276,    Adjusted R-squared:  -0.04523 
+## F-statistic: 0.5384 on 3 and 29 DF,  p-value: 0.6597
 \end{verbatim}
 
 \begin{Shaded}
@@ -3071,7 +3085,7 @@ With some confidence that our scrubbed-and-scored variables are appropriate for 
 ## [13] "model"
 \end{verbatim}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.002, \(p\) = 0.987) nor the proportion of BIPOC instructional staff (\(B\) = -0.403, \(p\) = 0.367), nor the proportion of Black classmates (\(B\) = -0.021, \(p\) = 0.326) led to statistically significant changes in perceptions of campus climate for Black students. Although it accounted for 5.91\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.050, \(p\) = 0.684) nor the proportion of BIPOC instructional staff (\(B\) = -0.456, \(p\) = 0.312), nor the proportion of Black classmates (\(B\) = -0.015, \(p\) = 0.457) led to statistically significant changes in perceptions of campus climate for Black students. Although it accounted for 5.28\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3091,14 +3105,14 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##   Variable     M    SD   1           2           3          
 ##   1. iBIPOC_pr 0.44 0.40                                    
 ##                                                             
-##   2. cmBlack   7.19 8.15 -.12                               
-##                          [-.43, .23]                        
+##   2. cmBlack   7.00 8.12 -.12                               
+##                          [-.43, .22]                        
 ##                                                             
-##   3. Belonging 4.26 1.46 .26         -.21                   
-##                          [-.09, .55] [-.50, .13]            
+##   3. Belonging 4.20 1.49 .24         -.16                   
+##                          [-.10, .53] [-.46, .17]            
 ##                                                             
-##   4. ClimateBL 2.32 0.98 -.16        -.17        -.10       
-##                          [-.48, .20] [-.48, .17] [-.42, .25]
+##   4. ClimateBL 2.29 0.99 -.16        -.13        -.04       
+##                          [-.48, .19] [-.45, .21] [-.37, .30]
 ##                                                             
 ## 
 ## Note. M and SD are used to represent mean and standard deviation, respectively.
@@ -3125,10 +3139,10 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##  
 ## 
 ##    Predictor      b      b_95%_CI  beta   beta_95%_CI sr2  sr2_95%_CI    r
-##  (Intercept) 2.59**  [1.35, 3.84]                                         
-##    Belonging  -0.00 [-0.26, 0.26] -0.00 [-0.40, 0.39] .00 [-.00, .00] -.01
-##      cmBlack  -0.02 [-0.06, 0.02] -0.19 [-0.57, 0.20] .03 [-.09, .15] -.17
-##    iBIPOC_pr  -0.40 [-1.30, 0.50] -0.17 [-0.56, 0.21] .03 [-.08, .14] -.16
+##  (Intercept) 2.32**  [1.14, 3.50]                                         
+##    Belonging   0.05 [-0.20, 0.30]  0.08 [-0.30, 0.46] .01 [-.04, .05]  .05
+##      cmBlack  -0.02 [-0.06, 0.03] -0.14 [-0.51, 0.24] .02 [-.07, .11] -.13
+##    iBIPOC_pr  -0.46 [-1.36, 0.45] -0.19 [-0.57, 0.19] .03 [-.09, .16] -.16
 ##                                                                           
 ##                                                                           
 ##                                                                           
@@ -3137,8 +3151,8 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 ##                 
 ##                 
 ##                 
-##        R2 = .059
-##  95% CI[.00,.19]
+##        R2 = .053
+##  95% CI[.00,.18]
 ##                 
 ## 
 ## Note. A significant b-weight indicates the beta-weight and semi-partial correlation are also significant.
@@ -3777,9 +3791,9 @@ Recall one of the guidelines was to remove variables with more than 25\% missing
 
 \begin{verbatim}
 ##     Blst_1  iBIPOC_pr     Blst_4   Belong_1   Belong_3     Blst_2     Blst_3 
-## 0.10810811 0.05405405 0.05405405 0.02702703 0.02702703 0.02702703 0.02702703 
+## 0.10526316 0.05263158 0.05263158 0.02631579 0.02631579 0.02631579 0.02631579 
 ##     Blst_5     Blst_6    cEval_1   cEval_19 
-## 0.02702703 0.02702703 0.02702703 0.02702703
+## 0.02631579 0.02631579 0.02631579 0.02631579
 \end{verbatim}
 
 Luckily, none of our variables have more than 25\% missing (\emph{or at least they didn't when I wrote this; the open nature of the survey and how it sources this chapter could change this}). If we did have a variable with more than 25\% missing, we would have to consider what to do about it.
@@ -3998,28 +4012,28 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 
 \begin{verbatim}
 ## # A tibble: 20 x 6
-##    term        estimate std.error statistic   p.value  nobs
-##    <chr>          <dbl>     <dbl>     <dbl>     <dbl> <int>
-##  1 (Intercept)   2.91      0.581      5.00  0.0000184    37
-##  2 Belonging    -0.0618    0.118     -0.524 0.604        37
-##  3 cmBlack      -0.0241    0.0210    -1.14  0.261        37
-##  4 iBIPOC_pr    -0.189     0.422     -0.448 0.657        37
-##  5 (Intercept)   2.90      0.565      5.14  0.0000123    37
-##  6 Belonging    -0.0720    0.113     -0.637 0.528        37
-##  7 cmBlack      -0.0240    0.0202    -1.19  0.244        37
-##  8 iBIPOC_pr    -0.144     0.394     -0.366 0.717        37
-##  9 (Intercept)   2.87      0.598      4.81  0.0000327    37
-## 10 Belonging    -0.0545    0.120     -0.455 0.652        37
-## 11 cmBlack      -0.0232    0.0211    -1.10  0.279        37
-## 12 iBIPOC_pr    -0.200     0.412     -0.486 0.630        37
-## 13 (Intercept)   2.88      0.600      4.81  0.0000325    37
-## 14 Belonging    -0.0530    0.121     -0.437 0.665        37
-## 15 cmBlack      -0.0235    0.0214    -1.10  0.279        37
-## 16 iBIPOC_pr    -0.216     0.430     -0.501 0.620        37
-## 17 (Intercept)   2.83      0.587      4.81  0.0000319    37
-## 18 Belonging    -0.0161    0.124     -0.130 0.898        37
-## 19 cmBlack      -0.0260    0.0213    -1.22  0.231        37
-## 20 iBIPOC_pr    -0.394     0.445     -0.886 0.382        37
+##    term         estimate std.error statistic   p.value  nobs
+##    <chr>           <dbl>     <dbl>     <dbl>     <dbl> <int>
+##  1 (Intercept)  2.58        0.577    4.48    0.0000805    38
+##  2 Belonging   -0.000893    0.118   -0.00757 0.994        38
+##  3 cmBlack     -0.0172      0.0212  -0.808   0.425        38
+##  4 iBIPOC_pr   -0.240       0.435   -0.553   0.584        38
+##  5 (Intercept)  2.60        0.572    4.54    0.0000669    38
+##  6 Belonging   -0.00414     0.118   -0.0349  0.972        38
+##  7 cmBlack     -0.0172      0.0213  -0.808   0.425        38
+##  8 iBIPOC_pr   -0.254       0.431   -0.590   0.559        38
+##  9 (Intercept)  2.60        0.543    4.78    0.0000330    38
+## 10 Belonging    0.0202      0.116    0.175   0.862        38
+## 11 cmBlack     -0.0189      0.0204  -0.926   0.361        38
+## 12 iBIPOC_pr   -0.505       0.436   -1.16    0.256        38
+## 13 (Intercept)  2.60        0.544    4.77    0.0000338    38
+## 14 Belonging   -0.0103      0.112   -0.0922  0.927        38
+## 15 cmBlack     -0.0180      0.0207  -0.867   0.392        38
+## 16 iBIPOC_pr   -0.233       0.418   -0.556   0.582        38
+## 17 (Intercept)  2.52        0.578    4.36    0.000113     38
+## 18 Belonging    0.0163      0.120    0.136   0.893        38
+## 19 cmBlack     -0.0190      0.0214  -0.884   0.383        38
+## 20 iBIPOC_pr   -0.201       0.434   -0.463   0.646        38
 \end{verbatim}
 
 \begin{Shaded}
@@ -4032,16 +4046,16 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 
 \begin{verbatim}
 ## Class: mipo    m = 5 
-##          term m    estimate         ubar            b           t dfcom
-## 1 (Intercept) 5  2.87873493 0.3438803867 1.021712e-03 0.345106441    33
-## 2   Belonging 5 -0.05148539 0.0142093767 4.486463e-04 0.014747752    33
-## 3     cmBlack 5 -0.02416805 0.0004418807 1.205279e-06 0.000443327    33
-## 4   iBIPOC_pr 5 -0.22873307 0.1772261026 9.281931e-03 0.188364419    33
+##          term m     estimate         ubar            b            t dfcom
+## 1 (Intercept) 5  2.578918801 0.3168579493 1.069500e-03 0.3181413496    34
+## 2   Belonging 5  0.004230366 0.0136383176 1.774196e-04 0.0138512211    34
+## 3     cmBlack 5 -0.018047803 0.0004426305 7.621488e-07 0.0004435451    34
+## 4   iBIPOC_pr 5 -0.286610867 0.1857887593 1.524495e-02 0.2040827000    34
 ##         df         riv      lambda        fmi
-## 1 31.05290 0.003565352 0.003552685 0.06207618
-## 2 29.73146 0.037888755 0.036505603 0.09537829
-## 3 31.06242 0.003273135 0.003262457 0.06178663
-## 4 28.59086 0.062848061 0.059131745 0.11869761
+## 1 32.02824 0.004050396 0.004034057 0.06090051
+## 2 31.60868 0.015610688 0.015370740 0.07227145
+## 3 32.09475 0.002066235 0.002061974 0.05893305
+## 4 27.65271 0.098466348 0.089639841 0.14903819
 \end{verbatim}
 
 \begin{Shaded}
@@ -4058,11 +4072,11 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 \end{Shaded}
 
 \begin{verbatim}
-##          term    estimate  std.error  statistic       df      p.value
-## 1 (Intercept)  2.87873493 0.58745761  4.9003279 31.05290 2.846078e-05
-## 2   Belonging -0.05148539 0.12144032 -0.4239563 29.73146 6.746494e-01
-## 3     cmBlack -0.02416805 0.02105533 -1.1478352 31.06242 2.598003e-01
-## 4   iBIPOC_pr -0.22873307 0.43400970 -0.5270229 28.59086 6.022433e-01
+##          term     estimate  std.error   statistic       df      p.value
+## 1 (Intercept)  2.578918801 0.56404020  4.57222516 32.02824 6.846407e-05
+## 2   Belonging  0.004230366 0.11769121  0.03594462 31.60868 9.715526e-01
+## 3     cmBlack -0.018047803 0.02106051 -0.85694994 32.09475 3.978263e-01
+## 4   iBIPOC_pr -0.286610867 0.45175513 -0.63443854 27.65271 5.310089e-01
 \end{verbatim}
 
 \begin{Shaded}
@@ -4071,7 +4085,7 @@ In this process, 5 individual, OLS, regressions are being conducted and the resu
 \end{Highlighting}
 \end{Shaded}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.051, \(p\) = 0.675) nor the proportion of BIPOC instructional staff (\(B\) = -0.229, \(p\) = 0.602) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.024, \(p\) = 0.260). Results are presented in Table X.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.004, \(p\) = 0.972) nor the proportion of BIPOC instructional staff (\(B\) = -0.287, \(p\) = 0.531) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.018, \(p\) = 0.398). Results are presented in Table X.
 
 \hypertarget{toward-the-apa-style-write-up-1}{%
 \section{Toward the APA Style Write-up}\label{toward-the-apa-style-write-up-1}}
@@ -4079,9 +4093,9 @@ Results of a multiple regression predicting the respondents' perceptions of camp
 \hypertarget{methoddata-diagnostics}{%
 \subsection{Method/Data Diagnostics}\label{methoddata-diagnostics}}
 
-Data screening suggested that 48 individuals opened the survey link. Of those, 42 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 37 met this criteria. Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.44\% of cells had missing data and 83.78\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50\% missing to be included the multiple imputation \citep{katitas_getting_2019}.
+Data screening suggested that 50 individuals opened the survey link. Of those, 43 granted consent and proceeded to the survey items. A further inclusion criteria was that the course was taught in the U.S; 38 met this criteria. Across cases that were deemed eligible on the basis of the inclusion/exclusion criteria, missingness ranged from 0\% to 36\%. Across the dataset, 3.35\% of cells had missing data and 84.21\% of cases had nonmissing data. At this stage in the analysis, we allowed all cases with fewer than 50\% missing to be included the multiple imputation \citep{katitas_getting_2019}.
 
-Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.813, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.816, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.977, \(p\) = 0.6384) and the respondent's perception of campus climate for Black students (\(W\) = 0.940, \(p\) = 0.0632) did not differ differently from a normal distribution.
+Regarding the distributional characteristics of the data, skew and kurtosis values of the variables fell below the values of 3 (skew) and 8 to 20 (kurtosis) that Kline suggests are concerning \citeyearpar{kline_principles_2016}. Results of the Shapiro-Wilk test of normality indicate that our variables assessing the proportion of classmates who are Black (\(W\) = 0.806, \(p\) = 0.0000) and the proportion of BIPOC instructional staff(\(W\) = 0.823, \(p\) = 0.0000) are statistically significantly different than a normal distribution. The scales assessing the respondent's belonging (\(W\) = 0.976, \(p\) = 0.5767) and the respondent's perception of campus climate for Black students (\(W\) = 0.934, \(p\) = 0.0376) did not differ differently from a normal distribution.
 
 We evaluated multivariate normality with the Mahalanobis distance test. Specifically, we used the \emph{outlier()} function in the \emph{psych} package and included all continuous variables in the calculation. Our visual inspection of the Q-Q plot suggested that the plotted line strayed from the straight line as the quantiles increased. Additionally, we appended the Mahalanobis distance scores as a variable to the data. Analyzing this variable, we found that 0 exceed three standard deviations beyond the median. \emph{Thus, with no outliers, we assumed multivariate normality and proceeded with the data analysis} AS DATA IS ADDED THIS NUMBER OF OUTLIERS COULD UPDATE FROM ZERO AND THIS TEXT COULD CHANGE.*
 
@@ -4090,7 +4104,7 @@ We managed missing data with multiple imputation \citep{enders_multiple_2017, ka
 \hypertarget{results-1}{%
 \subsection{Results}\label{results-1}}
 
-Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = -0.002, \(p\) = 0.987) nor the proportion of BIPOC instructional staff (\(B\) = -0.403, \(p\) = 0.367) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.021, \(p\) = 0.326). Although it accounted for 5.91\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
+Results of a multiple regression predicting the respondents' perceptions of campus climate for Black students indicated that neither contributions of the respondents' personal belonging (\(B\) = 0.050, \(p\) = 0.684) nor the proportion of BIPOC instructional staff (\(B\) = -0.456, \(p\) = 0.312) led to statistically significant changes in perceptions of campus climate for Black students. Results did suggest a statistically significant negative effect of the proportion of Black classmates on the campus climate for Black students. Specifically, as the proportion of Black students increases, there is less stigmatization and hostility on the campus (\(B\) = -0.015, \(p\) = 0.457). Although it accounted for 5.28\% of the variance, the overall model was not statistically significant. Results are presented in Table 2.
 
 \textbf{Some notes about this write-up}
 
@@ -4304,6 +4318,10 @@ Assignment Component & Points Possible & Points Earned \\
 ## [81] coda_0.19-4       survival_3.2-7    statmod_1.4.35    TH.data_1.0-10   
 ## [85] ellipsis_0.3.1
 \end{verbatim}
+
+\hypertarget{CPA}{%
+\chapter*{CONDITIONAL PROCESS ANALYSIS}\label{CPA}}
+\addcontentsline{toc}{chapter}{CONDITIONAL PROCESS ANALYSIS}
 
 \hypertarget{SimpleMed}{%
 \chapter{Simple Mediation}\label{SimpleMed}}
@@ -7859,6 +7877,1970 @@ Assignment Component & & \\
 ## [124] grid_4.0.4          rpart_4.1-15        coda_0.19-4        
 ## [127] minqa_1.2.4         rmarkdown_2.6       carData_3.0-4      
 ## [130] d3Network_0.5.2.1   lubridate_1.7.9.2   base64enc_0.1-3
+\end{verbatim}
+
+\hypertarget{ModMed}{%
+\chapter{Moderated Mediation}\label{ModMed}}
+
+\href{https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=1d28d076-efad-4471-b52d-ad1601826f92}{Screencasted Lecture Link}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{options}\NormalTok{(}\AttributeTok{scipen=}\DecValTok{999}\NormalTok{)}\CommentTok{\#eliminates scientific notation}
+\end{Highlighting}
+\end{Shaded}
+
+The focus of this lecture is the moderated mediation. That is, are the effects of the indirect effect (sign, significance, strength, presence/absence) \emph{conditional} on the effects of the moderator.
+
+At the outset, please note that although I rely heavily on Hayes \citeyearpar{hayes_introduction_2018} text and materials, I am using the R package \emph{lavaan} in these chapters. Very recently, Hayes has introduced a \href{https://www.processmacro.org/index.html}{PROCESS macro for R}. Because I am not yet up-to-speed on using this macro (it is not a typical R package) and because we will use \emph{lavaan} for confirmatory factor analysis and structural equation modeling, I have chosen to utilize the \emph{lavaan} package. A substantial difference is that the PROCESS macros use ordinary least squares and \emph{lavaan} uses maximum likelihood estimators.
+
+\hypertarget{navigating-this-lesson-6}{%
+\section{Navigating this Lesson}\label{navigating-this-lesson-6}}
+
+There is about1 hour and 15 minutes of lecture. If you work through the materials with me it would be plan for an additional hour and a half.
+
+While the majority of R objects and data you will need are created within the R script that sources the chapter, ocasionally there are some that cannot be created from within the R framework. Additionally, sometimes links fail. All original materials are provided at the \href{https://github.com/lhbikos/ReC_MultivariateModeling}{Github site} that hosts the book. More detailed guidelines for ways to access all these materials are provided in the OER's \protect\hyperlink{ReCintro}{introduction}
+
+\hypertarget{learning-objectives-6}{%
+\subsection{Learning Objectives}\label{learning-objectives-6}}
+
+Learning objectives from this lecture include the following:
+
+\begin{itemize}
+\tightlist
+\item
+  Recognize conditional process modeling from R script.
+\item
+  Using the R package \emph{lavaan},
+
+  \begin{itemize}
+  \tightlist
+  \item
+    specify a model with indirect effects,
+  \item
+    identify and interpret B weights, \emph{p} values, and \emph{CIs} for total, direct, and indirect effects, - calculate the total effects of X and M on Y,
+  \item
+    identify the proportion of variance accounted for in predicting M and Y.
+  \end{itemize}
+\item
+  Define and interpret the index of moderated mediation?
+\item
+  Outline a process of evaluating a moderated mediation in a piecewise \citep{hayes_introduction_2018} approach to model building
+\item
+  Regarding conditional indirect effects
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Interpret an index of moderated mediation
+  \item
+    Know the essential components of calculating an index of moderated mediation
+  \item
+    How would you probe a conditional indirect effect
+  \end{itemize}
+\item
+  Be able to interpret ``the usual'' things we find in regression: B/beta weights, R, \(R^{2}\), and figures
+\end{itemize}
+
+\hypertarget{planning-for-practice-6}{%
+\subsection{Planning for Practice}\label{planning-for-practice-6}}
+
+The suggestions for homework are graded in complexity and, if you like, can extend from the prior chapter on simple moderation. If you choose the first or second options, you can further amend the simulated data by making further variations such as sample size.
+
+\begin{itemize}
+\tightlist
+\item
+  Rework the problem in the chapter by changing the random seed in the code that simulates the data. This should provide minor changes to the data, but the results will likely be very similar.
+\item
+  There are a number of variables in the dataset. Swap out one or more variables in the moderated mediation and compare your solution to the one in the chapter (and/or oe you mimicked in the journal article).
+\item
+  Conduct a moderated mediation with data to which you have access. This could include data you simulate on your own or from a published article.
+\end{itemize}
+
+\hypertarget{readings-resources-6}{%
+\subsection{Readings \& Resources}\label{readings-resources-6}}
+
+In preparing this chapter, I drew heavily from the following resource(s). Other resources are cited (when possible, linked) in the text with complete citations in the reference list.
+
+\begin{itemize}
+\tightlist
+\item
+  Hayes, A. F. (2018). \emph{Introduction to mediation, moderation, and conditional process anlaysis: A regression-based approach}. New York, NY: Guilford Press. Available as an ebook from the SPU library: \url{https://ebookcentral-proquest-com.ezproxy.spu.edu/lib/spu/detail.action?docID=5109647}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Chapter 11, CPA fundamentals}: In this chapter Hayes disentangles conditional indirect effects.
+  \item
+    \textbf{Chapter 12, More CPA examples}: Among the examples is one that includes covariates.\\
+  \item
+    \textbf{Appendix A: Using Process}: An essential tool for PROCESS users because, even when we are in the R environment, this is the ``idea book.'' That is, the place where all the path models are presented in figures.
+  \end{itemize}
+\item
+  Lewis, J. A., Williams, M. G., Peppers, E. J., \& Gadson, C. A. (2017). Applying intersectionality to explore the relations between gendered racism and health among Black women. \emph{Journal of Counseling Psychology, 64}(5), 475--486. \url{https://doi-org.ezproxy.spu.edu/10.1037/cou0000231}
+\end{itemize}
+
+\hypertarget{packages-7}{%
+\subsection{Packages}\label{packages-7}}
+
+The script below will (a) check to see if the following packages are installed on your computer and, if not (b) install them.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#will install the package if not already installed}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(lavaan))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"lavaan"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(semPlot))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"semPlot"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(tidyverse))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(psych))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"psych"}\NormalTok{)\}}
+\ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(jtools))\{}\FunctionTok{install.packages}\NormalTok{(}\StringTok{"jtools"}\NormalTok{)\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: jtools
+\end{verbatim}
+
+\hypertarget{conditional-process-analysis}{%
+\section{Conditional Process Analysis}\label{conditional-process-analysis}}
+
+\hypertarget{the-definitional-and-conceptual-1}{%
+\subsection{The definitional and conceptual}\label{the-definitional-and-conceptual-1}}
+
+Hayes \citeyearpar{hayes_introduction_2018} coined the term and suggests we also talk about ``conditional process modeling.''
+
+\textbf{Conditional process analysis}: used when the analytical goal is to describe and understand the conditional nature of the mechanism or mechanisms by which a variable transmits its effect on another.
+
+We are integrating moderation and mediation mechanisms together into a single integrated analytical model.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Mediator}: Any causal system in which at least one causal antecedent X variable is proposed as influencing an outcome Y through a intervening variable M. In this model, there are two pathways by which X can influence Y: \emph{direct} effect of X on Y, and \emph{indirect} effect of X on Y through M.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Answers question, ``How does X affect Y''
+  \item
+    Partitions the X-to-Y relationship into two paths of influence: direct, indirect.
+  \item
+    Indirect effect contains two components (a,b) that when multipled (a*b) yield an estimate of how much these two cases that differ by one unit on X are estimated to differ on Y through the effect of X on M, which in turn affects Y.
+  \item
+    Keywords: how, through, via, indirect effect
+  \end{itemize}
+\item
+  \textbf{Moderator}: The effect of X on some variable Y is moderated by W if its size, sign, or strength depends on or can be predicted by W.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Stated another way, W and X \emph{interact} in their influence on Y.\\
+  \item
+    Moderators help establish the boundary conditions of an effect or the circumstances, stimuli, or type of people for which the effect is large v. small, present v. absent, positive v. negative, and so forth.
+  \item
+    Keywords: ``it depends,'' interaction effect.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Why should we engage both mediators and moderators?} Hayes \citeyearpar{hayes_introduction_2018} suggest that if we have only a mediator(s) in the model that we lose information if we ``reduce complex responses that no doubt differ from person to person or situation to situation'' (p.~394). He adds that ``all effects are moderated by something'' (p.~394). Correspondingly, he recommends we add them to a mediation anlaysis.
+
+Hayes \citeyearpar{hayes_introduction_2018} suggests that ``more complete'' (p.~395) analyses model the mechanisms at work linking X to Y (mediator{[}s{]}) while simultaneously allowing those effects to be contingent on context, circumstance, or individual difference (moderator{[}s{]}).
+
+\textbf{What are conditional direct and indirect effects?}. Mediation analyses produce indirect (the product of a sequence of effects that are assumed to be causal) and direct (the unique contribution of X to Y, controlling for other variables in the model) effects. These effects (the X-to-Y/direct and X-to-M-to-Y/indirect), can also be moderated. This is our quest! Figure 11.2 in Hayes' text \citeyearpar{hayes_introduction_2018} illustrates conceptually and statistically that we can specify moderation of any combination of direct and indirect paths/effects.
+
+\begin{figure}
+\centering
+\includegraphics{images/SimpleMed/CPAmodel.jpg}
+\caption{Image of conditional process analysis model where the moderator is hypothesized to change the a path; the path between the IV and mediator}
+\end{figure}
+
+Within the CPA framework we have lots of options that generally fall into two categories:
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Moderated mediation}: when an indirect effect of X on Y through M is moderated; the mechanism represented by the \emph{X-to-M-to-Y} chain of events operates to varying degrees (or not at all) for certain people or in certain contexts.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Any model in which the indirect effect (a*b) changes as a function of one or more moderators. These moderators can be operating on the a, b, or c' paths or any possible combination of the three
+  \item
+    X could moderate its own indirect effect on Y through M if the effect of M on Y depends on X, or
+  \item
+    The indirect effect of X on Y through M could be contingent on a fourth variable if that fourth variable W moderates one or more of the relationships in a three-variable causal system, or
+  \item
+    An indirect effect could be contingent on a moderator variable
+  \end{itemize}
+\item
+  \emph{Mediated moderation}: an interaction between X and some moderator W on Y is carried through a mediator M;
+
+  \begin{itemize}
+  \tightlist
+  \item
+    mediated moderation analysis is simply a mediation analysis with the product of two variables serving as the causal agent of focus
+  \item
+    An interaction between a moderator W and causal agent X on outcome Y could operate through a mediator M
+  \end{itemize}
+\end{itemize}
+
+Hayes argues that the mediated moderation hypotheses are ``regularly articulated and tested by scientists'' \citeyearpar[p.~459]{hayes_introduction_2018}. He warns, though, that we should not confuse the ``abundance of published examples of mediated moderation anlayses\ldots with the meaningfulness of the procedure itself'' (p.~460). He later adds that mediation moderation is ``neither interesting nor meaningful.'' Why?
+
+\begin{itemize}
+\tightlist
+\item
+  Conceptualizing a process in terms of a mediated moderation misdirects attention toward a variable in the model that actually doesn't measure anything.
+\item
+  Most often there are moderated mediation models that are identical in equations and resulting coefficients - the difference is in the resulting attentional focus and interpretation.
+\item
+  Hayes \citeyearpar{hayes_introduction_2018} recommends that models proposing mediated moderation be recast in terms of moderated mediation process.
+\item
+  Consequently, we will not work a mediated moderation, but there is an example in chapter 12.
+\end{itemize}
+
+\hypertarget{hayes--hayes_introduction_2018-piecewise-approach-to-building-models}{%
+\subsection{\texorpdfstring{Hayes' \citeyearpar{hayes_introduction_2018} Piecewise Approach to Building Models}{Hayes' {[}-@hayes\_introduction\_2018{]} Piecewise Approach to Building Models}}\label{hayes--hayes_introduction_2018-piecewise-approach-to-building-models}}
+
+In summarizing a strategic approach for testing structural equation models, Joreskog \citep{bollen_testing_1993} identified three scenarios:
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{strictly confirmatory}: the traditional NHST approach of proposing a single, theoretically derived, model, and after analyzing the data either rejects or fails to reject the model. No further modifications are made/allowed.
+\item
+  \emph{alternative models}: the reseacher proposes competing (also theoretically derived) models. Following analysis of a single set of empirical data, he or she selects one model as appropriate in representing the sample data.
+\item
+  \emph{model generating}: A priori, the researcher acknowledges that they may/may not find what they have theoretically proposed. So, a priori, they acknowledge that in the absence of ideal fit (which is the usual circumstance), they will proceed in an exploratory fashion to respecify/re-estimate the model. The goal is to find a model that is both substantively meaningful and statistically well-fitting.
+\end{itemize}
+
+A legacy of our field is the \emph{strictly confirmatory} approach. I am thrilled when I see research experts (e.g., \citep{byrne_structural_2016}) openly endorse a model building approach. In Chapter 12, Hayes \citeyearpar{hayes_introduction_2018} demonstrates the piecewise approach to building (and understanding) a complex model.
+
+\hypertarget{workflow-for-moderated-mediation}{%
+\section{Workflow for Moderated Mediation}\label{workflow-for-moderated-mediation}}
+
+At this point in this OER's development, I don't have a workflow graphic developed for this statistic. However, Hayes' \citeyearpar{hayes_introduction_2018} \emph{piecewise} approach to model testing/building is really the workflow. The secret is to decompose the model into its simplest moderations and mediations and analyze them separately before assembling them. When we get to the model we will analyze with this research vignette, a series of diagrams will make this more clear.
+
+Additionally, at the end of the chapter, I offer a template of R script for the popular moderated mediation (a single moderator influencin both the \emph{a} and \emph{c'} paths).
+
+\hypertarget{research-vignette-6}{%
+\section{Research Vignette}\label{research-vignette-6}}
+
+Once again the research vignette comes from the Lewis, Williams, Peppers, and Gadson's \citeyearpar{lewis_applying_2017} study titled, ``Applying Intersectionality to Explore the Relations Between Gendered Racism and Health Among Black Women.'' The study was published in the Journal of Counseling Psychology. Participants were 231 Black women who completed an online survey.
+
+Variables used in the study included:
+
+\begin{itemize}
+\item
+  \textbf{GRMS}: Gendered Racial Microaggressions Scale \citep{lewis_construction_2015} is a 26-item scale that assesses the frequency of nonverbal, verbal, and behavioral negative racial and gender slights experienced by Black women. Scaling is along six points ranging from 0 (never) to 5 (once a week or more). Higher scores indicate a greater frequency of gendered racial microaggressions. An example item is, ``Someone has made a sexually inappropriate comment about my butt, hips, or thighs.''
+\item
+  \textbf{MntlHlth} and \textbf{PhysHlth}: Short Form Health Survey - Version 2 \citep{ware_comparison_1995} is a 12-item scale used to report self-reported mental (six items) and physical health (six items).
+  Higher scores indicate higher mental health (e.g., little or no psychological ldistress) and physical health (e.g., little or no reported symptoms in physical functioning). An example of an item assessing mental health was, ``How much of the time during the last 4 weeks have you felt calm and peaceful?''; an example of a physical health item was, ``During the past 4 weeks, how much did pain interfere with your normal work?''
+\item
+  \textbf{Sprtlty}, \textbf{SocSup}, \textbf{Engmgt}, and \textbf{DisEngmt} are four subscales from the Brief Coping with Problems Experienced Inventory \citep{carver_you_1997}. The 28 items on this scale are presented on a 4-point scale ranging from 1 (\emph{I usually do not do this at all}) to 4(\emph{I usually do this a lot}). Higher scores indicate a respondents' tendency to engage in a particular strategy. Instructions were modified to ask how the female participants responded to recent experiences of racism and sexism as Black women. The four subscales included spirituality (religion, acceptance, planning), interconnectedness/social support (vent emotions, emotional support,instrumental social support), problem-oriented/engagement coping (active coping, humor, positive reinterpretation/positive reframing), and disengagement coping (behavioral disengagement, substance abuse, denial, self-blame, self-distraction).
+\item
+  \textbf{GRIcntlty}: The Multidimensional Inventory of Black Identity Centrality subscale \citep{sellers_multidimensional_nodate} was modified to measure the intersection of racial and gender identity centrality. The scale included 10 items scaled from 1 (\emph{strongly disagree}) to 7 (\emph{strongly agree}). An example item was, ``Being a \emph{Black woman} is important to my self-image.'' Higher scores indicated higher levels of gendered racial identity centrality.
+\end{itemize}
+
+\hypertarget{simulating-the-data-from-the-journal-article}{%
+\subsection{Simulating the data from the journal article}\label{simulating-the-data-from-the-journal-article}}
+
+First, we simulate the data from the means, standard deviations, and correlation matrix from the journal article.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Entering the intercorrelations, means, and standard deviations from the journal article}
+\NormalTok{LEWmu }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\FloatTok{1.99}\NormalTok{, }\FloatTok{2.82}\NormalTok{, }\FloatTok{2.48}\NormalTok{, }\FloatTok{2.32}\NormalTok{, }\FloatTok{1.75}\NormalTok{, }\FloatTok{5.71}\NormalTok{, }\FloatTok{21.37}\NormalTok{, }\FloatTok{21.07}\NormalTok{)}
+\NormalTok{LEWsd }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(.}\DecValTok{90}\NormalTok{, .}\DecValTok{70}\NormalTok{, .}\DecValTok{81}\NormalTok{, .}\DecValTok{61}\NormalTok{, .}\DecValTok{53}\NormalTok{, }\FloatTok{1.03}\NormalTok{, }\FloatTok{3.83}\NormalTok{, }\FloatTok{4.66}\NormalTok{)}
+\NormalTok{LEWr\_mat }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{ (}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, .}\DecValTok{20}\NormalTok{, .}\DecValTok{28}\NormalTok{, .}\DecValTok{30}\NormalTok{, .}\DecValTok{41}\NormalTok{, .}\DecValTok{19}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{32}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{18}\NormalTok{,}
+\NormalTok{        .}\DecValTok{20}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{49}\NormalTok{, .}\DecValTok{57}\NormalTok{, .}\DecValTok{22}\NormalTok{, .}\DecValTok{13}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{06}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{13}\NormalTok{,}
+\NormalTok{        .}\DecValTok{28}\NormalTok{, .}\DecValTok{49}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{46}\NormalTok{, .}\DecValTok{26}\NormalTok{, .}\DecValTok{38}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{18}\NormalTok{,}\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{08}\NormalTok{, }
+\NormalTok{        .}\DecValTok{30}\NormalTok{, .}\DecValTok{57}\NormalTok{, .}\DecValTok{46}\NormalTok{,  }\DecValTok{1}\NormalTok{, .}\DecValTok{37}\NormalTok{, .}\DecValTok{08}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{14}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{06}\NormalTok{,}
+\NormalTok{        .}\DecValTok{41}\NormalTok{, .}\DecValTok{22}\NormalTok{, .}\DecValTok{26}\NormalTok{, .}\DecValTok{37}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{05}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{54}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{28}\NormalTok{, }
+\NormalTok{        .}\DecValTok{19}\NormalTok{, .}\DecValTok{13}\NormalTok{, .}\DecValTok{38}\NormalTok{, .}\DecValTok{08}\NormalTok{, .}\DecValTok{05}\NormalTok{, }\DecValTok{1}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{10}\NormalTok{, .}\DecValTok{14}\NormalTok{, }
+        \SpecialCharTok{{-}}\NormalTok{.}\DecValTok{32}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{06}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{18}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{14}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{54}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{47}\NormalTok{,}
+        \SpecialCharTok{{-}}\NormalTok{.}\DecValTok{18}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{13}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{08}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{06}\NormalTok{, }\SpecialCharTok{{-}}\NormalTok{.}\DecValTok{28}\NormalTok{, .}\DecValTok{14}\NormalTok{, .}\DecValTok{47}\NormalTok{, }\DecValTok{1}\NormalTok{), }\AttributeTok{ncol =} \DecValTok{8}\NormalTok{)}
+\CommentTok{\#Creating a covariance matrix}
+
+\NormalTok{LEWcov\_mat }\OtherTok{\textless{}{-}}\NormalTok{ LEWsd }\SpecialCharTok{\%*\%} \FunctionTok{t}\NormalTok{(LEWsd) }\SpecialCharTok{*}\NormalTok{ LEWr\_mat}
+\NormalTok{LEWcov\_mat}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##          [,1]     [,2]      [,3]      [,4]      [,5]      [,6]      [,7]
+## [1,]  0.81000  0.12600  0.204120  0.164700  0.195570  0.176130 -1.103040
+## [2,]  0.12600  0.49000  0.277830  0.243390  0.081620  0.093730 -0.160860
+## [3,]  0.20412  0.27783  0.656100  0.227286  0.111618  0.317034 -0.558414
+## [4,]  0.16470  0.24339  0.227286  0.372100  0.119621  0.050264 -0.327082
+## [5,]  0.19557  0.08162  0.111618  0.119621  0.280900  0.027295 -1.096146
+## [6,]  0.17613  0.09373  0.317034  0.050264  0.027295  1.060900 -0.394490
+## [7,] -1.10304 -0.16086 -0.558414 -0.327082 -1.096146 -0.394490 14.668900
+## [8,] -0.75492 -0.42406 -0.301968 -0.170556 -0.691544  0.671972  8.388466
+##           [,8]
+## [1,] -0.754920
+## [2,] -0.424060
+## [3,] -0.301968
+## [4,] -0.170556
+## [5,] -0.691544
+## [6,]  0.671972
+## [7,]  8.388466
+## [8,] 21.715600
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Set random seed so that the following matrix always gets the same results.}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210403}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(MASS)}
+\NormalTok{Lewis\_df }\OtherTok{\textless{}{-}} \FunctionTok{mvrnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{212}\NormalTok{, }\AttributeTok{mu=}\NormalTok{LEWmu, }\AttributeTok{Sigma =}\NormalTok{ LEWcov\_mat, }\AttributeTok{empirical =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{colMeans}\NormalTok{(Lewis\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1.99  2.82  2.48  2.32  1.75  5.71 21.37 21.07
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Checking our work against the original correlation matrix}
+\FunctionTok{cor}\NormalTok{(Lewis\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]  [,8]
+## [1,]  1.00  0.20  0.28  0.30  0.41  0.19 -0.32 -0.18
+## [2,]  0.20  1.00  0.49  0.57  0.22  0.13 -0.06 -0.13
+## [3,]  0.28  0.49  1.00  0.46  0.26  0.38 -0.18 -0.08
+## [4,]  0.30  0.57  0.46  1.00  0.37  0.08 -0.14 -0.06
+## [5,]  0.41  0.22  0.26  0.37  1.00  0.05 -0.54 -0.28
+## [6,]  0.19  0.13  0.38  0.08  0.05  1.00 -0.10  0.14
+## [7,] -0.32 -0.06 -0.18 -0.14 -0.54 -0.10  1.00  0.47
+## [8,] -0.18 -0.13 -0.08 -0.06 -0.28  0.14  0.47  1.00
+\end{verbatim}
+
+Rename the variables
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{as.data.frame}\NormalTok{(Lewis\_df, }\AttributeTok{row.names =} \ConstantTok{NULL}\NormalTok{, }\AttributeTok{optional =} \ConstantTok{FALSE}\NormalTok{, }\AttributeTok{make.names =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{Lewis\_df }\OtherTok{\textless{}{-}}\NormalTok{ Lewis\_df}\SpecialCharTok{\%\textgreater{}\%}
+\NormalTok{  as.data.frame }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{GRMS =}\NormalTok{ V1, }\AttributeTok{Sprtlty =}\NormalTok{ V2, }\AttributeTok{SocSup =}\NormalTok{ V3, }\AttributeTok{Engmgt =}\NormalTok{ V4, }\AttributeTok{DisEngmt =}\NormalTok{ V5, }\AttributeTok{GRIcntlty =}\NormalTok{ V6, }\AttributeTok{MntlHlth =}\NormalTok{ V7, }\AttributeTok{PhysHlth =}\NormalTok{ V8)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(Lewis\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        GRMS  Sprtlty   SocSup   Engmgt  DisEngmt GRIcntlty MntlHlth PhysHlth
+## 1 1.6527393 2.022990 1.705523 1.360615 1.0830779  5.517213 22.75649 19.41684
+## 2 0.7640948 1.644033 2.505362 2.242470 1.7132075  5.413544 22.62540 22.26355
+## 3 2.0107291 2.321768 2.660635 2.004928 1.5158907  4.842883 19.07803 23.23430
+## 4 1.2409552 1.920184 1.470588 1.096715 1.4677302  4.124888 23.94831 18.74295
+## 5 1.4613106 3.775331 2.939616 1.825157 0.9183584  5.558731 22.77763 18.81243
+## 6 3.3326679 2.432105 2.709137 2.427134 1.7561275  8.816758 19.26199 24.46558
+\end{verbatim}
+
+\hypertarget{quick-peek-at-the-data}{%
+\subsection{Quick peek at the data}\label{quick-peek-at-the-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(psych)}
+\NormalTok{psych}\SpecialCharTok{::}\FunctionTok{describe}\NormalTok{(Lewis\_df)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##           vars   n  mean   sd median trimmed  mad   min   max range  skew
+## GRMS         1 212  1.99 0.90   1.97    1.99 0.80 -1.07  3.97  5.05 -0.12
+## Sprtlty      2 212  2.82 0.70   2.80    2.83 0.75  1.08  4.57  3.49 -0.10
+## SocSup       3 212  2.48 0.81   2.44    2.47 0.80  0.62  4.78  4.17  0.11
+## Engmgt       4 212  2.32 0.61   2.32    2.33 0.60  0.75  3.93  3.18 -0.14
+## DisEngmt     5 212  1.75 0.53   1.76    1.75 0.56  0.47  3.00  2.53 -0.05
+## GRIcntlty    6 212  5.71 1.03   5.64    5.68 0.95  2.72  9.56  6.84  0.37
+## MntlHlth     7 212 21.37 3.83  21.59   21.46 4.23 11.79 31.77 19.98 -0.14
+## PhysHlth     8 212 21.07 4.66  20.79   21.03 4.68  8.43 33.73 25.30  0.07
+##           kurtosis   se
+## GRMS          0.25 0.06
+## Sprtlty      -0.41 0.05
+## SocSup       -0.16 0.06
+## Engmgt       -0.22 0.04
+## DisEngmt     -0.56 0.04
+## GRIcntlty     0.76 0.07
+## MntlHlth     -0.56 0.26
+## PhysHlth     -0.18 0.32
+\end{verbatim}
+
+And a quick peek at a correlation matrix.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(apaTables)}
+\FunctionTok{apa.cor.table}\NormalTok{ (Lewis\_df, }\AttributeTok{show.conf.interval =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## The ability to suppress reporting of reporting confidence intervals has been deprecated in this version.
+## The function argument show.conf.interval will be removed in a later version.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## 
+## Means, standard deviations, and correlations with confidence intervals
+##  
+## 
+##   Variable     M     SD   1            2           3            4           
+##   1. GRMS      1.99  0.90                                                   
+##                                                                             
+##   2. Sprtlty   2.82  0.70 .20**                                             
+##                           [.07, .33]                                        
+##                                                                             
+##   3. SocSup    2.48  0.81 .28**        .49**                                
+##                           [.15, .40]   [.38, .59]                           
+##                                                                             
+##   4. Engmgt    2.32  0.61 .30**        .57**       .46**                    
+##                           [.17, .42]   [.47, .65]  [.35, .56]               
+##                                                                             
+##   5. DisEngmt  1.75  0.53 .41**        .22**       .26**        .37**       
+##                           [.29, .52]   [.09, .34]  [.13, .38]   [.25, .48]  
+##                                                                             
+##   6. GRIcntlty 5.71  1.03 .19**        .13         .38**        .08         
+##                           [.06, .32]   [-.00, .26] [.26, .49]   [-.06, .21] 
+##                                                                             
+##   7. MntlHlth  21.37 3.83 -.32**       -.06        -.18**       -.14*       
+##                           [-.44, -.19] [-.19, .08] [-.31, -.05] [-.27, -.01]
+##                                                                             
+##   8. PhysHlth  21.07 4.66 -.18**       -.13        -.08         -.06        
+##                           [-.31, -.05] [-.26, .00] [-.21, .06]  [-.19, .08] 
+##                                                                             
+##   5            6           7         
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##                                      
+##   .05                                
+##   [-.09, .18]                        
+##                                      
+##   -.54**       -.10                  
+##   [-.63, -.44] [-.23, .04]           
+##                                      
+##   -.28**       .14*        .47**     
+##   [-.40, -.15] [.01, .27]  [.36, .57]
+##                                      
+## 
+## Note. M and SD are used to represent mean and standard deviation, respectively.
+## Values in square brackets indicate the 95% confidence interval.
+## The confidence interval is a plausible range of population correlations 
+## that could have caused the sample correlation (Cumming, 2014).
+##  * indicates p < .05. ** indicates p < .01.
+## 
+\end{verbatim}
+
+\hypertarget{working-the-moderated-mediation}{%
+\section{Working the Moderated Mediation}\label{working-the-moderated-mediation}}
+
+The model we are testing is predicting a mental health (MntlHlth, Y) from gendered racial microaggressions (GRMS,X), mediated by disengagement coping (DisEngmt, M). The relationship between gendered racial microaggressions and disengagement coping (i.e., the \emph{a} path) is expected to be moderated by gendered racial identity centrality (GRIcntlty, W). Gendered racial identity centrality is also expected to moderate the path between gendered racial microaggressions and mental health (i.e., the \emph{c'} path). Thus, the specified model involves the evaluation of a conditional indirect effect.
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/LewisModMed.jpg}
+\caption{Image of conceptual representation of the conditional process analysis model where the moderator is hypothesized to change the a and c' paths}
+\end{figure}
+
+Hayes' \citeyearpar{hayes_introduction_2018} textbook and training materials frequently display the conceptual (above) and statistical models (below). These help facilitate understanding.
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/LewisStatistical.jpg}
+\caption{Image of statistical reprsentation of the conditional process analysis model where the moderator is hypothesized to change the a and c' paths}
+\end{figure}
+
+Looking at the diagram, with two consequent variables (i.e., those with arrows pointing to them) we can see two equations are needed to explain the model:
+
+\[M = i_{M}+a_{1}X + a_{2}W + a_{3}XW + e_{M}\]
+
+\[Y = i_{Y}+c_{1}^{'}X+ c_{2}^{'}W+c_{3}^{'}XW+ bM+e_{Y}\]
+
+When we have complicated models such as these, Hayes \citeyearpar{hayes_introduction_2018} suggests a piecewise approach to model building. Specifically, he decompose the model into its aggregate parts: a simple mediation and two simple moderation.
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/PiecewiseAssembly.jpg}
+\caption{Image of statistical reprsentation of the conditional process analysis model where the moderator is hypothesized to change the a and c' paths}
+\end{figure}
+
+Let's start with the the simple moderations.
+
+\hypertarget{piecewise-assembly-of-the-moderated-mediation}{%
+\subsection{Piecewise Assembly of the Moderated Mediation}\label{piecewise-assembly-of-the-moderated-mediation}}
+
+\hypertarget{analysis-1-a-simple-moderation}{%
+\subsubsection{Analysis \#1: A simple moderation}\label{analysis-1-a-simple-moderation}}
+
+We are asking, "Does GRI centrality moderate the relationship between gendered racial microaggressiona and disengagement coping?
+
+Y = disengagement coping
+X = gendered racial microaggressions
+W = GRI centrality
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/LewisMod1.jpg}
+\caption{Image of statistical representation of the simple moderation estimating DisEngmt from GRMS, moderated by GRIcntlty}
+\end{figure}
+
+The formula we are estimating:
+\[Y=b_{0}+b_{1}X+b_{2}W+b_{3}XW+e_{Y}\]
+
+Let's specify this simple moderation model with base R's \emph{lm()} function. Let's use the \emph{jtools} package so we get that great summ function and \emph{interactions} for the awesome plot.
+
+Since we are just working to understand our moderations, we can run them with ``regular old'' ordinary least squares.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(jtools) }\CommentTok{\#the summ function creates a terrific regression table}
+\FunctionTok{library}\NormalTok{(interactions)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+
+\NormalTok{Mod\_a\_path }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(DisEngmt}\SpecialCharTok{\textasciitilde{}}\NormalTok{GRMS}\SpecialCharTok{*}\NormalTok{GRIcntlty, }\AttributeTok{data=}\NormalTok{Lewis\_df)}
+\FunctionTok{summ}\NormalTok{(Mod\_a\_path, }\AttributeTok{digits =} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lr}
+\toprule
+\cellcolor{gray!6}{Observations} & \cellcolor{gray!6}{212}\\
+Dependent variable & DisEngmt\\
+\cellcolor{gray!6}{Type} & \cellcolor{gray!6}{OLS linear regression}\\
+\bottomrule
+\end{tabular}
+\end{table} \begin{table}[!h]
+\centering
+\begin{tabular}{lr}
+\toprule
+\cellcolor{gray!6}{F(3,208)} & \cellcolor{gray!6}{14.099}\\
+R² & 0.169\\
+\cellcolor{gray!6}{Adj. R²} & \cellcolor{gray!6}{0.157}\\
+\bottomrule
+\end{tabular}
+\end{table} \begin{table}[!h]
+\centering
+\begin{threeparttable}
+\begin{tabular}{lrrrr}
+\toprule
+  & Est. & S.E. & t val. & p\\
+\midrule
+\cellcolor{gray!6}{(Intercept)} & \cellcolor{gray!6}{1.417} & \cellcolor{gray!6}{0.517} & \cellcolor{gray!6}{2.741} & \cellcolor{gray!6}{0.007}\\
+GRMS & 0.212 & 0.231 & 0.919 & 0.359\\
+\cellcolor{gray!6}{GRIcntlty} & \cellcolor{gray!6}{-0.027} & \cellcolor{gray!6}{0.090} & \cellcolor{gray!6}{-0.299} & \cellcolor{gray!6}{0.765}\\
+GRMS:GRIcntlty & 0.006 & 0.039 & 0.144 & 0.886\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item Standard errors: OLS
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+Looking at these results we can see that the predictors account for about 17\% of variance in disengagement coping. However, there is no significance in the predictors. Neither the IV variable (GRMS, {[}X{]}), nor the moderator (GRIcntlty, {[}Y{]})), nor its interaction (GRMS:GRIcntlty, {[}XW{]}) are significant.
+
+It's always helpful to graph the relationship. The \emph{interaction\_plot()} function from the package, \emph{interactions} can make helpful illustrations. In the case of interactions/moderations, I like to run them ``both ways'' to see which makes more sense.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{interact\_plot}\NormalTok{(Mod\_a\_path, }\AttributeTok{pred =}\NormalTok{ GRMS, }\AttributeTok{modx =}\NormalTok{ GRIcntlty)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/MOD a path plot-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{interact\_plot}\NormalTok{(Mod\_a\_path, }\AttributeTok{pred =}\NormalTok{ GRIcntlty, }\AttributeTok{modx =}\NormalTok{ GRMS)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/MOD a path plot-2.pdf}
+The figure with GRIcntrlty as the moderator, shows a very similar prediction of disengagement coping from gendered racial microaggressions. The figure that uses GRMS as the moderator, visually, looks like there are big differences as a function of GRMS. Looking at the Y axis (disengagement), though, shows that the scaling variables are not well-spaced.
+
+Next, let's probe the interaction with simple slopes. Probing the interaction is a common follow-up. With these additional inferential tests we can see where in the distribution of the moderator, X has an effect on Y that is different from zero (and where it does not). There are two common approaches.
+
+The Johnson-Neyman is a \emph{floodlight} approach and provides an indication of the places in the distribution of W (moderator) that X has an effect on Y that is different than zero. The pick-a-point is sometimes called the \emph{analysis of simple slopes} or a \emph{spotlight} approach, probes the distribution at specific values (often the \emph{M} +/- 1\emph{SD}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sim\_slopes}\NormalTok{(Mod\_a\_path, }\AttributeTok{pred =}\NormalTok{ GRMS, }\AttributeTok{modx =}\NormalTok{ GRIcntlty)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## JOHNSON-NEYMAN INTERVAL 
+## 
+## When GRIcntlty is INSIDE the interval [3.02, 9.11], the slope of GRMS is p
+## < .05.
+## 
+## Note: The range of observed values of GRIcntlty is [2.72, 9.56]
+## 
+## SIMPLE SLOPES ANALYSIS 
+## 
+## Slope of GRMS when GRIcntlty = 4.68 (- 1 SD): 
+## 
+##   Est.   S.E.   t val.      p
+## ------ ------ -------- ------
+##   0.24   0.06     4.06   0.00
+## 
+## Slope of GRMS when GRIcntlty = 5.71 (Mean): 
+## 
+##   Est.   S.E.   t val.      p
+## ------ ------ -------- ------
+##   0.24   0.04     6.39   0.00
+## 
+## Slope of GRMS when GRIcntlty = 6.74 (+ 1 SD): 
+## 
+##   Est.   S.E.   t val.      p
+## ------ ------ -------- ------
+##   0.25   0.05     4.81   0.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#sim\_slopes(Mod\_a\_path, pred=GRIcntlty, modx = GRMS) \#sometimes I like to look at it in reverse {-}{-} like in the plots}
+\end{Highlighting}
+\end{Shaded}
+
+The Johnson-Neyman suggests that between the GRIcntlty values of 3.02 and 9.03, the relationship between GRMS is statistically significant. We see the same result in the pick-a-point approach where at the GRIcntlty values of 4.68, 5.71, and 6.74, X has a statistically significant effect on Y. Is this a contradiction to the non-significant interaction effect?
+
+No.~The test of interaction is an interaction about the relationship between \emph{W} and \emph{X}'s effect on \emph{Y}. Just showing that \emph{X} is significantly related to \emph{Y} for a specific value does not address any dependence upon the moderator (\emph{W}). Hayes \citeyearpar{hayes_introduction_2018} covers this well in his Chapter 14, in the section ``Reporting a Moderation Analysis.''
+
+\textbf{What have we learned in this simple moderation?}
+
+\begin{itemize}
+\tightlist
+\item
+  While there are no significant predictors (neither X, W, nor XW), the model accounts for about 17\% of variance in the DV.
+\item
+  Although there was a non-significant effect of GRMS on disengagement coping, analysis of simple slopes suggested a significant relationship between these variables at a given ranges of GRIcntlty.
+\item
+  We'll keep these in mind.
+\end{itemize}
+
+\hypertarget{analysis-2-another-simple-moderation}{%
+\subsubsection{Analysis \#2: Another simple moderation}\label{analysis-2-another-simple-moderation}}
+
+We are asking, ``Does gendered racial identity centrality moderate the relationship between gendered racial microaggressions and mental health?''
+
+Y = mental health
+X = gendered racial microaggressions
+W = GRI centrality
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/LewisMod2.jpg}
+\caption{Image of statistical representation of the simple moderation estimating MntlHlth from GRMS, moderated by GRIcntlty}
+\end{figure}
+
+As before, this is our formulaic rendering:\\
+\[Y=b_{0}+b_{1}X+b_{2}W+b_{3}XW+e_{Y}\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Mod\_c\_path }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(MntlHlth}\SpecialCharTok{\textasciitilde{}}\NormalTok{GRMS}\SpecialCharTok{*}\NormalTok{GRIcntlty, }\AttributeTok{data=}\NormalTok{Lewis\_df)}
+\FunctionTok{summ}\NormalTok{(Mod\_c\_path, }\AttributeTok{digits =} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lr}
+\toprule
+\cellcolor{gray!6}{Observations} & \cellcolor{gray!6}{212}\\
+Dependent variable & MntlHlth\\
+\cellcolor{gray!6}{Type} & \cellcolor{gray!6}{OLS linear regression}\\
+\bottomrule
+\end{tabular}
+\end{table} \begin{table}[!h]
+\centering
+\begin{tabular}{lr}
+\toprule
+\cellcolor{gray!6}{F(3,208)} & \cellcolor{gray!6}{8.137}\\
+R² & 0.105\\
+\cellcolor{gray!6}{Adj. R²} & \cellcolor{gray!6}{0.092}\\
+\bottomrule
+\end{tabular}
+\end{table} \begin{table}[!h]
+\centering
+\begin{threeparttable}
+\begin{tabular}{lrrrr}
+\toprule
+  & Est. & S.E. & t val. & p\\
+\midrule
+\cellcolor{gray!6}{(Intercept)} & \cellcolor{gray!6}{26.647} & \cellcolor{gray!6}{3.877} & \cellcolor{gray!6}{6.873} & \cellcolor{gray!6}{0.000}\\
+GRMS & -2.168 & 1.729 & -1.254 & 0.211\\
+\cellcolor{gray!6}{GRIcntlty} & \cellcolor{gray!6}{-0.460} & \cellcolor{gray!6}{0.674} & \cellcolor{gray!6}{-0.682} & \cellcolor{gray!6}{0.496}\\
+GRMS:GRIcntlty & 0.144 & 0.293 & 0.492 & 0.623\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item Standard errors: OLS
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+In this model that is, overall, statistically significant, we account for about 11\% of variance in the DV. Looking at these results we can see that there is no significance in the predictors. Neither the IV (GRMS, {[}X{]}), nor the moderator (GRIcntlty, {[}Y{]})), nor its interaction (GRMS:GRIcntlty, {[}XW{]}) are significant.
+
+Let's look at the plots.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{interact\_plot}\NormalTok{(Mod\_c\_path, }\AttributeTok{pred =}\NormalTok{ GRMS, }\AttributeTok{modx =}\NormalTok{ GRIcntlty)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/MOD c path plot-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{interact\_plot}\NormalTok{(Mod\_c\_path, }\AttributeTok{pred =}\NormalTok{ GRIcntlty, }\AttributeTok{modx =}\NormalTok{ GRMS)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/MOD c path plot-2.pdf}
+The figure with GRIcntrlty as the moderator, shows fanning out when mental health is high and GRMS is low.
+
+Next, let's probe the interaction with simple slopes. Probing the interaction is a common follow-up. With these additional inferential tests we can see where in the distribution of the moderator, X has an effect on Y that is different from zero (and where it does not). There are two common approaches.
+
+The Johnson-Neyman is a \emph{floodlight} approach and provides an indication of the places in the distribution of W (moderator) that X has an effect on Y that is different than zero. The pick-a-point is sometimes called the \emph{analysis of simple slopes} or a \emph{spotlight} approach, probes the distribution at specific values (often the \emph{M} +/- 1\emph{SD}).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sim\_slopes}\NormalTok{(Mod\_c\_path, }\AttributeTok{pred =}\NormalTok{ GRMS, }\AttributeTok{modx =}\NormalTok{ GRIcntlty)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## JOHNSON-NEYMAN INTERVAL 
+## 
+## When GRIcntlty is INSIDE the interval [2.97, 7.46], the slope of GRMS is p
+## < .05.
+## 
+## Note: The range of observed values of GRIcntlty is [2.72, 9.56]
+## 
+## SIMPLE SLOPES ANALYSIS 
+## 
+## Slope of GRMS when GRIcntlty = 4.68 (- 1 SD): 
+## 
+##    Est.   S.E.   t val.      p
+## ------- ------ -------- ------
+##   -1.49   0.44    -3.39   0.00
+## 
+## Slope of GRMS when GRIcntlty = 5.71 (Mean): 
+## 
+##    Est.   S.E.   t val.      p
+## ------- ------ -------- ------
+##   -1.35   0.29    -4.70   0.00
+## 
+## Slope of GRMS when GRIcntlty = 6.74 (+ 1 SD): 
+## 
+##    Est.   S.E.   t val.      p
+## ------- ------ -------- ------
+##   -1.20   0.39    -3.08   0.00
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#sim\_slopes(Mod\_c\_path, pred=GRIcntlty, modx = GRMS) \#sometimes I like to look at it in reverse {-}{-} like in the plots}
+\end{Highlighting}
+\end{Shaded}
+
+The Johnson-Neyman suggests that between the GRIcntlty values of 2.972 and 7.46, the relationship between GRMS is statistically significant. We see the same result in the pick-a-point approach where at the GRIcntlty values of 4.68, 5.71, and 6.74, X has a statistically significant effect on Y. Is this a contradiction to the non-significant interaction effect?
+
+Again. No.~The test of interaction is an interaction about the relationship between \emph{W} and \emph{X}'s effect on \emph{Y}. Just showing that \emph{X} is significantly related to \emph{Y} for a specific value does not address any dependence upon the moderator (\emph{W}). Hayes \citeyearpar{hayes_introduction_2018} covers this well in his Chapter 14, in the section ``Reporting a Moderation Analysis.''
+
+\textbf{What have we learned in this simple moderation?}
+
+\begin{itemize}
+\tightlist
+\item
+  As predictors to the DV, disengagement coping, the IV (X), moderator (W), and its interaction term (XW) have non-significant effects. That said, the overall model was significant and accounted for 11\% of variance in the DV.
+\item
+  Although there was a non-significant effect of GRMS on mental health, analysis of simple slopes suggested a significant relationship between these variables at a given range of GRIcntlty.
+\item
+  We'll keep these in mind.
+\end{itemize}
+
+\hypertarget{analysis-3-a-simple-mediation}{%
+\subsubsection{Analysis \#3: A simple mediation}\label{analysis-3-a-simple-mediation}}
+
+We are asking, ``Does disengagement coping mediate the relationship between gendered racial microaggressions and mental health?''
+
+Y = mental health
+X = gendered racial microaggressions
+M = GRI centrality
+
+\includegraphics{images/ModMed/LewisMed.jpg}
+Looking at the diagram, with two consequent variables (i.e., those with arrows pointing to them) we can see two equations are needed to explain the model:
+
+\[M = i_{M}+aX + e_{M}\]
+
+\[Y = i_{Y}+c'X+ bM+e_{Y}\]
+
+To conduct this analysis, I am using the guidelines in the \protect\hyperlink{SimpleMed}{chapter on simple mediation}. We are switching to the \emph{lavaan} package.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lavaan)}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210421}\NormalTok{) }\CommentTok{\#reset in case you choose to separate these sections}
+\NormalTok{LMedModel }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{          MntlHlth \textasciitilde{} b*DisEngmt + c\_p*GRMS }
+\StringTok{          DisEngmt \textasciitilde{}a*GRMS}
+\StringTok{          }
+\StringTok{          \#intercepts}
+\StringTok{          DisEngmt \textasciitilde{} DisEngmt.mean*1}
+\StringTok{          MntlHlth \textasciitilde{} MntlHlth.mean*1}
+\StringTok{          }
+\StringTok{          indirect :=  a*b}
+\StringTok{          direct  := c\_p}
+\StringTok{          total\_c  := c\_p + (a*b)}
+\StringTok{          \textquotesingle{}}
+\NormalTok{LMed\_fit }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(LMedModel, }\AttributeTok{data =}\NormalTok{ Lewis\_df, }\AttributeTok{se=}\StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing =} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{)}
+\NormalTok{LMed\_Sum }\OtherTok{\textless{}{-}}  \FunctionTok{summary}\NormalTok{(LMed\_fit, }\AttributeTok{standardized=}\NormalTok{T, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 30 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                          7
+##                                                       
+##   Number of observations                           212
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   MntlHlth ~                                                            
+##     DisEngmt   (b)   -3.551    0.398   -8.914    0.000   -4.311   -2.740
+##     GRMS     (c_p)   -0.504    0.274   -1.844    0.065   -1.042    0.040
+##   DisEngmt ~                                                            
+##     GRMS       (a)    0.241    0.034    7.137    0.000    0.176    0.308
+##    Std.lv  Std.all
+##                   
+##    -3.551   -0.491
+##    -0.504   -0.119
+##                   
+##     0.241    0.410
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .DsEngmt (DsE.)    1.270    0.073   17.400    0.000    1.122    1.414
+##    .MntlHlt (MnH.)   28.588    0.752   38.039    0.000   27.036   30.058
+##    Std.lv  Std.all
+##     1.270    2.401
+##    28.588    7.482
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .MntlHlth         10.172    0.866   11.739    0.000    8.313   11.877
+##    .DisEngmt          0.233    0.020   11.810    0.000    0.195    0.272
+##    Std.lv  Std.all
+##    10.172    0.697
+##     0.233    0.832
+## 
+## R-Square:
+##                    Estimate
+##     MntlHlth          0.303
+##     DisEngmt          0.168
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     indirect         -0.857    0.155   -5.547    0.000   -1.163   -0.575
+##     direct           -0.504    0.274   -1.843    0.065   -1.042    0.040
+##     total_c          -1.362    0.298   -4.568    0.000   -1.951   -0.781
+##    Std.lv  Std.all
+##    -0.857   -0.201
+##    -0.504   -0.119
+##    -1.362   -0.320
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{LMed\_ParEsts}\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(LMed\_fit, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{LMed\_Sum}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## $PE
+##         lhs op       rhs         label exo        est         se         z
+## 1  MntlHlth  ~  DisEngmt             b   0 -3.5510981 0.39835676 -8.914366
+## 2  MntlHlth  ~      GRMS           c_p   0 -0.5043849 0.27353191 -1.843971
+## 3  DisEngmt  ~      GRMS             a   0  0.2414444 0.03382987  7.137019
+## 4  DisEngmt ~1           DisEngmt.mean   0  1.2695256 0.07296232 17.399743
+## 5  MntlHlth ~1           MntlHlth.mean   0 28.5881475 0.75155311 38.038759
+## 6  MntlHlth ~~  MntlHlth                 0 10.1718137 0.86646385 11.739455
+## 7  DisEngmt ~~  DisEngmt                 0  0.2325784 0.01969341 11.809963
+## 8      GRMS ~~      GRMS                 1  0.8061792 0.00000000        NA
+## 9      GRMS ~1                           1  1.9900000 0.00000000        NA
+## 10 indirect :=       a*b      indirect   0 -0.8573929 0.15457758 -5.546683
+## 11   direct :=       c_p        direct   0 -0.5043849 0.27366878 -1.843049
+## 12  total_c := c_p+(a*b)       total_c   0 -1.3617778 0.29811174 -4.568011
+## 13 MntlHlth r2  MntlHlth                 0  0.3032865         NA        NA
+## 14 DisEngmt r2  DisEngmt                 0  0.1681000         NA        NA
+##                   pvalue   ci.lower    ci.upper     std.lv    std.all
+## 1  0.0000000000000000000 -4.3111930 -2.73988833 -3.5510981 -0.4914052
+## 2  0.0651873898745749525 -1.0421481  0.04025633 -0.5043849 -0.1185239
+## 3  0.0000000000009536816  0.1755652  0.30832526  0.2414444  0.4100000
+## 4  0.0000000000000000000  1.1217602  1.41401013  1.2695256  2.4010007
+## 5  0.0000000000000000000 27.0361334 30.05840757 28.5881475  7.4819352
+## 6  0.0000000000000000000  8.3134145 11.87663252 10.1718137  0.6967135
+## 7  0.0000000000000000000  0.1949968  0.27192324  0.2325784  0.8319000
+## 8                     NA  0.8061792  0.80617925  0.8061792  1.0000000
+## 9                     NA  1.9900000  1.99000000  1.9900000  2.2163445
+## 10 0.0000000291139363728 -1.1633703 -0.57549700 -0.8573929 -0.2014761
+## 11 0.0653219113923206862 -1.0421481  0.04025633 -0.5043849 -0.1185239
+## 12 0.0000049237374675215 -1.9513442 -0.78147274 -1.3617778 -0.3200000
+## 13                    NA         NA          NA         NA         NA
+## 14                    NA         NA          NA         NA         NA
+##       std.nox
+## 1  -0.4914052
+## 2  -0.1320049
+## 3   0.4566338
+## 4   2.4010007
+## 5   7.4819352
+## 6   0.6967135
+## 7   0.8319000
+## 8   0.8061792
+## 9   1.9900000
+## 10 -0.2243922
+## 11 -0.1320049
+## 12 -0.3563971
+## 13         NA
+## 14         NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{LMed\_ParEsts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##         lhs op       rhs         label    est    se      z pvalue ci.lower
+## 1  MntlHlth  ~  DisEngmt             b -3.551 0.398 -8.914  0.000   -4.328
+## 2  MntlHlth  ~      GRMS           c_p -0.504 0.274 -1.844  0.065   -1.069
+## 3  DisEngmt  ~      GRMS             a  0.241 0.034  7.137  0.000    0.177
+## 4  DisEngmt ~1           DisEngmt.mean  1.270 0.073 17.400  0.000    1.115
+## 5  MntlHlth ~1           MntlHlth.mean 28.588 0.752 38.039  0.000   27.125
+## 6  MntlHlth ~~  MntlHlth               10.172 0.866 11.739  0.000    8.620
+## 7  DisEngmt ~~  DisEngmt                0.233 0.020 11.810  0.000    0.197
+## 8      GRMS ~~      GRMS                0.806 0.000     NA     NA    0.806
+## 9      GRMS ~1                          1.990 0.000     NA     NA    1.990
+## 10 indirect :=       a*b      indirect -0.857 0.155 -5.547  0.000   -1.207
+## 11   direct :=       c_p        direct -0.504 0.274 -1.843  0.065   -1.069
+## 12  total_c := c_p+(a*b)       total_c -1.362 0.298 -4.568  0.000   -1.962
+##    ci.upper std.lv std.all std.nox
+## 1    -2.759 -3.551  -0.491  -0.491
+## 2     0.018 -0.504  -0.119  -0.132
+## 3     0.311  0.241   0.410   0.457
+## 4     1.410  1.270   2.401   2.401
+## 5    30.125 28.588   7.482   7.482
+## 6    12.275 10.172   0.697   0.697
+## 7     0.279  0.233   0.832   0.832
+## 8     0.806  0.806   1.000   0.806
+## 9     1.990  1.990   2.216   1.990
+## 10   -0.597 -0.857  -0.201  -0.224
+## 11    0.018 -0.504  -0.119  -0.132
+## 12   -0.789 -1.362  -0.320  -0.356
+\end{verbatim}
+
+\textbf{In this simple mediation we learn}*:
+
+\begin{itemize}
+\tightlist
+\item
+  The \emph{a} path (GRMS --\textgreater{} DisEngmt) is statistically significant.
+\item
+  The \emph{b} path (DisEngmt --\textgreater{} MntlHlth) is statistically significant.
+\item
+  The total effect (GRMS --\textgreater{} MntlHlth) is statistically significant.
+\item
+  The direct effect (GRMS --\textgreater{} MntlHlth when DisEngmt is in the model) falls out of significance.
+\item
+  The indirect effect is statistically significant.
+\item
+  The model accounts for 30\% of the variance in mental health (DV) and 17\% of the variance in disengagement coping (M).
+\end{itemize}
+
+Recall how the bootstrapped, bias-corrected confidence intervals can be different? It's always good to check. In this case, CI95s and the \(p\) values are congruent.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{210421}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(semPlot)}
+\FunctionTok{semPaths}\NormalTok{(LMed\_fit, }\CommentTok{\#must identiy the model you want to map}
+         \AttributeTok{what =} \StringTok{"est"}\NormalTok{, }\CommentTok{\#"est" plots the estimates, but keeps it greyscale with no fading}
+         \CommentTok{\#whatLabels = "stand", \#"stand" changes to standardized values}
+         \AttributeTok{layout =} \StringTok{\textquotesingle{}tree\textquotesingle{}}\NormalTok{, }\AttributeTok{rotation =} \DecValTok{2}\NormalTok{, }\CommentTok{\#together, puts predictors on left, IVs on right }
+         \CommentTok{\#layout = \textquotesingle{}circle\textquotesingle{},}
+         \AttributeTok{edge.label.cex =} \FloatTok{1.00}\NormalTok{, }\CommentTok{\#font size of parameter values}
+         \CommentTok{\#edge.color = "black", \#overwrites the green/black coloring}
+         \AttributeTok{sizeMan=}\DecValTok{10}\NormalTok{, }\CommentTok{\#size of squares/observed/"manifest" variables}
+         \AttributeTok{fade=}\ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#if TRUE, there lines are faded such that weaker lines correspond with lower values {-}{-} a cool effect, but tough for journals}
+         \AttributeTok{esize=}\DecValTok{2}\NormalTok{, }
+         \AttributeTok{asize=}\DecValTok{3}\NormalTok{,}
+         \CommentTok{\#label.prop = .5,}
+         \AttributeTok{label.font =} \FloatTok{2.5}\NormalTok{, }\CommentTok{\#controls size (I think) of font for labels}
+         \AttributeTok{label.scale =} \ConstantTok{TRUE}\NormalTok{, }\CommentTok{\#if false, the labels will not scale to fit inside the nodes}
+         \AttributeTok{nDigits =} \DecValTok{3}\NormalTok{, }\CommentTok{\#decimal places (default is 2)}
+         \AttributeTok{residuals =} \ConstantTok{FALSE}\NormalTok{,}\CommentTok{\#excludes residuals (and variances) from the path diagram}
+         \AttributeTok{nCharNodes =} \DecValTok{0}\NormalTok{, }\CommentTok{\#specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)}
+         \AttributeTok{intercepts =} \ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#gets rid of those annoying triangles (intercepts) in the path diagram)}
+\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"Disengagement Coping as Mediator between GRMS and Mental Health"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/semPlot of simple med in the modmed-1.pdf}
+
+\hypertarget{the-moderated-mediation-a-combined-analysis}{%
+\section{The Moderated Mediation: A Combined analysis}\label{the-moderated-mediation-a-combined-analysis}}
+
+For a quick reminder, the diagram with labeled paths will help specify this in \emph{lavaan}.
+
+\begin{figure}
+\centering
+\includegraphics{images/ModMed/LewisStatistical.jpg}
+\caption{Image of statistical reprsentation of the conditional process analysis model where the moderator is hypothesized to change the a and c' paths}
+\end{figure}
+
+Looking at the diagram, with two consequent variables (i.e., those with arrows pointing to them) we can see two equations are needed to explain the model:
+
+\[M = i_{M}+a_{1}X + a_{2}W + a_{3}XW + e_{M}\]
+
+\[Y = i_{Y}+c_{1}^{'}X+ c_{2}^{'}W+c_{3}^{'}XW+ bM+e_{Y}\]
+Y = MntlHlth
+X = GRMS
+W = DisEngmt
+M = GRIcntlty
+
+\hypertarget{specification-in-lavaan}{%
+\subsection{\texorpdfstring{Specification in \emph{lavaan}}{Specification in lavaan}}\label{specification-in-lavaan}}
+
+In the code below
+
+\begin{itemize}
+\tightlist
+\item
+  First specify the equations, hints
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the a,b,c, labels are affixed with the *(asterisk)
+  \item
+    interaction terms are identifed with the colon
+  \end{itemize}
+\item
+  Create code for the intercepts (Y and M) with the form: VarName \textasciitilde{} VarName.mean*1
+\item
+  Create code for the mean and variance of all moderators (W, Z, etc.); these will be used in simple slopes.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Means use the form: VarName \textasciitilde{} VarName.mean*1
+  \item
+    Variances use the form: VarName \textasciitilde\textasciitilde VarName.var*VarName
+  \end{itemize}
+\item
+  Calculate the \emph{index of moderated mediation}: quantifies the relationship between the moderator and the indirect effect.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    To the degree that the value of the IMM is different from zero and the associated inferential test is statistically significant (bootstrapped confidence intervals are preferred; more powerful), we can conclude that the indirect effect is moderated.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      The IMM is used in the formula to calculate the conditional indirect effects.
+    \item
+      Hayes argues that a statistically significant IMM suggest they are (boom, done, p.~430).
+    \end{itemize}
+  \end{itemize}
+\item
+  Create code to calculate indirect effects conditional on (\emph{M} +/- 1\emph{SD}) moderator with the general form:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    product of the indirect effect (a*b) PLUS
+  \item
+    the product of the IMM and the moderated value
+  \end{itemize}
+\item
+  Because our direct path is moderated, we will use a similar process to specify the direct effects conditional on (\emph{M} +/- 1\emph{SD}) moderator with the general form:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the direct effect (c\_p1) PLUS
+  \item
+    the moderated value (c\_p3) at each of the three levels (\emph{M} +/- 1\emph{SD})
+  \end{itemize}
+\item
+  Although they don't tend to be reported, you can create total effects conditional on the (\emph{M} +/- 1\emph{SD}). These are simply the sum of the c\_p and all indirect paths, specified individually, at their \emph{M} +/- 1\emph{SD} conditional values.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{190505}\NormalTok{)}
+\NormalTok{Combined }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{    \#equations}
+\StringTok{    DisEngmt \textasciitilde{} a1*GRMS + a2*GRIcntlty + a3*GRMS:GRIcntlty}
+\StringTok{    MntlHlth \textasciitilde{} c\_p1*GRMS + c\_p2*GRIcntlty + c\_p3*GRMS:GRIcntlty + b*DisEngmt}
+
+\StringTok{    \#intercepts}
+\StringTok{    DisEngmt \textasciitilde{} DisEngmt.mean*1}
+\StringTok{    MntlHlth \textasciitilde{} MntlHlth.mean*1}
+
+\StringTok{    \#means, variances of W for simple slopes}
+\StringTok{    GRIcntlty \textasciitilde{} GRIcntlty.mean*1}
+\StringTok{    GRIcntlty \textasciitilde{}\textasciitilde{} GRIcntlty.var*GRIcntlty}
+\StringTok{    }
+\StringTok{    \#index of moderated mediation, there will be an a and b path in the product}
+\StringTok{    \#if the a and/or b path is moderated, select the label that represents the moderation}
+\StringTok{    imm := a3*b}
+
+\StringTok{    \#Note that we first create the indirect product, then add to it the product of the imm and the W level}
+\StringTok{    indirect.SDbelow := a1*b + imm*(GRIcntlty.mean {-} sqrt(GRIcntlty.var))}
+\StringTok{    indirect.mean := a1*b + imm*(GRIcntlty.mean)}
+\StringTok{    indirect.SDabove := a1*b + imm*(GRIcntlty.mean + sqrt(GRIcntlty.var))}
+
+\StringTok{    \#direct effect is also moderated so calculate with c\_p1 + c\_p3}
+\StringTok{    direct.SDbelow := c\_p1 + c\_p3*(GRIcntlty.mean {-} sqrt(GRIcntlty.var)) }
+\StringTok{    direct.Smean := c\_p1 + c\_p3*(GRIcntlty.mean)}
+\StringTok{    direct.SDabove := c\_p1 + c\_p3*(GRIcntlty.mean + sqrt(GRIcntlty.var))}
+
+\StringTok{    \#total effect}
+\StringTok{    total.SDbelow := direct.SDbelow + indirect.SDbelow}
+\StringTok{    total.mean := direct.Smean + indirect.mean}
+\StringTok{    total.SDabove := direct.SDabove + indirect.SDabove}
+\StringTok{ \textquotesingle{}}
+\NormalTok{Combined\_fit }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(Combined, }\AttributeTok{data =}\NormalTok{ Lewis\_df, }\AttributeTok{se =} \StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing =} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{, }\AttributeTok{bootstrap =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in lavaan::lavaan(model = Combined, data = Lewis_df, se = "bootstrap", :
+## lavaan WARNING: syntax contains parameters involving exogenous covariates;
+## switching to fixed.x = FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cFITsum }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(Combined\_fit, }\AttributeTok{standardized =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)    }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 58 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                         18
+##                                                       
+##   Number of observations                           212
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                               431.115
+##   Degrees of freedom                                 2
+##   P-value (Chi-square)                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   DisEngmt ~                                                            
+##     GRMS      (a1)    0.212    0.194    1.092    0.275   -0.191    0.582
+##     GRIcntl   (a2)   -0.027    0.078   -0.345    0.730   -0.186    0.123
+##     GRMS:GR   (a3)    0.006    0.032    0.174    0.862   -0.053    0.074
+##   MntlHlth ~                                                            
+##     GRMS    (c_p1)   -1.412    1.420   -0.994    0.320   -3.953    1.625
+##     GRIcntl (c_p2)   -0.556    0.521   -1.067    0.286   -1.545    0.549
+##     GRMS:GR (c_p3)    0.164    0.234    0.701    0.483   -0.323    0.584
+##     DsEngmt    (b)   -3.567    0.399   -8.933    0.000   -4.287   -2.791
+##    Std.lv  Std.all
+##                   
+##     0.212    0.358
+##    -0.027   -0.052
+##     0.006    0.065
+##                   
+##    -1.412   -0.331
+##    -0.556   -0.149
+##     0.164    0.261
+##    -3.567   -0.495
+## 
+## Covariances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   GRMS ~~                                                               
+##     GRMS:GRIcntlty    5.076    0.547    9.272    0.000    4.033    6.200
+##    Std.lv  Std.all
+##                   
+##     5.076    0.925
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .DsEngmt (DsE.)    1.417    0.453    3.128    0.002    0.543    2.326
+##    .MntlHlt (MnH.)   31.703    3.017   10.508    0.000   25.395   37.661
+##     GRIcntl (GRI.)    5.710    0.072   78.874    0.000    5.571    5.865
+##     GRMS              1.990    0.063   31.622    0.000    1.866    2.115
+##     GRMS:GR          11.538    0.429   26.896    0.000   10.725   12.361
+##    Std.lv  Std.all
+##     1.417    2.666
+##    31.703    8.273
+##     5.710    5.557
+##     1.990    2.216
+##    11.538    1.888
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     GRIcntl (GRI.)    1.056    0.120    8.826    0.000    0.831    1.301
+##    .DsEngmt           0.232    0.020   11.718    0.000    0.192    0.271
+##    .MntlHlt          10.110    0.825   12.254    0.000    8.248   11.508
+##     GRMS              0.806    0.085    9.475    0.000    0.646    0.984
+##     GRMS:GR          37.363    4.171    8.959    0.000   29.719   45.723
+##    Std.lv  Std.all
+##     1.056    1.000
+##     0.232    0.822
+##    10.110    0.688
+##     0.806    1.000
+##    37.363    1.000
+## 
+## R-Square:
+##                    Estimate
+##     DisEngmt          0.178
+##     MntlHlth          0.312
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     imm              -0.020    0.115   -0.174    0.862   -0.262    0.194
+##     indirect.SDblw   -0.850    0.206   -4.128    0.000   -1.241   -0.451
+##     indirect.mean    -0.870    0.158   -5.523    0.000   -1.192   -0.566
+##     indirect.SDabv   -0.891    0.186   -4.782    0.000   -1.272   -0.547
+##     direct.SDbelow   -0.644    0.410   -1.572    0.116   -1.417    0.165
+##     direct.Smean     -0.476    0.289   -1.644    0.100   -1.046    0.120
+##     direct.SDabove   -0.307    0.335   -0.919    0.358   -0.994    0.324
+##     total.SDbelow    -1.494    0.426   -3.510    0.000   -2.280   -0.649
+##     total.mean       -1.346    0.307   -4.390    0.000   -1.954   -0.766
+##     total.SDabove    -1.198    0.384   -3.121    0.002   -1.977   -0.461
+##    Std.lv  Std.all
+##    -0.020   -0.032
+##    -0.850   -0.323
+##    -0.870   -0.355
+##    -0.891   -0.387
+##    -0.644    0.861
+##    -0.476    1.122
+##    -0.307    1.383
+##    -1.494    0.538
+##    -1.346    0.767
+##    -1.198    0.997
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cParamEsts }\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(Combined\_fit, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{a-quick-plot}{%
+\subsection{A quick plot}\label{a-quick-plot}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(semPlot)}
+\FunctionTok{semPaths}\NormalTok{(Combined\_fit, }\CommentTok{\#must identiy the model you want to map}
+         \AttributeTok{what =} \StringTok{"est"}\NormalTok{, }\CommentTok{\#"est" plots the estimates, but keeps it greyscale with no fading}
+         \CommentTok{\#whatLabels = "stand", \#"stand" changes to standardized values}
+         \AttributeTok{layout =} \StringTok{\textquotesingle{}tree\textquotesingle{}}\NormalTok{, }\AttributeTok{rotation =} \DecValTok{2}\NormalTok{, }\CommentTok{\#together, puts predictors on left, IVs on right }
+         \CommentTok{\#layout = \textquotesingle{}circle\textquotesingle{},}
+         \AttributeTok{edge.label.cex =} \FloatTok{1.00}\NormalTok{, }\CommentTok{\#font size of parameter values}
+         \CommentTok{\#edge.color = "black", \#overwrites the green/black coloring}
+         \AttributeTok{sizeMan=}\DecValTok{10}\NormalTok{, }\CommentTok{\#size of squares/observed/"manifest" variables}
+         \AttributeTok{fade=}\ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#if TRUE, there lines are faded such that weaker lines correspond with lower values {-}{-} a cool effect, but tough for journals}
+         \AttributeTok{esize=}\DecValTok{2}\NormalTok{, }
+         \AttributeTok{asize=}\DecValTok{3}\NormalTok{,}
+         \CommentTok{\#label.prop = .5,}
+         \AttributeTok{label.font =} \FloatTok{2.5}\NormalTok{, }\CommentTok{\#controls size (I think) of font for labels}
+         \AttributeTok{label.scale =} \ConstantTok{TRUE}\NormalTok{, }\CommentTok{\#if false, the labels will not scale to fit inside the nodes}
+         \AttributeTok{nDigits =} \DecValTok{3}\NormalTok{, }\CommentTok{\#decimal places (default is 2)}
+         \AttributeTok{residuals =} \ConstantTok{FALSE}\NormalTok{,}\CommentTok{\#excludes residuals (and variances) from the path diagram}
+         \AttributeTok{nCharNodes =} \DecValTok{0}\NormalTok{, }\CommentTok{\#specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)}
+         \AttributeTok{intercepts =} \ConstantTok{FALSE}\NormalTok{, }\CommentTok{\#gets rid of those annoying triangles (intercepts) in the path diagram)}
+\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"Moderated Mediation"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{ReC_MultivariateModeling_files/figure-latex/semPlot of the modmed-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{write.csv}\NormalTok{ (cParamEsts, }\AttributeTok{file=}\StringTok{"Combined\_fit.csv"}\NormalTok{) }\CommentTok{\#optional to write it to a .csv file}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{beginning-the-interpretation}{%
+\subsection{Beginning the interpretation}\label{beginning-the-interpretation}}
+
+We have already looked at some of the simple effects found within the more complex model. Let's grab the formulae.
+
+\[\hat{M} = i_{M}+a_{1}X + a_{2}W + a_{3}XW + e_{M}\]
+
+\[\hat{Y} = i_{Y}+c_{1}^{'}X+ c_{2}^{'}W+c_{3}^{'}XW+ bM+e_{Y}\]
+
+And substitute in our values
+
+\[\hat{M} = 1.417 + 0.212X + (-0.027) W + 0.006XW\]
+\[\hat{Y} = 31.703 + (-1.4115)X + (-0.556)W + 0.164XW + (-3.567)M\]
+
+\hypertarget{tabling-the-data}{%
+\subsection{Tabling the data}\label{tabling-the-data}}
+
+Table 1
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.00}}@{}}
+\toprule
+Analysis of Moderated Mediation for GRMS, Gendered Racial Identity Centrality, Coping, and Mental Health \\
+\midrule
+\endhead
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+& & \\
+\midrule
+\endhead
+& Disengagement Coping (M) & Mental Health (Y) \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcccccccc@{}}
+\toprule
+& & & & & & & & \\
+\midrule
+\endhead
+Antecedent & path & \(B\) & \(SE\) & \(p\) & path & \(B\) & \(SE\) & \(p\) \\
+constant & \(i_{M}\) & 1.417 & 0.453 & 0.002 & \(i_{Y}\) & 31.703 & 3.017 & 0.000 \\
+GRMS (X) & \(a_{1}\) & 0.212 & 0.194 & 0.275 & \(c_{1}\) & -1.412 & 1.420 & 0.320 \\
+GRIcntrlty (W) & \(a_{2}\) & -0.027 & 0.078 & 0.730 & \(c_{2}\) & -0.556 & 0.521 & 0.286 \\
+GRMS*GRIcntrlty(XW) & \(a_{3}\) & 0.006 & 0.032 & 0.862 & \(c_{3}\) & 0.164 & 0.234 & 0.483 \\
+DisEngmt (M) & & & & & \(b\) & -3.567 & 0.399 & 0.000 \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+& & \\
+\midrule
+\endhead
+& \(R^2\) = 17.78\% & \(R^2\) = 31.16\% \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.00}}@{}}
+\toprule
+ \\
+\midrule
+\endhead
+Conditional Indirect, Direct, and Total Effects at Gendered Racial Identity Centrality Values \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}lcccc@{}}
+\toprule
+& & & & \\
+\midrule
+\endhead
+& Boot effect & Boot SE & Boot CI95 lower & Boot CI95 upper \\
+Index of moderated mediation & -0.020 & 0.115 & -0.264 & 0.188 \\
+Indirect & & & & \\
+-1 \emph{SD} & -0.850 & 0.206 & -1.267 & -0.462 \\
+Mean & -0.870 & 0.158 & -1.236 & -0.594 \\
++1 \emph{SD} & -0.891 & 0.186 & -1.299 & -0.565 \\
+Direct & & & & \\
+-1 \emph{SD} & -0.644 & 0.410 & -1.420 & 0.153 \\
+Mean & -0.476 & 0.289 & -1.019 & 0.159 \\
++1 \emph{SD} & -0.307 & 0.335 & -0.980 & 0.331 \\
+Total & & & & \\
+-1 \emph{SD} & -1.494 & 0.426 & -2.295 & -0.662 \\
+Mean & -1.346 & 0.307 & -1.944 & -0.739 \\
++1 \emph{SD} & -1.198 & 0.384 & -1.948 & -0.455 \\
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}l@{}}
+\toprule
+ \\
+\midrule
+\endhead
+\bottomrule
+\end{longtable}
+
+\emph{Note}. IV(X) = gendered racial microaggressions; M = disengagement coping; W; gendered racial identity centrality; Y = mental health. The significance of the indirect and direct effects were calculated with bias-corrected confidence intervals (.95) bootstrap analysis.
+
+17.78\% of the variance in disengagement coping (mediator) and 31.16\% of the variance in mental health (DV) are predicted by their respective models.
+
+The model we tested suggested that both the indirect and direct effects should be moderated. Hayes provides a more detailed and elaborate explanation of this on pp.~447 - 458.
+
+\hypertarget{conditional-indirect-effects}{%
+\subsubsection{Conditional Indirect effects}\label{conditional-indirect-effects}}
+
+\begin{itemize}
+\tightlist
+\item
+  An indirect effect can be moderated if either the \emph{a} or \emph{b} path (or both) is(are) moderated.
+\item
+  If at least one of the indirect paths is part of a moderation, then the whole indirect (axb) path would be moderated.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In this model, we specified a moderation of the \emph{a} path.
+  \end{itemize}
+\item
+  We know if the \emph{a} path is moderated if the moderation term is statistically significant.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In our case, \(a_{3}\) GRMS:GRIcntlty was not statistically significant (\(B\) = 0.006, \(p\) = 0.862).
+  \end{itemize}
+\item
+  We also look at the \emph{Index of Moderated Mediation}. The IMM is the product of the moderated path (in this case, the value of \(a_{3}\)) and \emph{b}. If this index is 0, then the slope of the line for the indirect effect is flat. The bootstrap confidence interval associated with this test is the way to determine whether/not this slope is statistically significant from zero. In our case, IMM = -0.020, CI095 = -0.264 to 0.188. This suggests that we do not have a moderated mediation. Hayes claims the IMM saves us from formally comparing (think ``contrasts'' pairs of conditional indirect effects)
+\item
+  We can even get more information about the potentially moderated indirect effect by \emph{probing the conditional indirect effect}. Because an indirect effect is not normally distributed, Hayes discourages using a Johnson-Neyman approach and suggests that we use the pick-a-point. He usually selects the 16th, 50th, and 84th percentiles of the distribution. However, many researchers commonly report the mean+/-1SD.
+\item
+  at 1SD below the mean \(B\) = -0.850, CI95 -1.267 to -0.462;
+\item
+  at the mean \(B\) = -0.870, CI95 -1.236 to -0.594).\\
+\item
+  at 1SD above the mean, the conditional indirect effect was significant (\(B\) = -0.891, CI95 -1.299 to -0.565).\\
+\item
+  Looking at the relative consistency of the \(B\) weights and the consistently significant \(p\) values, we see that there was an indirect effect throughout the varying levels of the moderator, gendered racial identity centrality. Thus, it makes sense that this was not a moderated mediation.
+\end{itemize}
+
+\hypertarget{conditional-direct-effect}{%
+\subsubsection{Conditional Direct effect}\label{conditional-direct-effect}}
+
+\begin{itemize}
+\tightlist
+\item
+  The direct effect of X to Y estimates how differences in X relate to differences in Y holding constant the proposed mediator(s).
+\item
+  We know the direct effect is moderated if the interaction term (c\_p3)is statistically significant. In our case, it was not (\emph{B} = 0.164, \emph{p} = 0.483).
+\item
+  Probing a conditional direct effect is straightforward\ldots we typically use the same points as we did in the probing of the conditional indirect effect.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For both my values (mean and +/- 1SD) and Hayes values (16th, 50th, 84th percentiles), the direct effect (e.g., the effect of skepticism on willingness to donate) was not statistically significant from zero at any level of the moderator.
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{model-trimming}{%
+\subsection{Model trimming}\label{model-trimming}}
+
+Hayes terms it \emph{pruning}, but suggests that when there is no moderation of an effect, the researcher may want to delete that interaction term. In our case, neither the direct nor indirect effect was moderated (although the +1\emph{SD} was close (\(B\) = -0.307, \(p\) = 0.331). Deleting these paths one at a time is typical practice because the small boost of power with each deleted path may ``turn on'' significance elsewhere. If I were to engage in model trimming, I would start with the indirect effect to see if the direct effect became moderated. This is consistent with the simple moderation we ran earlier where we saw a fanning out at one end of the distribution.
+
+\hypertarget{apa-style-write-up-1}{%
+\subsection{APA Style Write-up}\label{apa-style-write-up-1}}
+
+\emph{Note}: Make sure to look at the write-up in the Lewis et al. \citep{lewis_applying_2017} manuscript. I am a little confused in that Figure 2 of their manuscript suggests there was a moderation of both the \emph{a} and \emph{c'} paths. However, the results in Table 4 do not provide information about the moderation to the \emph{c'} path. The Lewis et al.~write-up is an efficient one, simultaneously presenting the results of two outcome variables -- mental and physical health. While our \emph{B} weights from our simulated data map similarly onto those reported in the Lewis et al.~manuscript, we do not get get the statistically significant moderated mediation that they get.
+
+\textbf{Results}
+
+\textbf{Preliminary Analyses}
+
+\begin{itemize}
+\tightlist
+\item
+  Missing data anlaysis and managing missing data
+\item
+  Bivariate correlations, means, SDs
+\item
+  Distributional characteristics, assumptions, etc.
+\item
+  Address limitations and concerns
+\end{itemize}
+
+\textbf{Primary Analyses}
+Our analysis evaluated a moderation mediation model predicting mental health (Y/MntlHlth) from gendered racial microaggressions (X/GRMS) mediated by disengagement coping (M/DisEngmt). Gendered racial identity centrality (W/GRIcntrlty) was our moderating variable. We specified a moderation of path \emph{a} (X/GRMS to M/DisEngmt) and the direct path, \emph{c'} (X/GRMS to Y/MntlHlth). Data were analyzed with maximum likelihood estimation in the R package \emph{lavaan} (v. 0.6-7); the significance of effects were tested with 1000 bootstrap confidence intervals. Results of the full model are presented in Table 1 and illustrated in Figure 1 (\emph{a variation of the semPlot or Hayes style representation}). The formula for the mediator and dependent variable are expressed below.
+
+\[\hat{M} = 1.417 + 0.212X + (-0.027) W + 0.006XW\]
+\[\hat{Y} = 31.703 + (-1.4115)X + (-0.556)W + 0.164XW + (-3.567)M\]
+
+Results suggested a strong and negative total effect of gendered racial microaggressions on mental health that is mediated through disengagement coping. That is, in the presence of gendered racial microaggressions, participants increased disengagement coping which, in turn, had negative effects on mental health. The index of moderated mediation was -0.020 (CI95 -0.264 to 0.188) and suggested that the indirect effects were not conditional on the values of the moderator. While there was no evidence of moderation on the indirect or direct paths, there was a statistically significant, and consistently strong, mediation throughout the range of the gendered racial identity centrality (moderator). **Because we did not have a moderated mediation, I would probably not include the rest of this paragraph (nor include the moderation figure). I just wanted to demonstrate how to talk about findings if they were significant (although I acnowledg throughat that these are non-significant).* Figure 2 illustrates the conditional effects (non-significant) of GRMS (X) on mental health (Y) among those at the traditional levels of mean and +/- 1 \emph{SD} where there is a fanning out of the effect of GRMS on when the presence of gendered racial microaggressions is low and mental health is at its highest. In this combination, mental health is even more positive in the presence of positive gendered racial identity centrality. Our model accounted for 17.78\% of the variance in the mediator (disengagement coping) and 31.16\% of the variance in the dependent variable (mental health).
+
+\begin{figure}
+\centering
+\includegraphics{images/Modmed/GRMS_MH_GRIC.jpg}
+\caption{Figure 2. The non-significant moderating effect of gendered racial identity centrality on the relationship between gendered racial microaggressions and mental health}
+\end{figure}
+
+\hypertarget{residual-and-related-questions-1}{%
+\section{Residual and Related Questions\ldots{}}\label{residual-and-related-questions-1}}
+
+..that you might have; or at least I had, but if had answered them earlier it would have disrupt the flow.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Would you stop here? Or keep tinkering?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I am tempted (but out of time, at least today, so stay tuned) to delete moderation of the indirect effect to see if I can get a moderated direct effect. My choice would also depend on to what I committed in any kind of pre-registration. My approach to science tends to be \emph{model generating} \citep{bollen_testing_1993} and in his text, Hayes \citeyearpar{hayes_introduction_2018} advised authors to write about what they found -- not all the things they tried. This \emph{tinkering} remains strongly in the vein of theoretically driven analyses.
+  \end{itemize}
+\item
+  The output we get is different from the output in the journal article being used as the research vignette. Why? And should we worry about it?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    We are simulating data. This gives us some advantages in that (unless we specify it), we never have missingness and our variables should be normally distributed. Because we are working from means, standard deviations, and correlations, our data will never be the same as the original researcher. That said, we can compare our results to the journal to \emph{check out work.} I am somewhat reassured that our \(B\) weights align and somewhat concerned that the index of moderated moderation was so far off. I suppose I will always doubt myself, and will therefore be open to anyone who finds an error in the specification of the model.
+  \end{itemize}
+\item
+  Some of the statistics you are reporting are different than the ones in Hayes and the ones that use the PROCESS macro (e.g., what happened to the \emph{F} test)?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The default estimator for \emph{lavaan} is maximum likelihood (ML) and Hayes uses ordinary least squares (OLS). This affects both the values of coefficients, standard errors, AND the type of statistics that are reported.
+  \item
+    You can ask for OLS regression by adding the statement ``estimator =''GLS". Even with this option, I have not discovered a way to obtain the \emph{F} tests for the overall model. Researchers seem to be comfortable with this, even asking for less than we did (e.g., many do not request R square).
+  \item
+    Best I can tell, researchers who do want this might use a combination of packages, using GLS estimators in \emph{lavaan} (this easily gets them the bootstrapped CIs) and the move to a different regression package to get the intercepts and \emph{F} tests. If I did this I would triple check to make sure that all the output really lined up.
+  \end{itemize}
+\item
+  Why did we ignore the traditional fit statistics associated with structural equation modeling (e.g., CFI, RMSEA).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I hesitate to do this with models that do not include latent variables. Therefore, we asked for an ``in-between'' amount of info that should be sufficient for publication submission (any editor may have their own preferences and ask for more).
+  \end{itemize}
+\item
+  What if I have missing data?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    When we enter the \emph{lavaan} world we do get options other than multiple imputation. In today's example we used the ``sem'' fitting function. Unless otherwise specified, listwise deletion (deleting the entire case when one of its variables is used to estimate the model) is the default in \emph{lavaan}. If data are MCAR or MAR, you can add the argument \emph{missing = ``ml''} (or its alias \emph{missing = ``fiml''}). More here \url{https://users.ugent.be/~yrosseel/lavaan/lavaan2.pdf} on the 1.7/Missing data in lavaan slide.
+  \item
+    That said, the type of estimator matters. If you estimate your data with GLS (generalized least squares) or WLS (weighted least squares), you are required to have complete data (however you got it). We used maximum likelihood and, even though we had non-missing data, I used the \emph{missing = ``fiml''} code.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{practice-problems-6}{%
+\section{Practice Problems}\label{practice-problems-6}}
+
+The three problems described below were designed to grow during the series of chapters on simple and complex mediation, complex moderation, and conditional process analysis (i.e,. this chapter). I have recommended that you select a dataset that includes at least four variables. If you are new to this topic, you may wish to select variables that are all continuously scaled. The IV and moderator (next chapters) could be categorical (if they are dichotomous, please use 0/1 coding; if they have more than one category it is best if they are ordered). You will likely encounter challenges that were not covered in this chapter. Search for and try out solutions, knowing that there are multiple paths through the analysis.
+
+The suggested practice problem for this chapter is to conduct a simple mediation.
+
+\begin{itemize}
+\tightlist
+\item
+  There are a number of variables in the dataset. Swap out one or more variables in the model of simple mediation and compare your solution to the one in the chapter.
+\item
+  Conduct a simple mediation with data to which you have access. This could include data you simulate on your own or from a published article.
+\end{itemize}
+
+\hypertarget{problem-1-rework-the-research-vignette-as-demonstrated-but-change-the-random-seed-2}{%
+\subsection{Problem \#1: Rework the research vignette as demonstrated, but change the random seed}\label{problem-1-rework-the-research-vignette-as-demonstrated-but-change-the-random-seed-2}}
+
+If this topic feels a bit overwhelming, simply change the random seed in the data simulation, then rework the problem. This should provide minor changes to the data (maybe in the second or third decimal point), but the results will likely be very similar.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, M, or W roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables and the moderated effects & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-2-rework-the-research-vignette-but-swap-one-or-more-variables-2}{%
+\subsection{Problem \#2: Rework the research vignette, but swap one or more variables}\label{problem-2-rework-the-research-vignette-but-swap-one-or-more-variables-2}}
+
+Use the simulated data, but select one of the other models that was evaluated in the Lewis et al. \citep{lewis_applying_2017} study. Compare your results to those reported in the mansucript.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, M, or W roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables and the moderated effects & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{problem-3-use-other-data-that-is-available-to-you-2}{%
+\subsection{Problem \#3: Use other data that is available to you}\label{problem-3-use-other-data-that-is-available-to-you-2}}
+
+Using data for which you have permission and access (e.g., IRB approved data you have collected or from your lab; data you simulate from a published article; data from an open science repository; data from other chapters in this OER), complete a simple mediation.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.76}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.11}}@{}}
+\toprule
+Assignment Component & & \\
+\midrule
+\endhead
+1. Assign each variable to the X, Y, M, or W roles (ok but not required to include a cov) & 5 & \_\_\_\_\_ \\
+2. Specify and run the lavaan model & 5 & \_\_\_\_\_ \\
+3. Use semPlot to create a figure & 5 & \_\_\_\_\_ \\
+4. Create a table that includes regression output for the M and Y variables and the moderated effects & 5 & \_\_\_\_\_ \\
+5. Represent your work in an APA-style write-up & 5 & \_\_\_\_\_ \\
+6. Explanation to grader & 5 & \_\_\_\_\_ \\
+7. Be able to hand-calculate the indirect, direct, and total effects from the a, b, \& c' paths & 5 & \_\_\_\_\_ \\
+\textbf{Totals} & 35 & \_\_\_\_\_ \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{bonus-track-1}{%
+\section{Bonus Track:}\label{bonus-track-1}}
+
+\begin{figure}
+\hypertarget{id}{%
+\centering
+\includegraphics[width=6.45833in,height=2.19792in]{images/film-strip-1.jpg}
+\caption{Image of a filmstrip}\label{id}
+}
+\end{figure}
+
+I find it useful to have script with the variables labeled merely by their role. Below, I quickly create an ModMeddemo\_df from the Lewis et al. \citep{lewis_applying_2017} simulated data and then run the analysis with the variables named in their roles.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\NormalTok{ModMedDemo\_df }\OtherTok{\textless{}{-}} \FunctionTok{rename}\NormalTok{(Lewis\_df, }\AttributeTok{X =}\NormalTok{ GRMS, }\AttributeTok{Y =}\NormalTok{ MntlHlth, }\AttributeTok{W =}\NormalTok{ GRIcntlty, }\AttributeTok{M =}\NormalTok{ DisEngmt )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(lavaan)}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{190505}\NormalTok{)}
+\NormalTok{ModMedDemo }\OtherTok{\textless{}{-}} \StringTok{\textquotesingle{}}
+\StringTok{    \#equations}
+\StringTok{    M \textasciitilde{} a1*X + a2*W + a3*X:W}
+\StringTok{    Y \textasciitilde{} c\_p1*X + c\_p2*W + c\_p3*X:W + b*M}
+
+\StringTok{    \#intercepts}
+\StringTok{    M \textasciitilde{} M.mean*1}
+\StringTok{    Y \textasciitilde{} Y.mean*1}
+
+\StringTok{    \#means, variances of W for simple slopes}
+\StringTok{    W \textasciitilde{} W.mean*1}
+\StringTok{    W \textasciitilde{}\textasciitilde{} W.var*W}
+\StringTok{    }
+\StringTok{    \#index of moderated mediation, there will be an a and b path in the product}
+\StringTok{    \#if the a and/or b path is moderated, select the label that represents the moderation}
+\StringTok{    imm := a3*b}
+
+\StringTok{    \#Note that we first create the indirect product, then add to it the product of the imm and the W level}
+\StringTok{    indirect.SDbelow := a1*b + imm*(W.mean {-} sqrt(W.var))}
+\StringTok{    indirect.mean := a1*b + imm*(W.mean)}
+\StringTok{    indirect.SDabove := a1*b + imm*(W.mean + sqrt(W.var))}
+
+\StringTok{    \#direct effect is also moderated so calculate with c\_p1 + c\_p3}
+\StringTok{    direct.SDbelow := c\_p1 + c\_p3*(W.mean {-} sqrt(W.var)) }
+\StringTok{    direct.Smean := c\_p1 + c\_p3*(W.mean)}
+\StringTok{    direct.SDabove := c\_p1 + c\_p3*(W.mean + sqrt(W.var))}
+
+\StringTok{    \#total effect}
+\StringTok{    total.SDbelow := direct.SDbelow + indirect.SDbelow}
+\StringTok{    total.mean := direct.Smean + indirect.mean}
+\StringTok{    total.SDabove := direct.SDabove + indirect.SDabove}
+\StringTok{ \textquotesingle{}}
+\NormalTok{ModMedDemo\_fit }\OtherTok{\textless{}{-}} \FunctionTok{sem}\NormalTok{(ModMedDemo, }\AttributeTok{data =}\NormalTok{ ModMedDemo\_df, }\AttributeTok{se =} \StringTok{"bootstrap"}\NormalTok{, }\AttributeTok{missing =} \StringTok{\textquotesingle{}fiml\textquotesingle{}}\NormalTok{, }\AttributeTok{bootstrap =} \DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in lavaan::lavaan(model = ModMedDemo, data = ModMedDemo_df, se =
+## "bootstrap", : lavaan WARNING: syntax contains parameters involving exogenous
+## covariates; switching to fixed.x = FALSE
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ModMed\_FitSum }\OtherTok{\textless{}{-}} \FunctionTok{summary}\NormalTok{(ModMedDemo\_fit, }\AttributeTok{standardized =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{rsq=}\NormalTok{T, }\AttributeTok{ci=}\ConstantTok{TRUE}\NormalTok{)    }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## lavaan 0.6-7 ended normally after 58 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of free parameters                         18
+##                                                       
+##   Number of observations                           212
+##   Number of missing patterns                         1
+##                                                       
+## Model Test User Model:
+##                                                       
+##   Test statistic                               431.115
+##   Degrees of freedom                                 2
+##   P-value (Chi-square)                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   M ~                                                                   
+##     X         (a1)    0.212    0.194    1.092    0.275   -0.191    0.582
+##     W         (a2)   -0.027    0.078   -0.345    0.730   -0.186    0.123
+##     X:W       (a3)    0.006    0.032    0.174    0.862   -0.053    0.074
+##   Y ~                                                                   
+##     X       (c_p1)   -1.412    1.420   -0.994    0.320   -3.953    1.625
+##     W       (c_p2)   -0.556    0.521   -1.067    0.286   -1.545    0.549
+##     X:W     (c_p3)    0.164    0.234    0.701    0.483   -0.323    0.584
+##     M          (b)   -3.567    0.399   -8.933    0.000   -4.287   -2.791
+##    Std.lv  Std.all
+##                   
+##     0.212    0.358
+##    -0.027   -0.052
+##     0.006    0.065
+##                   
+##    -1.412   -0.331
+##    -0.556   -0.149
+##     0.164    0.261
+##    -3.567   -0.495
+## 
+## Covariances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##   X ~~                                                                  
+##     X:W               5.076    0.547    9.272    0.000    4.033    6.200
+##    Std.lv  Std.all
+##                   
+##     5.076    0.925
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##    .M       (M.mn)    1.417    0.453    3.128    0.002    0.543    2.326
+##    .Y       (Y.mn)   31.703    3.017   10.508    0.000   25.395   37.661
+##     W       (W.mn)    5.710    0.072   78.874    0.000    5.571    5.865
+##     X                 1.990    0.063   31.622    0.000    1.866    2.115
+##     X:W              11.538    0.429   26.896    0.000   10.725   12.361
+##    Std.lv  Std.all
+##     1.417    2.666
+##    31.703    8.273
+##     5.710    5.557
+##     1.990    2.216
+##    11.538    1.888
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     W       (W.vr)    1.056    0.120    8.826    0.000    0.831    1.301
+##    .M                 0.232    0.020   11.718    0.000    0.192    0.271
+##    .Y                10.110    0.825   12.254    0.000    8.248   11.508
+##     X                 0.806    0.085    9.475    0.000    0.646    0.984
+##     X:W              37.363    4.171    8.959    0.000   29.719   45.723
+##    Std.lv  Std.all
+##     1.056    1.000
+##     0.232    0.822
+##    10.110    0.688
+##     0.806    1.000
+##    37.363    1.000
+## 
+## R-Square:
+##                    Estimate
+##     M                 0.178
+##     Y                 0.312
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(>|z|) ci.lower ci.upper
+##     imm              -0.020    0.115   -0.174    0.862   -0.262    0.194
+##     indirect.SDblw   -0.850    0.206   -4.128    0.000   -1.241   -0.451
+##     indirect.mean    -0.870    0.158   -5.523    0.000   -1.192   -0.566
+##     indirect.SDabv   -0.891    0.186   -4.782    0.000   -1.272   -0.547
+##     direct.SDbelow   -0.644    0.410   -1.572    0.116   -1.417    0.165
+##     direct.Smean     -0.476    0.289   -1.644    0.100   -1.046    0.120
+##     direct.SDabove   -0.307    0.335   -0.919    0.358   -0.994    0.324
+##     total.SDbelow    -1.494    0.426   -3.510    0.000   -2.280   -0.649
+##     total.mean       -1.346    0.307   -4.390    0.000   -1.954   -0.766
+##     total.SDabove    -1.198    0.384   -3.121    0.002   -1.977   -0.461
+##    Std.lv  Std.all
+##    -0.020   -0.032
+##    -0.850   -0.323
+##    -0.870   -0.355
+##    -0.891   -0.387
+##    -0.644    0.861
+##    -0.476    1.122
+##    -0.307    1.383
+##    -1.494    0.538
+##    -1.346    0.767
+##    -1.198    0.997
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ModMed\_ParamEsts }\OtherTok{\textless{}{-}} \FunctionTok{parameterEstimates}\NormalTok{(ModMedDemo\_fit, }\AttributeTok{boot.ci.type =} \StringTok{"bca.simple"}\NormalTok{, }\AttributeTok{standardized=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R version 4.0.4 (2021-02-15)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] interactions_1.1.3 jtools_2.1.1       MASS_7.3-53        semTable_1.8      
+##  [5] semPlot_1.1.2      lavaan_0.6-7       apaTables_2.0.8    mice_3.13.0       
+##  [9] sjstats_0.18.0     formattable_0.2.1  qualtRics_3.1.4    forcats_0.5.0     
+## [13] stringr_1.4.0      dplyr_1.0.2        purrr_0.3.4        readr_1.4.0       
+## [17] tidyr_1.1.2        tibble_3.0.4       ggplot2_3.3.3      tidyverse_1.3.0   
+## [21] psych_2.0.12      
+## 
+## loaded via a namespace (and not attached):
+##   [1] readxl_1.3.1        backports_1.2.0     Hmisc_4.4-2        
+##   [4] BDgraph_2.63        igraph_1.2.6        plyr_1.8.6         
+##   [7] splines_4.0.4       TH.data_1.0-10      digest_0.6.27      
+##  [10] htmltools_0.5.0     matrixcalc_1.0-3    fansi_0.4.1        
+##  [13] magrittr_2.0.1      Rsolnp_1.16         checkmate_2.0.0    
+##  [16] lisrelToR_0.1.4     cluster_2.1.0       openxlsx_4.2.3     
+##  [19] modelr_0.1.8        sandwich_3.0-0      jpeg_0.1-8.1       
+##  [22] sem_3.1-11          MBESS_4.8.0         colorspace_2.0-0   
+##  [25] rvest_0.3.6         haven_2.3.1         xfun_0.19          
+##  [28] crayon_1.3.4        jsonlite_1.7.2      lme4_1.1-26        
+##  [31] regsem_1.6.2        survival_3.2-7      zoo_1.8-8          
+##  [34] glue_1.4.2          kableExtra_1.3.1    gtable_0.3.0       
+##  [37] emmeans_1.5.3       webshot_0.5.2       mi_1.0             
+##  [40] sjmisc_2.8.5        abind_1.4-5         scales_1.1.1       
+##  [43] mvtnorm_1.1-1       DBI_1.1.0           Rcpp_1.0.5         
+##  [46] viridisLite_0.3.0   xtable_1.8-4        performance_0.6.1  
+##  [49] htmlTable_2.1.0     tmvnsim_1.0-2       foreign_0.8-81     
+##  [52] Formula_1.2-4       stats4_4.0.4        truncnorm_1.0-8    
+##  [55] htmlwidgets_1.5.3   httr_1.4.2          RColorBrewer_1.1-2 
+##  [58] ellipsis_0.3.1      farver_2.0.3        pkgconfig_2.0.3    
+##  [61] XML_3.99-0.5        nnet_7.3-15         kutils_1.70        
+##  [64] dbplyr_2.0.0        utf8_1.1.4          labeling_0.4.2     
+##  [67] reshape2_1.4.4      tidyselect_1.1.0    rlang_0.4.9        
+##  [70] effectsize_0.4.1    munsell_0.5.0       cellranger_1.1.0   
+##  [73] tools_4.0.4         cli_2.2.0           generics_0.1.0     
+##  [76] sjlabelled_1.1.7    broom_0.7.3         fdrtool_1.2.15     
+##  [79] evaluate_0.14       arm_1.11-2          yaml_2.2.1         
+##  [82] knitr_1.30          fs_1.5.0            stationery_0.98.30 
+##  [85] pander_0.6.3        zip_2.1.1           glasso_1.11        
+##  [88] pbapply_1.4-3       nlme_3.1-151        whisker_0.4        
+##  [91] xml2_1.3.2          compiler_4.0.4      rstudioapi_0.13    
+##  [94] curl_4.3            png_0.1-7           huge_1.3.4.1       
+##  [97] reprex_0.3.0        statmod_1.4.35      pbivnorm_0.6.0     
+## [100] stringi_1.5.3       parameters_0.10.1   qgraph_1.6.5       
+## [103] rockchalk_1.8.144   lattice_0.20-41     Matrix_1.2-18      
+## [106] nloptr_1.2.2.2      vctrs_0.3.6         pillar_1.4.7       
+## [109] lifecycle_0.2.0     OpenMx_2.18.1       estimability_1.3   
+## [112] data.table_1.13.4   insight_0.11.1      corpcor_1.6.9      
+## [115] R6_2.5.0            latticeExtra_0.6-29 bookdown_0.21      
+## [118] gridExtra_2.3       codetools_0.2-18    gtools_3.8.2       
+## [121] boot_1.3-25         assertthat_0.2.1    rjson_0.2.20       
+## [124] withr_2.3.0         mnormt_2.0.2        multcomp_1.4-15    
+## [127] bayestestR_0.8.0    parallel_4.0.4      hms_0.5.3          
+## [130] grid_4.0.4          rpart_4.1-15        coda_0.19-4        
+## [133] minqa_1.2.4         rmarkdown_2.6       carData_3.0-4      
+## [136] d3Network_0.5.2.1   lubridate_1.7.9.2   base64enc_0.1-3
 \end{verbatim}
 
 \hypertarget{refs}{%

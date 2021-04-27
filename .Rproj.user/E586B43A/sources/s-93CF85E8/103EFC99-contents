@@ -1,0 +1,530 @@
+---
+title: "Condition Process Analysis II"
+author: "Lynette H. Bikos, PhD, ABPP"
+date: "04/20/2020"
+output: word_document
+always_allow_html: yes
+csl: apa-single-spaced.csl
+bibliography: StatsnMethods.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(comment = NA) #keeps out the hashtags in the knits
+```
+
+```{r clear environment}
+# Clear your Global Environment
+rm(list=ls())
+```
+
+![image](howmany.jpg){#id .class width=600 height=300px}
+
+**Screencast Playlist link:**  https://spu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=8f7c069d-bdf4-4506-bfa6-aba2014e615a 
+
+
+## navigating this lectuRette
+
+About 40 minutes. Add another hour to work through and digest the materials.
+
+The focus of this lecture is to work another CPA example, this time with a *piecemeal* approach to model building.
+
+### quiz pRep
+
+* What might the value be in taking a "piecemeal" (Hayes) or "model generating" (Joreskog) approach to model building?
+* Regarding conditional indirect effects
+     +  Interpret an index of moderated mediation
+     +  Know the essential components of calculating an index of moderated mediation
+     +  How would you probe a conditional indirect effect
+* Be able to interpret "the usual" things we find in regression:  B/beta weights, R, $R^{2}$, and figures
+* In the quiz items, always remember to look at the figures for answers to interpretation questions!
+
+
+### planning for youR homewoRk
+
+A continuation from the previous week.  See grading template (RMD file) in SP folder.
+
+### Readings & ResouRces
+
+* Hayes, A. F. (2018). *Introduction to mediation, moderation, and conditional process anlaysis:  A regression-based approach*. New York, NY: Guilford Press. Available as an ebook from the SPU library:  https://ebookcentral-proquest-com.ezproxy.spu.edu/lib/spu/detail.action?docID=5109647 
+  - **Chapter 12, More CPA examples**:  With a little increased complexity, we work the DISASTER problem in this chapter where the moderator effects both the indirect and direct paths.  Hayes encourages and demonstrates a piecemeal approach to model buildin 
+  - **Appendix A:  Using Process**:  An essential tool for PROCESS users because, even when we are in the R environment, this is the "idea book." That is, the place where all the path models are presented in figures.
+* Chapman, D. A., & Lickel, B. (2016). Climate change and disasters: How framing affects justifications for giving or withholding aid to disaster victims. Social Psychological and Personality Science, 7(1), 13–20. https://doi-org.ezproxy.spu.edu/10.1177/1948550615590448
+  - Data and analyse are based on this "motivating example."  Pay closest attention to Method/Results.
+
+
+# Hayes' PieceMeal Approach to Building Models
+
+In summarizing a strategic approach for testing structural equation models, Joreskog (1993) identified three scenarios:
+
+* *strictly confirmatory*:  the traditional NHST approach of proposing a single, theoretically derived, model, and after analyzing the data either rejects or fails to reject the model.  No further modifications are made/allowed.
+* *alternative models*:  the reseacher proposes competing (also theoretically derived) models.  Following analysis of a single set of empirical data, he or she selects one model as appropriate in representing the sample data.
+* *model generating*:  A priori, the researcher acknowledges that they may/may not find what they have theoretically proposed. So, a priori, they acknowledge that in the absence of ideal fit (which is the usual circumstance), they will proceed in an exploratory fashion to respecify/re-estimate the model.  The goal is to find a model that is both substantively meaningful and statistically well-fitting.
+
+A legacy of our field is the *strictly confirmatory* approach.  I am thrilled when I see research experts (e.g., Byrne, McCoach/O'Connell) openly endorse a model building approach.  In Chapter 12, Hayes demonstrates what he terms a "piecemeal" approach to building (and understanding) a complex model.
+
+
+### Some points Hayes wants you to *get* in this chapter
+
+* Absence of an association between X and Y (total effect) does not mean that X isn't causally influencing Y in some manner.  Why?
+    + Correlation is not a necessary condition of cause
+    + Absence of correlation doesn't say anything about whether the relationship between X and Y is dependent upon (e.g., moderated by) something else.
+    
+
+## Motivating Example:  A return to DISASTER
+
+The datafile is DISASTER. In this example (Chapman & Lickel, 2016), 211 participants read a new story about a famine in Africa that was reportedly caused by severe droughts in the region.  
+
+* For half of the participants (*frame* = 0), the story suggested that climate change was caused by natural causes; for the other half (*frame* = 1) the story attributed the drought to the effects of climate change.  
+* After reading the story, the participants were asked a set of questions assessing how much they agreed or disagreed with various justifications for not providing aid to the victims (e.g., they did not deserve help, the victims had themselves to blame, donations would not be helpful). Higher scores on the *justify* variable quantifies the strength of the participant's justification for withholding aid (higher scores reflect a stronger sense that helping victims is not justified).  
+* The *skeptic* variable assesses the degree of climate change skepticism; higher scores mean more skepticism.  
+* Intentions to *donate* (or donation attitudes); higher scores indicated more positive attitudes toward donating.
+
+We will walk along with Hayes as he sequentially evaluates three "small parts" (3-variable constellations) of a bigger model and then assembles them.
+
+* Skeptic (W) as moderator the effect of manipulation of frame (X) on willingness to donate (Y)
+* The mediating relationship of justify (M) on the relationship between manipulation of frame (X) and willingness to donate (Y)
+* The moderating effect of skeptic (W) on the relationship bewteen manipulation of frame (X) on justify (M)
+
+The assembly: the mediating role of justify (M) on the relationship between manipulated frame (X) on donate (Y), moderated by skeptic (W) on the a path of the indirect efect and the c'/direct effect.
+
+![image](DisasterModels.JPG){#id .class width=500 height=500px}
+
+```{r Install Packages}
+#will install the package if not already installed
+if(!require(lavaan)){install.packages("lavaan")}
+if(!require(semPlot)){install.packages("semPlot")}
+if(!require(tidyverse)){install.packages("tidyverse")}
+if(!require(psych)){install.packages("psych")}
+```
+
+```{r quick peek}
+library(psych)
+DISTdat <- read.csv ("disaster.csv", header = TRUE)
+str(DISTdat)
+round(describe(DISTdat),3)
+```
+
+### Analysis #1:  Does climate change skepticism moderate the relationship bewteen manipulation of frame and willingness to donate?
+
+Y = donate
+X = frame
+W = skeptic
+
+The formula we are estimating:
+$$Y=b_{0}+b_{1}X+b_{2}W+b_{3}XW+e_{Y}$$  
+
+Let's specify this simple moderation model with base R's *lm()* function.  Let's use the *jtools* package so we get that great summ function and *interactions* for the awesome plot.
+
+```{r open library}
+library(jtools)
+library(interactions)
+library(ggplot2)
+```
+
+```{r MOD1 specification}
+ModDirect <- lm(donate~frame*skeptic, data=DISTdat)
+summ(ModDirect, digits = 3)
+```
+
+Looking at these results we see that there is an interaction effect of frame*skeptic. 
+
+Our resulting equation is:
+
+$$\hat{Y}=5.029 + 0.679X - 0.140W - 0.171XW$$ 
+
+The significant interaction term (*B* = -.171, *p* = 0.043) lets us know that the relationship between frame and donate is different at different levels skeptic.  We can tell by the negative B weight, that for each 1 point increase in skeptic, the frame/donate slope tilts further in the negative relation.
+
+
+Some plots make more sense than others.  Sometimes I run them both ways.
+Hayes (and I agree) that having frame in the role of the moderator makes a better explanatory figure.
+```{r MOD1 plot}
+interact_plot(ModDirect, pred = frame, modx = skeptic)
+interact_plot(ModDirect, pred = skeptic, modx = frame)
+```
+
+Let's probe the interaction with the simple slopes.
+A note -- the Johnson-Neyman won't be that helpful because frame is dichotomous.
+
+```{r MOD1 simple slopes}
+sim_slopes(ModDirect, pred = skeptic, modx = frame)
+sim_slopes(ModDirect, pred=frame, modx = skeptic)
+```
+
+**Learned so far:**
+
+* Significant interaction term (*B* = -0.171, *p* = 0.0432)
+* It appears that among those low in climate change skepticism, framing the drought as caused by climate change produced a greater willingness to donate compared to when climate change was not described as the cause.
+* Among those high in climate change skepticism, the opposite pattern occurs:  willingness to donate to the victims is lower among those who read the story attributing the cause to climate change.
+* Simple slopes are curious, the slopes are significantly different from 0 for both of the frame conditions; but along skepticism, they are all non-signifciant.  Hayes mentions, "This can happen, obviously, because it has" (p. 434).  He adds that we can conclude that the frame has some contribution to the willingness to donate, but we cannot be more precise than this.
+
+### Analysis #2:  Do people's beliefs about whether providing aid to the victims is justified (justify, Y) mediate the relationship between the manipulated frame (x) of the disaster on willingness to donate (Y)?
+
+
+Y = donate
+X = frame
+M = justify
+
+Because we need the bootstrap confidence intervals for a more powerful estimation of the indirect effect, we will use the *lavaan* package and try to produce a reasonable figure with *semPlot*.
+
+```{r open lavaan library}
+library(lavaan)
+library(semPlot)
+```
+
+
+```{r specify mediation}
+set.seed(090506)
+Med <- '
+          #equations
+          donate ~ b*justify + c_p*frame          
+          justify ~a*frame
+          
+          #intercepts
+          donate ~ donate.mean*1
+          justify ~ justify.mean*1
+
+          indirect :=  a*b
+          direct  := c_p
+          total_c  := c_p + (a*b)
+          '
+Med_fit <- sem(Med, data = DISTdat, se="bootstrap", missing = 'fiml')
+summary(Med_fit, standardized=T, rsq=T, ci=TRUE)
+parameterEstimates(Med_fit, boot.ci.type = "bca.simple", standardized=TRUE)
+```
+
+```{r semPlot of serial PMI model}
+library(semPlot)
+semPaths(Med_fit, #must identiy the model you want to map
+         what = "est", #"est" plots the estimates, but keeps it greyscale with no fading
+         #whatLabels = "stand", #"stand" changes to standardized values
+         layout = 'tree', rotation = 2, #together, puts predictors on left, IVs on right 
+         #layout = 'circle',
+         edge.label.cex = 1.00, #font size of parameter values
+         #edge.color = "black", #overwrites the green/black coloring
+         sizeMan=10, #size of squares/observed/"manifest" variables
+         fade=FALSE, #if TRUE, there lines are faded such that weaker lines correspond with lower values -- a cool effect, but tough for journals
+         esize=2, 
+         asize=3,
+         #label.prop = .5,
+         label.font = 2.5, #controls size (I think) of font for labels
+         label.scale = TRUE, #if false, the labels will not scale to fit inside the nodes
+         nDigits = 3, #decimal places (default is 2)
+         residuals = FALSE,#excludes residuals (and variances) from the path diagram
+         nCharNodes = 0, #specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)
+         intercepts = FALSE, #gets rid of those annoying triangles (intercepts) in the path diagram)
+)
+title("Disaster:  Simple Mediation")
+```
+
+### Analysis #3:  Does climate change skepticism moderate the relationship bewteen manipulation of frame and justification for withholding aid?
+
+*Note*:  Hayes doesn't rework this in Chapter 12 because it was the simple moderation we worked in Chapter 7.  We'll work it here (a) for practice and (b) so we have all the pieces of the story.
+
+Here we are taking a little sliver.  That which was that mediator is now in the role of DV.  
+
+Y = justify (but it's the M in the bigger model)
+X = frame
+W = skeptic
+
+The formula we are estimating:
+$$Y=b_{0}+b_{1}X+b_{2}W+b_{3}XW+e_{Y}$$ 
+
+
+```{r MOD2 specification}
+ModIndirect <- lm(justify~frame*skeptic, data=DISTdat)
+summ(ModIndirect, digits = 3)
+```
+
+Again we have a significant moderation (*B* = 0.201, *p* < 0.001).  This means that frame/justify relationship is different at different levels of skeptic (the moderator).  Because the interaction term is positive, we know that as skepticism increases by 1 unit, the tilt of the slope is increasingly positive.
+
+
+the plots
+```{r MOD2 plot}
+interact_plot(ModIndirect, pred = frame, modx = skeptic)
+interact_plot(ModIndirect, pred = skeptic, modx = frame)
+```
+
+
+```{r MOD2 simple slopes}
+sim_slopes(ModDirect, pred = skeptic, modx = frame)
+sim_slopes(ModDirect, pred=frame, modx = skeptic)
+```
+
+Learned from analysis 3:
+* Significant interaction term (*B* = 0.201, *p* = 0.0432)
+* The effect of the framing on the cause of the drought on strength of justifications for withholding aid depends on climate change skepticism.  As climate change skepticism increased by one unit, the difference in strength of justifications between those told climate change was the cause and those not so told increased by 0.201 units.  Those with the strongest levels of justification, are those in the framing condition with the highest levels of skepticism.
+
+### Combined analysis
+
+The diagram with labeled paths will help specify this in *lavaan*, necessary because we need the bootstrapped confidence intervals to determine the statistical significance of the conditional indirect effects.
+
+![image](statistical.JPG){#id .class width=500 height=500px}
+
+Two formulas (one for mediator, one for DV) that represent this model are
+
+$$M = i_{M}+a_{1}X+a_{2}W+a_{3}XW+e_{m}$$ 
+
+$$Y=i_{Y}+c_{1}'X+c_{2}'W+c'_{3}XW+bM+e_{Y}$$
+
+
+Y = donate
+X = frame
+W = skeptic
+M = justify
+
+```{r specify mediation in lavaan}
+set.seed(190505)
+Combined <- '
+    #equations
+    justify ~ a1*frame + a2*skeptic + a3*frame:skeptic
+    donate ~ c_p1*frame + c_p2*skeptic + c_p3*frame:skeptic + b*justify
+
+   #intercepts
+    donate ~ donate.mean*1
+    justify ~ justify.mean*1
+
+    #means, variances of W for simple slopes
+    skeptic ~ skeptic.mean*1
+    skeptic ~~ skeptic.var*skeptic
+    
+    #index of moderated mediation, the moderated path multiplied by the interaction term
+    imm := a3*b
+
+    #Note that we first create the indirect product, then add to it the product of the imm and the W level
+    indirect.SDbelow := a1*b + imm*(skeptic.mean - sqrt(skeptic.var))
+    indirect.mean := a1*b + imm*(skeptic.mean)
+    indirect.SDabove := a1*b + imm*(skeptic.mean + sqrt(skeptic.var))
+
+   #direct effect is also moderated so calculate with c_p1 + c_p3
+    direct.SDbelow := c_p1 + c_p3*(skeptic.mean - sqrt(skeptic.var)) 
+    direct.Smean := c_p1 + c_p3*(skeptic.mean)
+    direct.SDabove := c_p1 + c_p3*(skeptic.mean + sqrt(skeptic.var))
+
+    #total effect
+    total.SDbelow := direct.SDbelow + indirect.SDbelow
+    total.mean := direct.Smean + indirect.mean
+    total.SDabove := direct.SDabove + indirect.SDabove
+
+    #Quick demo of Hayes values of 16th, 50th, and 84th percentiles see formulas on pp 448-449
+    #This provides some evidence that the formula created above, but if you wanted to do it, you would need to get your own percentiles
+    indirect.16th := a1*b + imm*(1.592)
+    indirect.50th := a1*b + imm*(2.8)
+    indirect.84th := a1*b + imm*(5.2)
+    direct.16th := c_p1 + c_p3*(1.592) 
+    direct.50th := c_p1 + c_p3*(2.8)
+    direct.84th := c_p1 + c_p3*(5.2)
+ '
+Combined_fit <- sem(Combined, data = DISTdat, se = "bootstrap", missing = 'fiml', bootstrap = 1000)
+summary(Combined_fit, standardized = TRUE, rsq=T, ci=TRUE)    
+parameterEstimates(Combined_fit, boot.ci.type = "bca.simple", standardized=TRUE)
+```
+
+### Beginning the interpretation
+
+We have already looked at some of the simple effects found within the more complex model.  Let's grab the formulae.
+$$\hat{M} = 2.452 - 0.562X + 0.105 W + 0.201XW$$
+$$\hat{Y} = 7.291 + 0.160X - 0.043W + 0.015XW - 0.923M$$
+
+17% of the variance in justify (mediator) and 42% of the variance in donate (DV) are predicted by their respective models.
+
+### Closeup examination of moderated mediation.
+
+The model we tested suggested that both the indirect and direct effects should be moderated. Hayes provides a more detailed and elaborate explanation of this on pp. 447 - 458.
+
+**Conditional Indirect effects** 
+
+* An indirect effect can be moderated if either the *a* or b path (or both) is(are) moderated. 
+* If at least one of the indirect paths is part of a moderation, then the whole indirect (axb) path would be moderated.
+    + In this model, we specified a moderation of the *a* path. 
+* We know if the *a* path is moderated if the moderation term is statistically significant.  
+    + In our case, *a*3/frame:skeptic was statistically significant (*B* = 0.201, *p* = 0.001).
+* But since this interaction term is ONLY on the a single path, we need to know more.  
+    +  *Index of Moderated Mediation* (IMM) is the product of the moderated path (in this case, the value of *a*3) and *b*.  If this index is 0, then the slope of the line for the indirect effect would be flat. The bootstrap confidence interval associated with this test is the way to determine whether/not this slope is statistically significant from zero. In our case, IMM = -0.186, *p* = 0.003. The dashed line in Figure 12.7 shows the negative slope of the indirect effect. Hayes claims the IMM saves us from formally comparing (think "contrasts" pairs of conditional indirect effects)
+    +  *Probing the conditional indirect effect* gets us even more detailed information about the moderation.  Because an indirect effect is not normally distributed, Hayes discourages using a Johnson-Neyman approach and suggests that we use the pick-a-point.  He usually selects the 16th, 50th, and 84th percentiles of the distribution; I tend to use the mean+/-1SD (I ran both for you). In my method, the conditional indirect effects at the lower levels were not statistically significant (at 1SD below the mean *B* =  0.268, CI95 -0.009 to 0.605; at the mean *B* = -0.108, CI95 -0.320 o 0.105).  However, at 1SD above the mean, the conditional indirect effect was significant (*B* = -0.485, CI95 -0.864 to -0.145).  The values for Hayes followed the same pattern.  
+* A summary statement (copied directly from Hayes p. 457):  Among climate change skeptics, justifications for withholding aid functions as a mediator of the effect of the framing of the cause of the drought on willingness to donate to the victims.  The negative indirect effect means that framing the drought as caused by climate change, as opposed to leaving it unspecified, reduced willingness to donate to the victims by increasing the strength of their justifications for withholding aid, which in turn, reduces willingess to donate.  However, such justifications do not significantly mediate the effect of framing on willingness to donate among those less skeptical of climate change, as the two conditional indirect effects among those moderate and low in climate change skepticism are not signiicantly different from zero.
+
+![image](Fig12_7.JPG){#id .class width=400 height=700px}
+
+Someone is making it difficult to read about probing direct effects...
+![image](SofieDirect.JPG){#id .class width=400 height=600px}
+
+**Conditional Direct effect**
+
+* The direct effect of X to Y estimates how differences in X relate to differences in Y holding constant the proposed mediator(s).
+* We know the direct effect is moderated if the interaction term (c_p3)is statistically significant.  In our case, it was not (*B* = 0.015, *p* = 0.835). 
+* Probing a conditional direct effect is straightforward...we typically use the same points as we did in the probing of the conditional indirect effect.
+  + For both my values (mean and +/- 1SD) and Hayes values (16th, 50th, 84th percentiles), the direct effect (e.g., the effect of skepticism on willingness to donate) was not statistically significant from zero at any level of the moderator.
+
+### Model Trimming
+
+Hayes terms it *pruning*, but suggests that since there was no moderation of the direct effect, the researcher may want to delete that interaction term (c_p3(frame:skeptic)).  The researcher may wish to specify skeptic as a covariate onto Y(donate), or also delete it.  While it was NS in our specification, deleting these paths one at a time is typical practice because the small boost of power with each deleted path may "turn on" significance elsewhere.
+
+## Writing it Up
+
+*Note*:  It's worth looking at the Chapman and Lickel (2016) manuscript.  Although a little more complicated (and they used PROCESS), it's a great example and so I very much modeled it here.
+
+**Results**
+
+**Preliminary Analyses**
+
+*  Missing data anlaysis and managing missing data
+*  Bivariate correlations, means, SDs
+*  Distributional characteristics, assumptions, etc.
+*  Rule-out any concerns.
+
+**Primary Analyses**
+Our analysis evaluated a moderation mediation model predicting attitudes about donating (Y/donate) from experimental condition (X/frame) mediated by donation justification(M/justiy).  Climate change skepticism (W/skeptic) was our moderating variable.  We specified a moderation of path *a* (X/frame to M/justify) and the direct path, *c'* (X/frame to Y/donate). Data were analyzed with maximum likelihood estimation in the R package *lavaan* (v. 0.6-5); the significance of effects were tested with 1000 bootstrap confidence intervals. Results of the full model are presented in Table 1.  The formula for the mediator and dependent variable are expressed below.  
+
+
+$$\hat{M} = 2.452 - 0.562X + 0.105 W + 0.201XW$$
+$$\hat{Y} = 7.291 + 0.160X - 0.043W + 0.015XW - 0.923M$$
+Results suggested that 17% of the variance in the mediator (justify) and 42% of the variance in the dependent variable (donate) were accounted for by the model. There was a significant interaction effect between frame (X) and justify (M) when skepticism(W) served as the moderator.  Figure 1 illustrates the conditional effects of disaster framing (X) on the strength of justifications for withholding aid (Y) among those at the traditional levels of mean and +/- 1 *SD*.  As evidenced in the graph, the slope of the donate/skepticism relationship is sharpest for those whose framing condition was climate change, such that those who are most willing to donate are low climate change skepticism and have the climate change frame and those who are least willing to donate have high climate change skepticism and have the climate change frame.
+
+The index of moderated mediation was -0.186 (CI95 -0.319 to -0.067) suggested that the indirect effects were conditional on the values of the moderator.  The conditional indirect effects at the lower levels were not statistically significant. However, at 1SD above the mean, the conditional indirect effect was significant (*B* = -0.485, CI95 -0.864 to -0.145). There was no significant conditional direct effect. 
+
+Summarizing these findings, among climate change skeptics, justifications for withholding aid functions as a mediator of the effect of the framing of the cause of the drought on willingness to donate to the victims.  The negative indirect effect means that framing the drought as caused by climate change, as opposed to leaving it unspecified, reduced willingness to donate to the victims by increasing the strength of their justifications for withholding aid, which in turn, reduces willingess to donate.  However, such justifications do not significantly mediate the effect of framing on willingness to donate among those less skeptical of climate change, as the two conditional indirect effects among those moderate and low in climate change skepticism are not signiicantly different from zero.
+
+#Bonus Track: 
+
+![Image of a filmstrip](film-strip-1.jpg){#id .class width=620 height=211}
+```{r reclear environment}
+# Clear your Global Environment
+rm(list=ls())
+```
+## Fake Data Example:  Moderated Mediation
+
+https://ademos.people.uic.edu/Chapter15.html#5_moderated_mediation_analyses_using_%E2%80%9Clavaan%E2%80%9D_package
+Provides super helpful information on how to make up data for an analysis and then run it in different packages, including *lavaan*.
+
+For fun, I'm using Demos' instructions, but working the same Chapter 12 problem in Hayes, backwards (identifying no variables, just X,Y,W, a, b, c roles). 
+
+To establish the results we want, I'm getting information for the model from Table 12.1/Model Coefficients for the CPA and descriptive statistics from Hayes' dataset, disaster.csv.
+
+```{r Establishing Results for MadeUp Data}
+a1 = -.5625 #Set the path a1 strength (effect of X on M)
+
+a2 = .1051 #Set path a2 strength (effect of W on M)
+
+a3 = .2012#Set path a3 strength (interaction between X and M)
+
+b = -.9227 #Set path b strength (effect of M on Y)
+
+c_p1 = .1603 #Set path c'1 strength (effect of X on Y)
+
+c_p2 = -.0426 #Set path c'2 strength (effect of M on Y)
+
+c_p3 = 0.0149 #Set path c'3 strength (interaction betwee X and M on Y)
+```
+
+I grabbed the *N* for the whole dataset.  And also the *M*s and *SD*s for the X (frame) and W (skeptic) variables.  M and Y are created formulaically.  You can look either at a figure or a table, making sure all the predictors are accounted for.
+
+Just a reminder, this example is intended to be a "recipe" using the X, Y, M, W, a, b, c, c_p labels.  I'm merely using the Hayes' data as another resource to practice (e.g., properly specify and verify by checking against the model).
+
+```{r Establishing Characteristics of MadeUp Data}
+set.seed(190505)
+n <- 211 #Set sample size
+
+X <- rnorm(n, .4748, .50) #IV:frame, M = .4748, SD = .50
+
+W <- rnorm(n, 3.38, 2.031) #Moderator: skeptic, M = 3.38, SD = 2.03)
+ 
+M <- a1*X + a2*W + a3*X*W + rnorm(n, 2.87, .93) #Mediator: justify M = 2.87, SD = .93
+#The mediator variable is created as a function of the IV, moderator, and their interaction with some random noise thrown in the mix
+
+Y <- c_p1*X + c_p2*W + c_p3*X*W + b*M + rnorm(n, 4.60, 1.32) #DV: donate, M = 4.60, SD = 1.32 
+#Similar to the mediator, the DV is a function of the IV, moderator, their interaction, and the mediator with some random noise thrown in the mix
+```
+
+Now we make the dataframe
+That which you want to name the variable precedes the names we created above.
+```{r Making the Dataframe}
+set.seed(190505)
+ReCreatedData <- data.frame(Y=Y, X=X, M=M, W=W)
+```
+
+Everything looks reasonable, except the mean of the Y variable (it was 4.60 in the original data).
+
+```{r another peek at data}
+library(psych)
+str(ReCreatedData)
+round(describe(ReCreatedData),3)
+```
+
+
+```{r  recreated specification}
+set.seed(190505)
+ReCrModMed <- '
+    #equations
+    M ~ a1*X + a2*W + a3*X:W
+    Y ~ c_p1*X + c_p2*W + c_p3*X:W + b*M
+
+   #intercepts
+    Y ~ Y.mean*1
+    M ~ M.mean*1
+
+    #means, variances of W for simple slopes
+    W ~ W.mean*1
+    W ~~ W.var*W
+    
+    #index of moderated mediation, the moderated path multiplied by the interaction term
+    #I presume this would be adjusted based on which path(s) were moderated
+    #For example, if the b path of the indirect effect was the one that was moderated I presume it would imm would be a*b3
+    imm := a3*b
+
+    #Note that we first create the indirect product, then add to it the product of the imm and the SD level.
+    # Just like imm, these would be altered if the b portion of the indirect effect was the one moderated
+    indirect.SDbelow := a1*b + imm*(W.mean - sqrt(W.var))
+    indirect.mean := a1*b + imm*(W.mean)
+    indirect.SDabove := a1*b + imm*(W.mean + sqrt(W.var))
+
+    #direct effect ONLY DO THIS IF THE DIRECT EFFECT IS MODERATED
+    direct.SDbelow := c_p1 + c_p3*(W.mean - sqrt(W.var)) 
+    direct.Smean := c_p1 + c_p3*(W.mean)
+    direct.SDbelow := c_p1 + c_p3*(W.mean + sqrt(W.var))
+
+    #total effect
+    total.SDbelow := direct.SDbelow + indirect.SDbelow
+    total.mean := direct.Smean + indirect.mean
+    total.SDabove := direct.SDbelow + indirect.SDabove
+ '
+ReCrModMed_fit <- sem(ReCrModMed, data = ReCreatedData, se = "bootstrap", bootstrap = 1000)
+summary(ReCrModMed_fit, standardized = TRUE, rsq=T, ci=TRUE)    
+parameterEstimates(ReCrModMed_fit, boot.ci.type = "bca.simple", standardized=TRUE)
+
+```
+
+```{r semPlot of serial PMI model B}
+library(semPlot)
+semPaths(ReCrModMed_fit, #must identiy the model you want to map
+         what = "est", #"est" plots the estimates, but keeps it greyscale with no fading
+         #whatLabels = "stand", #"stand" changes to standardized values
+         layout = 'tree', rotation = 2, #together, puts predictors on left, IVs on right 
+         #layout = 'circle',
+         edge.label.cex = 1.00, #font size of parameter values
+         #edge.color = "black", #overwrites the green/black coloring
+         sizeMan=10, #size of squares/observed/"manifest" variables
+         fade=FALSE, #if TRUE, there lines are faded such that weaker lines correspond with lower values -- a cool effect, but tough for journals
+         esize=2, 
+         asize=3,
+         #label.prop = .5,
+         label.font = 2.5, #controls size (I think) of font for labels
+         label.scale = TRUE, #if false, the labels will not scale to fit inside the nodes
+         nDigits = 3, #decimal places (default is 2)
+         residuals = FALSE,#excludes residuals (and variances) from the path diagram
+         nCharNodes = 0, #specifies how many characters to abbreviate variable lables; default is 3.  If 0, uses your entire variable label and adjusts fontsize (which could be a downside)
+         intercepts = FALSE, #gets rid of those annoying triangles (intercepts) in the path diagram)
+)
+title("ModMed from Recreated Data")
+```
+
+Good news -- the script ran, but the results don't look quite the same.
+
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+# References
+
+
